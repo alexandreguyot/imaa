@@ -1,15 +1,9 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+        Route for website
 */
+
 
 Route::get('/', 'IndexController@Index');
 Route::get('/activites', 'ActivityController@Index');
@@ -26,3 +20,17 @@ Route::get('/equipe/ce-qui-nous-differencie', 'TeamController@Difference');
 Route::get('/actualites', 'NewsController@Index');
 
 Route::get('/contact', 'ContactController@Index');
+
+/*
+    Route for ERP
+*/
+Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
+    Route::get('/dashboard', ['name' => 'erp.dashboard', 'controller'=> 'DashboardController@index']);
+
+    Route::middleware('admin')->prefix('admin')->group(function () {
+        Route::get('creation-projet/{$id}', ['name' => 'erp.get.create-project', 'ProjetController@index']);
+        Route::post('post-creation-projet', ['name' => 'erp.post.create-project', 'ProjetController@create']);
+        Route::put('edition-projet', ['name' => 'erp.put.edit-project', 'ProjetController@edit']);
+        Route::delete('creation-projet', ['name' => 'erp.delete.delete-project', 'ProjetController@delete']);
+    });
+});
