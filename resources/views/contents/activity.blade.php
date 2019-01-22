@@ -15,15 +15,17 @@
 			<div class="info-center">
 				<h1>activités</h1>
 				<ul>
-					<li><a href="#">nos domaines</a></li>
-					<li><a href="#">nos missions</a></li>
-					<li><a href="#">notre secteur activité</a></li>
+					<li><a href="activites/nos-domaines">nos domaines</a></li>
+					<li><a href="activites/nos-missions">nos missions</a></li>
+					<li><a href="activites/secteur-geographique">notre secteur activité</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 
 @stop
+
+
 
 <!-- Facultatif, si l'on a des fichiers js spécifiques à la page -->
 @section('scripts')

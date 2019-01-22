@@ -10,7 +10,18 @@
 
 	<!-- Hero Section
 	================================================== --> 
-	<p>Nos missions</p>
+		<header class="header-small">
+		<div class="container-header">
+			<div class="info-center">
+				<h1>Nos missions</h1>
+				<ul class="breadcrumb">
+					<li><a href="{{ url('home') }}">Accueil</a></li>
+					<li><a href="{{ url('activites') }}">Activités</a></li>
+					<li>Nos missions</li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
 @stop
 

@@ -17,11 +17,11 @@
       </div>
       <div class="col-md-6 col-lg-7">
         <ul class="nav nav-inline">
-          <li class="nav-item active"><a class="nav-link" href="#">Accueil</a></li>
-          <li class="nav-item "><a class="nav-link" href="activites">Activités</a></li>
-          <li class="nav-item"><a class="nav-link" href="equipe">L'équipe</a></li>
-          <li class="nav-item"><a class="nav-link" href="" target="_blank">Actualités</a></li>
-          <li class="nav-item"><a class="nav-link" href="" target="_blank">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">Accueil</a></li>
+          <li class="nav-item "><a class="nav-link" href="{{ url('activites') }}">Activités</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('equipe') }}">L'équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('actualites') }}" >Actualités</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('contact') }}" >Contact</a></li>
           <li class="nav-item"><a class="nav-link scroll-top" href="#totop"> <span class="icon-caret-up"></span></a></li>
         </ul>
       </div>

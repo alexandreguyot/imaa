@@ -10,14 +10,14 @@
 
 	<!-- Hero Section
 	================================================== --> 
-		<header class="header-small">
+	<header class="header-small">
 		<div class="container-header">
 			<div class="info-center">
-				<h1>Secteur géograghique</h1>
+				<h1>Présentation</h1>
 				<ul class="breadcrumb">
 					<li><a href="{{ url('home') }}">Accueil</a></li>
-					<li><a href="{{ url('activites') }}">Activités</a></li>
-					<li>Secteur géograghique</li>
+					<li><a href="{{ url('equipe') }}">L'équipe</a></li>
+					<li>Présentation</li>
 				</ul>
 			</div>
 		</div>

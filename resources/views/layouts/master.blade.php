@@ -21,6 +21,7 @@
     <body>
         @include('layouts._header')
         @yield('content') 
+        @include('layouts._login')
         @include('layouts._footer')
 
         @yield('scripts') 

@@ -15,9 +15,9 @@
 			<div class="info-center">
 				<h1>l'équipe</h1>
 				<ul>
-					<li><a href="#">Présentation</a></li>
-					<li><a href="#">Savoir faire</a></li>
-					<li><a href="#">Ce qui nou differencie</a></li>
+					<li><a href="{{ url('equipe/presentation') }}">Présentation</a></li>
+					<li><a href="{{ url('equipe/savoir-faire') }}">Savoir faire</a></li>
+					<li><a href="{{ url('equipe/ce-qui-nous-differencie') }}">Ce qui nous differencie</a></li>
 				</ul>
 			</div>
 		</div>

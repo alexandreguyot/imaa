@@ -7,16 +7,16 @@
     <div id="collapsingNavbar" class="" >
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item nav-item-toggable">
-          <a class="nav-link" href="http://localhost/imaa/public/">Accueil</a>
-        </li>
-        <li class="nav-item nav-item-toggable active">
-          <a class="nav-link" href="activites">Activités</a>
+          <a class="nav-link" href="{{ url('home') }}">Accueil</a>
         </li>
         <li class="nav-item nav-item-toggable">
-          <a class="nav-link" href="equipe">L'équipe</a>
+          <a class="nav-link" href="{{ url('activites') }}">Activités</a>
         </li>
         <li class="nav-item nav-item-toggable">
-          <a class="nav-link" href="actualites">Actualités</a> 
+          <a class="nav-link" href="{{ url('equipe') }}">L'équipe</a>
+        </li>
+        <li class="nav-item nav-item-toggable">
+          <a class="nav-link" href="{{ url('actualites') }}">Actualités</a> 
         </li>
         <li class="nav-item dropdown hidden-sm-down textselect-off">
           <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

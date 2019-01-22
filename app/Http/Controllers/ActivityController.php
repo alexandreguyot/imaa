@@ -16,7 +16,7 @@ class ActivityController extends Controller
     }
     public function Missions()
     {
-    	return view('contents.activity.mission');
+    	return view('contents.activity.missions');
     }
     public function Sector()
     {
