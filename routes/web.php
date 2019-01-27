@@ -21,6 +21,8 @@ Route::get('/actualites', ['name' => 'actualites', 'uses' => 'NewsController@Ind
 
 Route::get('/contact', ['name' => 'contact', 'uses' => 'ContactController@Index']);
 
+Route::get('/mentions-legales', ['name' => 'mentions-legales', 'uses' => 'LegalesController@Index']);
+
 /*
     Route for ERP
 */

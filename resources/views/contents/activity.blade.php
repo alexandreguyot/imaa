@@ -5,22 +5,26 @@
     <title>IMAA - Ingénierie Management d'Affaires Associés - Accueil</title>
     <meta name="description" content="">
 @stop
+
  
 @section('content')
+
+@include('layouts._header')
 
 	<!-- Hero Section
 	================================================== --> 
 	<header>
-		<div class="container-header" style="background-image: url({{ URL::asset('images/bg-contact.jpg') }});">
+		<div class="container-header" style="background-image: url({{ URL::asset('images/bg-activites.jpg') }});">
 			<div class="info-center">
-				<h1>activités</h1>
-				<ul>
-					<li><a href="activites/nos-domaines">nos domaines</a></li>
-					<li><a href="activites/nos-missions">nos missions</a></li>
-					<li><a href="activites/secteur-geographique">notre secteur activité</a></li>
+				<h1 class="animated fadeInDown">Activités</h1>
+				<ul class="animated fadeInUp">
+					<li><a href="activites/nos-domaines">Nos domaines</a></li>
+					<li><a href="activites/nos-missions">Nos missions</a></li>
+					<li><a href="activites/secteur-geographique">Secteur géographique</a></li>
 				</ul>
 			</div>
 		</div>
+		@include('layouts._social')
 	</header>
 
 @stop
