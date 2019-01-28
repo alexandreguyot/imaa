@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class LegalesController extends Controller
 {
-    public function Index()
+    public function index()
     {
     	return view('contents.legales');
     }

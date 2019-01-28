@@ -1,38 +1,45 @@
 <?php
 
 /*
-        Route for website
-*/
+ * Route pour le site web
+ * */
+
+Route::namespace('Site')->group(function () {
+    Route::get('/', ['name' => 'home', 'uses' => 'IndexController@index']);
+    Route::get('/activites', ['name' => 'activites', 'uses' => 'ActivityController@index']);
+    Route::get('/activites/nos-domaines', ['name' => 'activites.nos-domaines', 'uses' => 'ActivityController@domains']);
+    Route::get('/activites/nos-missions', ['name' => 'activites.nos-missions', 'uses' => 'ActivityController@missions']);
+    Route::get('/activites/secteur-geographique', ['name' => 'activites.secteur-geographique', 'uses' => 'ActivityController@sector']);
+    Route::get('/equipe', ['name' => 'equipe', 'uses' => 'TeamController@index']);
+    Route::get('/equipe/presentation', ['name' => 'equipe.presentation', 'uses' => 'TeamController@resume']);
+    Route::get('/equipe/savoir-faire', ['name' => 'equipe.savoir-faire', 'uses' => 'TeamController@talents']);
+    Route::get('/equipe/ce-qui-nous-differencie', ['name' => 'equipe.ce-qui-nous-differencie', 'uses' => 'TeamController@difference']);
+    Route::get('/actualites', ['name' => 'actualites', 'uses' => 'NewsController@index']);
+    Route::get('/contact', ['name' => 'contact', 'uses' => 'ContactController@index']);
+});
 
 
-Route::get('/home', ['name' => 'home', 'uses' => 'IndexController@Index']);
+/*
+ * Route pour le login
+ * */
+Auth::routes();
 
-Route::get('/activites', ['name' => 'activites', 'uses' => 'ActivityController@Index']);
-Route::get('/activites/nos-domaines', ['name' => 'activites.nos-domaines', 'uses' => 'ActivityController@Domains']);
-Route::get('/activites/nos-missions', ['name' => 'activites.nos-missions', 'uses' => 'ActivityController@Missions']);
-Route::get('/activites/secteur-geographique', ['name' => 'activites.secteur-geographique', 'uses' => 'ActivityController@Sector']);
+/*
+ * Route pour les clients pour consulter le projet
+ * */
+Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'DashboardController@index', 'middleware' => 'auth']);
 
-Route::get('/equipe', ['name' => 'equipe', 'uses' => 'TeamController@Index']);
-Route::get('/equipe/presentation', ['name' => 'equipe.presentation', 'uses' => 'TeamController@Resume']);
-Route::get('/equipe/savoir-faire', ['name' => 'equipe.savoir-faire', 'uses' => 'TeamController@Talents']);
-Route::get('/equipe/ce-qui-nous-differencie', ['name' => 'equipe.ce-qui-nous-differencie', 'uses' => 'TeamController@Difference']);
-
-Route::get('/actualites', ['name' => 'actualites', 'uses' => 'NewsController@Index']);
-
-Route::get('/contact', ['name' => 'contact', 'uses' => 'ContactController@Index']);
 
 Route::get('/mentions-legales', ['name' => 'mentions-legales', 'uses' => 'LegalesController@Index']);
 
 /*
-    Route for ERP
-*/
+ * Route pour l'ERP
+ * */
 Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
-    Route::get('/dashboard', ['name' => 'erp.dashboard', 'uses'=> 'DashboardController@index']);
-
     Route::middleware('admin')->prefix('admin')->group(function () {
         Route::get('creation-projet/{$id}', ['name' => 'erp.get.create-project', 'uses' => 'ProjectController@index']);
         Route::post('post-creation-projet', ['name' => 'erp.post.create-project', 'uses' =>'ProjectController@create']);
         Route::put('edition-projet', ['name' => 'erp.put.edit-project', 'uses' => 'ProjectController@edit']);
-        Route::delete('creation-projet', ['name' => 'erp.delete.delete-project','uses' => 'ProjectController@delete']);
+        Route::delete('suppression-projet', ['name' => 'erp.delete.delete-project','uses' => 'ProjectController@delete']);
     });
 });
