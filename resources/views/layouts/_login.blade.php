@@ -1,6 +1,6 @@
 <section class="section-signup">
   <div class="container">
-    <h3 class="text-xs-center m-b-3">Connectez-vous à l'espace IMAA</h3>
+    <h3 class="text-xs-center m-b-3">Connectez-vous à votre espace IMAA</h3>
     @auth
 
     @endauth
@@ -30,4 +30,4 @@
       </form>
     @endguest
   </div>
-</section>
+</section> 

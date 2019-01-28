@@ -50,7 +50,7 @@
 		          		<li>Planning décisionnel</li>
 		          		<li>Planning TCE détaillé</li>
 		          		<li>Lean construction (LPS/5S)</li>
-		          		<li>Point d'arret sur les jalons</li>
+		          		<li>Point d'arrêt sur les jalons</li>
 		          		<li>Pointage hebdomadaire des effectifs</li>
 		          	</ul>
 	          	</div>

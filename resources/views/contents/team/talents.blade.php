@@ -46,7 +46,7 @@
 	            </p>
 	          	<div class="card_block">
 	          		<ul>
-	          			<li>Suivre l’exécution de vos projets (Production /Qualité Environnement/ Sécurité)</li>
+	          			<li>Suivre l’exécution de vos projets (Production / Qualité Environnement / Sécurité)</li>
 	          			<li>Assurer le suivi économique de vos affaires</li>
 	          			<li>Gérer l’aspect juridique et contractuel de l’opération</li>
 	          			<li>Déployer une démarche Lean construction (LPS/5S…)</li>

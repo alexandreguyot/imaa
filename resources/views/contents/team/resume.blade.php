@@ -40,19 +40,12 @@
 						<li>6 ans au sein d’un major en entreprise générale sur Paris</li>
 						<li>12 ans au sein d’un major en entreprise générale sur Nantes et Angers</li>
 						<li>Dernier poste occupé : Directeur de travaux</li>
+						<li>2019 : création de la société IMAA</li>
 					</ul>
 	          	</div>		
 	            <p>
 	        		<img src="{{ URL::asset('images/banners/team.jpg') }}" class="banner">
-	            </p>
-	          	<div class="card_block">
-					<h3>Maxime CAMARA</h3>
-					<h4>Tél : 06 71 09 39 64 - <a href="mailto:contact@imaa.eu">contact@imaa.eu</a></h4>
-					<ul>
-						<li>9 ans au sein d’un major en entreprise générale sur	Nantes et Angers</li>
-						<li>Dernier poste occupé : Ingénieur principal chargé d’opérations</li>
-					</ul>
-	          	</div>		
+	            </p>	
           	</div>
           </div>
         </div>

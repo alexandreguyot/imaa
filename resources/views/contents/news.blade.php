@@ -32,13 +32,13 @@
 	        </div>
           </div>
           <div class="col-md-9">
-           <article>
+           <div class="article">
             <p>
-        		<img src="{{ URL::asset('images/banners/newspaper.jpg') }}" class="banner">
+        		<img src="{{ URL::asset('images/banners/newspaper.jpg') }}" class="banner"> 
             </p>
            	<h3>News 01</h3>
            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non arcu diam. Etiam pellentesque sem et urna commodo, varius tincidunt purus vulputate. Morbi ornare massa non nisi blandit pharetra. Donec id velit ultricies, euismod justo non, cursus purus. Ut sed odio ut justo auctor finibus sit amet non leo. Nam eget turpis quis augue vulputate aliquam non eget metus. Nunc vitae fermentum nisi, eget posuere est.</p>
-           </article>
+           </div>
           </div>
         </div>
       </div>
