@@ -56,7 +56,7 @@ body {
 			top: -5px;
 			> img {
 				position: absolute;
-				&:first-child {
+				&:first-child { 
 					width: 130px;
 					top: 80px;
 					left: 0;
@@ -272,6 +272,47 @@ body {
 					color: white;
 					font-style: italic;
 					line-height: 24px;
+					a {
+						color: white;
+					}
+					&.home {
+						position: relative;
+						margin: 0 auto 20px;
+						text-align: center;
+						white-space: nowrap;
+						overflow: hidden;
+					}
+					&.anim-typewriter{
+					  animation: typewriter 6s steps(80) 6s 1 normal both,
+					             blinkTextCursor 1s steps(80) infinite normal;
+					}
+					@keyframes typewriter{
+					  from{width: 0;}
+					  to{width: 890px;} 
+					}
+					@keyframes blinkTextCursor{
+					  from{border-right-color: rgba(255,255,255,.75);}
+					  to{border-right-color: transparent;}
+					}
+
+
+				}
+				@media (min-width: 900px) {
+					p {
+						&.rwd{
+							display: none;
+						}
+					}	
+				}
+				@media (max-width: 900px) {
+					p {
+						&.home{
+							display: none;
+						}
+						&.rwd{
+							display: block;
+						}
+					}	
 				}
 				ul {
 					padding: 0;
@@ -546,6 +587,9 @@ body {
 					}
 				}
 			}
+			a {
+				color: @lightblue;
+			}
 			ul {
 				margin: 20px 0 20px 20px;
 				padding: 0;
@@ -621,7 +665,6 @@ body {
 				text-align: center;
 				font-weight: 600;
 				color: @darkblue;
-				padding: 0 0 0;
 			}
 			h4 {
 				text-align: center;

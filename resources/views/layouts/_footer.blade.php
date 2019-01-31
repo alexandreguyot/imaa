@@ -17,7 +17,7 @@
       </div>
       <div class="col-md-12 col-lg-7">
         <ul class="nav nav-inline">
-          <li class="nav-item {{ active_check('home') }}"><a class="nav-link" href="{{ url('home') }}">Accueil</a></li>
+          <li class="nav-item {{ active_check('home') }}"><a class="nav-link" href="{{ url('/') }}">Accueil</a></li>
           <li class="nav-item {{ active_check('activites') }}"><a class="nav-link" href="{{ url('activites') }}">Activités</a></li>
           <li class="nav-item {{ active_check('equipe') }}"><a class="nav-link" href="{{ url('equipe') }}">L'équipe</a></li>
           <li class="nav-item {{ active_check('actualites') }}"><a class="nav-link" href="{{ url('actualites') }}" >Actualités</a></li>

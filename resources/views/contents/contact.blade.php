@@ -25,8 +25,9 @@
           <div class="col-md-3">
           <div class="sidebar">
 		      	<ul>
-		      		<li><a href="#">16 rue de la Maison Cochée<br>44880 Sautron </a></li>
-		      		<li><a href="#">Tél : 06 21 50 73 78</a></li>
+		      		<li><a href="#">44880 Sautron </a></li>
+              <li><a href="#">Tél : 06 21 50 73 78</a></li>
+		      		<li><a href="mailto:contact@imaa.eu">contact@imaa.eu</a></li>
 		      	</ul>
 	        </div>
           </div>

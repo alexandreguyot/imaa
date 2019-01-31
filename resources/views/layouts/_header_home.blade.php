@@ -1,22 +1,22 @@
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
-  <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp delay-3s">
+  <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp delay-2s">
    <div class="container">
-     <a class="navbar-brand home" href="{{ url('home') }}">
-       <img src="{{ URL::asset('images/logo/_ima.svg') }}" class="animated fadeInDown delay-4s">
-       <img src="{{ URL::asset('images/logo/_a.svg') }}" class="animated flipInX delay-6s">
-       <img src="{{ URL::asset('images/logo/_chevrons.svg') }}" class="animated fadeInUp delay-5s">
+     <a class="navbar-brand home" href="{{ url('/') }}">
+       <img src="{{ URL::asset('images/logo/_ima.svg') }}" class="animated fadeInDown delay-3s">
+       <img src="{{ URL::asset('images/logo/_a.svg') }}" class="animated flipInX delay-5s">
+       <img src="{{ URL::asset('images/logo/_chevrons.svg') }}" class="animated fadeInUp delay-4s">
      </a>
      <div id="collapsingNavbar" class="collapsingNavbar home" > 
        <ul class="nav navbar-nav pull-xs-right">
-         <li class="nav-item nav-item-toggable {{ active_check('home') }} ">
+         <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
            <div class="chevron">
-             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-7s">
+             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('home') }}">Accueil</a>
+           <a class="nav-link" href="{{ url('/') }}">Accueil</a>
          </li> 
          <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
            <div class="chevron">
-             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-7s">
+             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
            <a class="nav-link" href="{{ url('activites') }}">Activités</a>
            <ul>
@@ -27,7 +27,7 @@
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('equipe') }}">
            <div class="chevron">
-             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-7s">
+             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
            <a class="nav-link" href="{{ url('equipe') }}">L'équipe</a>
            <ul>
@@ -38,11 +38,11 @@
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('actualites') }}">
            <div class="chevron">
-             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-7s">
+             <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
            <a class="nav-link" href="{{ url('actualites') }}">Actualités</a> 
          </li>
-         <li class="nav-item dropdown hidden-sm-down textselect-off">
+         <!-- <li class="nav-item dropdown hidden-sm-down textselect-off">
            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
            </a>
@@ -60,7 +60,7 @@
              <a href="#" class="dropdown-item text-uppercase">Boite à plans</a>
              <a href="#" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
            </div>
-         </li>
+         </li> -->
        </ul>
      </div>
      <div class="nav-bar-active">

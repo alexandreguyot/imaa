@@ -16,7 +16,7 @@
 				<h1 class="animated fadeInDown">Secteur géograghique</h1>
 				<p class="animated fadeInUp"><small>Bretagne / Pays de la Loire / Aquitaine / Paris</small></p>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('home') }}">Accueil</a></li>
+					<li><a href="{{ url('/') }}">Accueil</a></li>
 					<li><a href="{{ url('activites') }}">Activités</a></li>
 					<li>Secteur géograghique</li>
 				</ul>

@@ -16,7 +16,7 @@
 				<h1 class="animated fadeInDown">Présentation</h1>
 				<p class="animated fadeInUp"><small>2 Ingénieurs de formation ESTP Cachan - ENISE/CENTRALE, guidés par<br/> la volonté d’une réussite partagée dans l’acte de construire.</small></p>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('home') }}">Accueil</a></li>
+					<li><a href="{{ url('/') }}">Accueil</a></li>
 					<li><a href="{{ url('equipe') }}">L'équipe</a></li>
 					<li>Présentation</li>
 				</ul>

@@ -16,7 +16,7 @@
 				<h1 class="animated fadeInDown">Nos domaines</h1>
 				<p class="animated fadeInUp"><small>Intervention dans le cadre de marchés publics et privés</small></p>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('home') }}">Accueil</a></li>
+					<li><a href="{{ url('/') }}">Accueil</a></li>
 					<li><a href="{{ url('activites') }}">Activités</a></li>
 					<li>Nos domaines</li>
 				</ul>

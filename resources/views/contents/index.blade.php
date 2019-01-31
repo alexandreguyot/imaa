@@ -15,17 +15,19 @@
 	================================================== --> 
 	<header class="">
 		<div class="container-header animated fadeIn" style="background-image: url({{ URL::asset('images/bg-header.jpg') }});">
-			<div class="info-center animated fadeIn  delay-1s">
+			<div class="home info-center animated fadeIn  delay-1s">
 				<h1 class="animated fadeInUp delay-1s">Ingénierie Management d'Affaires Associés</h1>
-				<p class="animated fadeInDown delay-2s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
-        <a class="animated fadeInDown delay-3s btn btn-primay" href="#edito" role="button">L'édito <i class="fas fa-angle-down"></i></a>
+        <p class="home anim-typewriter animated fadeInDown delay-7s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
+				<p class="rwd animated fadeInDown delay-7s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
+        <a class="animated fadeInDown delay-2s btn btn-primay" href="#edito" role="button">L'édito <i class="fas fa-angle-down"></i></a>
 			</div>
 		</div>
     @include('layouts._social_home')
 	</header>
 
-	<!-- Edito Section
-	================================================== --> 
+	
+  <!-- Edito Section
+  ================================================== --> 
     <section id="edito" class="section-edito">
       <div class="container">
         <div class="row ">
@@ -59,7 +61,7 @@
         </div>
       </div>
     </section>
-	<section class="section-edito bg-darkblue">
+  <section class="section-edito bg-darkblue">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -92,6 +94,7 @@
         </div>
       </div>
     </section>
+
 
 
 @stop

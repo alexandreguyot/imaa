@@ -14,6 +14,7 @@
 		<div class="container-header" style="background-image: url({{ URL::asset('images/bg-contact.jpg') }});">
 			<div class="info-center">
 				<h1 class="animated fadeInDown">Actualites</h1>
+        <p class="animated fadeInUp"><a href="https://fr.linkedin.com/in/guillaume-coeurderoy-158aa3a2" target="_Blank"><small>Retrouvez IMAA sur linkedin</small></a></p>
 			</div>
 		</div>
 		@include('layouts._social')
@@ -25,9 +26,7 @@
           <div class="col-md-3">
           <div class="sidebar">
 		      	<ul>
-		      		<li><a href="#">News #01</a></li>
-		      		<li><a href="#">News #02</a></li>
-		      		<li><a href="#">News #03</a></li>
+		      		<li><a href="#">01/02/2019</a></li>
 		      	</ul>
 	        </div>
           </div>
@@ -36,8 +35,9 @@
             <p>
         		<img src="{{ URL::asset('images/banners/newspaper.jpg') }}" class="banner"> 
             </p>
-           	<h3>News 01</h3>
-           	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non arcu diam. Etiam pellentesque sem et urna commodo, varius tincidunt purus vulputate. Morbi ornare massa non nisi blandit pharetra. Donec id velit ultricies, euismod justo non, cursus purus. Ut sed odio ut justo auctor finibus sit amet non leo. Nam eget turpis quis augue vulputate aliquam non eget metus. Nunc vitae fermentum nisi, eget posuere est.</p>
+           	<h3>01/02/2019</h3>
+           	<p>Lancement du site internet www.imaa.eu. A travers les rubriques du site, découvrez nos services et notre savoir faire.</p>
+            <p>Pour plus d'informations, contactez-nous via notre <a href="{{ url('contact') }}">page contact</a></p>
            </div>
           </div>
         </div>

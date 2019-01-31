@@ -1,13 +1,13 @@
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp ">
    <div class="container">
-     <a class="navbar-brand" href="{{ url('home') }}">
+     <a class="navbar-brand" href="{{ url('/') }}">
        <img src="{{ URL::asset('images/logo_imaa.png') }}">
        <span class="sr-only">IMAA</span>
      </a> 
      <div id="collapsingNavbar" class="collapsingNavbar" >
        <ul class="nav navbar-nav pull-xs-right">
          <li class="nav-item nav-item-toggable {{ active_check('home') }} ">
-           <a class="nav-link" href="{{ url('home') }}">Accueil</a>
+           <a class="nav-link" href="{{ url('/') }}">Accueil</a>
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-1s">
            </div>
@@ -40,7 +40,7 @@
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-1s">
            </div>
          </li>
-         <li class="nav-item dropdown hidden-sm-down textselect-off">
+         <!-- <li class="nav-item dropdown hidden-sm-down textselect-off">
            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
            </a>
@@ -58,7 +58,7 @@
              <a href="#" class="dropdown-item text-uppercase">Boite à plans</a>
              <a href="#" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
            </div>
-         </li>
+         </li> -->
        </ul>
      </div>
      <div class="nav-bar-active">

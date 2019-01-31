@@ -1,6 +1,7 @@
 <section class="section-signup">
   <div class="container">
     <h3 class="text-xs-center m-b-3">Connectez-vous à votre espace IMAA</h3>
+    <h4 class="text-xs-center m-b-3">Prochainement disponible</h4>
     @auth
 
     @endauth
