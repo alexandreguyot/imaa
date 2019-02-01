@@ -42,12 +42,12 @@
             <div class="card_block">
              <h3>Missions de Maitrise d'Oeuvre Exécution</h3>
              <ul>
-              <li>ACT<br/>Assistance au Maitre d'Ouvrage pour la passation des contrats de travaux</li>
+              <li>ACT<br/>Assistance au Maitre d'Ouvrage pour la passation des Contrats de Travaux</li>
               <li>VISA<br/>Visas des études d'exécution</li>
               <li>DET<br/>Direction de l'Exécution des contrats de Travaux</li>
               <li>AOR<br/>Assistance lors des Opérations de Réception</li>
              </ul>   
-            </div>
+            </div> 
             <div class="card_block">
               <h3>Missions Ordonnancement Pilotage Coordination</h3>
             </div>

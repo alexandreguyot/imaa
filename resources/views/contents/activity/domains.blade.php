@@ -37,7 +37,7 @@
 						<li>Accession</li>
 						<li>Social</li>
 						<li>Réhabilitation</li>
-						<li>Résidences de tourisme / hotellerie / seniors / étudiantes</li>
+						<li>Résidences de tourisme / hôtellerie / seniors / étudiantes</li>
 					</ul>
 	          	</div>		
 	            <p>
