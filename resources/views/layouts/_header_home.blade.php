@@ -12,7 +12,7 @@
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('/') }}">Accueil</a>
+           <a class="nav-link" href="{{ url('/accueil') }}">Accueil</a>
          </li> 
          <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
            <div class="chevron">

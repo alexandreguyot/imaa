@@ -7,7 +7,7 @@
      <div id="collapsingNavbar" class="collapsingNavbar" >
        <ul class="nav navbar-nav pull-xs-right">
          <li class="nav-item nav-item-toggable {{ active_check('home') }} ">
-           <a class="nav-link" href="{{ url('/') }}">Accueil</a>
+           <a class="nav-link" href="{{ url('/accueil') }}">Accueil</a>
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-1s">
            </div>

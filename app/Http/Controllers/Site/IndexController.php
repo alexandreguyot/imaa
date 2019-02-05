@@ -11,4 +11,9 @@ class IndexController extends Controller
     {
     	return view('contents.index');
     }
+    public function home()
+    {
+    	return view('contents.index-home');
+    }
 }
+

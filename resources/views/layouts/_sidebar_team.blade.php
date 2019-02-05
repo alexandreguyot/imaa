@@ -1,6 +1,6 @@
 <div class="sidebar ">
 	<ul>
-		<li class="{{ active_check('home') }}"><a href="{{ url('/') }}">Accueil</a></li>
+		<li class="{{ active_check('home') }}"><a href="{{ url('/accueil') }}">Accueil</a></li>
 		<li class="{{ active_check('activites') }}"><a href="{{ url('activites') }}">Activités</a></li>
 		<li class="{{ active_check('equipe') }}">
 			<a href="{{ url('equipe') }}">L'équipe</a>

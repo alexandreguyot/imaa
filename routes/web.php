@@ -6,6 +6,7 @@
 
 Route::namespace('Site')->group(function () {
     Route::get('/', ['name' => 'home', 'uses' => 'IndexController@index']);
+    Route::get('/accueil', ['name' => 'accueil', 'uses' => 'IndexController@Home']);
     Route::get('/activites', ['name' => 'activites', 'uses' => 'ActivityController@index']);
     Route::get('/activites/nos-domaines', ['name' => 'activites.nos-domaines', 'uses' => 'ActivityController@domains']);
     Route::get('/activites/nos-missions', ['name' => 'activites.nos-missions', 'uses' => 'ActivityController@missions']);

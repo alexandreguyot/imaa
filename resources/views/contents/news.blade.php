@@ -14,7 +14,7 @@
 		<div class="container-header" style="background-image: url({{ URL::asset('images/bg-contact.jpg') }});">
 			<div class="info-center">
 				<h1 class="animated fadeInDown">Actualites</h1>
-        <p class="animated fadeInUp"><a href="https://fr.linkedin.com/in/guillaume-coeurderoy-158aa3a2" target="_Blank"><small>Retrouvez IMAA sur linkedin</small></a></p>
+        <p class="animated fadeInUp"><a href="#"><small>Retrouvez IMAA sur linkedin</small></a></p>
 			</div>
 		</div>
 		@include('layouts._social')
@@ -36,8 +36,9 @@
         		<img src="{{ URL::asset('images/banners/newspaper.jpg') }}" class="banner"> 
             </p>
            	<h3>01/02/2019</h3>
-           	<p>Lancement du site internet www.imaa.eu. A travers les rubriques du site, découvrez nos services et notre savoir faire.</p>
-            <p>Pour plus d'informations, contactez-nous via notre <a href="{{ url('contact') }}">page contact</a></p>
+           	<p>Le lancement du site internet d'une entreprise est un moment important comportant sa part d'inconnu sur la façon dont il va être perçu mais surtout actant le démarrage d'une structure que nous souhaitons avant tout à votre écoute et novatrice dans la façon d'aborder la collaboration entre les différents acteurs de la construction. </p>
+            <p>IMAA est le fruit d'une réflexion terrain sur ce qui fonctionne mais aussi sur ce qui ne fonctionne plus. Nous souhaitons la mettre en œuvre à vos côtés afin que votre satisfaction soit notre atout pour le futur. Les métiers de la construction évoluent, les acteurs ne sont plus les mêmes, leurs attentes s'aiguisent; nous en sommes tous témoins chaque jour. 
+            <p>Il est donc important d'accompagner ces changements et de nous adapter en travaillant mieux mais surtout ensemble. Nous vous laissons appréhender ce qui nous anime au travers de notre EDITO, des différentes rubriques du site et vous laissons découvrir nos services et notre savoir-faire….. </p>
            </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
 			<div class="info-center">
 				<h1 class="animated fadeInDown">Présentation</h1>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('/') }}">Accueil</a></li>
+					<li><a href="{{ url('/accueil') }}">Accueil</a></li>
 					<li><a href="{{ url('equipe') }}">L'équipe</a></li>
 					<li>Présentation</li>
 				</ul>
@@ -32,9 +32,8 @@
           	<div class="article">
 	          	<div class="card_block">
 	      			<h3>Guillaume COEURDEROY</h3>
-	      			<h4>Tél : 06 21 50 73 78 - <a href="mailto:contact@imaa.eu">contact@imaa.eu</a></h4>
+	      			<h4><a href="mailto:contact@imaa.eu">contact@imaa.eu</a></h4>
 					<ul>
-						
 						<li>2 ans dans un cabinet de maitrise d’oeuvre OPC en chargé d’opérations sur Paris</li>
 						<li>6 ans au sein d’un major en entreprise générale sur Paris</li>
 						<li>12 ans au sein d’un major en entreprise générale sur Nantes et Angers</li>

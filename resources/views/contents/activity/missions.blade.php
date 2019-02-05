@@ -15,7 +15,7 @@
 			<div class="info-center">
 				<h1 class="animated fadeInDown">Nos missions</h1>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('/') }}">Accueil</a></li>
+					<li><a href="{{ url('/accueil') }}">Accueil</a></li>
 					<li><a href="{{ url('activites') }}">Activités</a></li>
 					<li>Nos missions</li>
 				</ul>
