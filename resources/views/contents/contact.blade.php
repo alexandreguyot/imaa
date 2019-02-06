@@ -31,36 +31,36 @@
 	        </div>
           </div>
           <div class="col-md-9">
-           <form>
+           <form class="" action="sendMail.php" id="form_contact" method="POST">
              <div class="row">
                <div class="col-md-6 col-xl-6">
                  <div class="form-group ">
                    <label class="sr-only" for="inputEmail">Nom</label>
-                   <input type="text" class="form-control form-control-lg" id="inputEmail" placeholder="Nom *" autocomplete="off">
+                   <input type="text" name="name" class="form-control form-control-lg" id="name" placeholder="Nom *" autocomplete="off">
                  </div>
                </div>
                <div class="col-md-6 col-xl-6">
                  <div class="form-group ">
                    <label class="sr-only" for="inputEmail">Prénom</label>
-                   <input type="text" class="form-control form-control-lg" id="inputEmail" placeholder="Prénom *" autocomplete="off">
+                   <input type="text" name="surname" class="form-control form-control-lg" id="surname" placeholder="Prénom *" autocomplete="off">
                  </div>
                </div>
                <div class="col-md-6 col-xl-6">
                  <div class="form-group ">
                    <label class="sr-only" for="inputEmail">Adresse e-mail</label>
-                   <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="Adresse e-mail *" autocomplete="off">
+                   <input type="email" name="email" class="form-control form-control-lg" id="email" placeholder="Adresse e-mail *" autocomplete="off">
                  </div>
                </div>
                <div class="col-md-6 col-xl-6">
                  <div class="form-group ">
                    <label class="sr-only" for="inputEmail">Téléphone</label>
-                   <input type="text" class="form-control form-control-lg" id="inputEmail" placeholder="Téléphone" autocomplete="off">
+                   <input type="text" name="telephone" class="form-control form-control-lg" id="telephone" placeholder="Téléphone" autocomplete="off">
                  </div>
                </div>
                <div class="col-md-6 col-xl-12">
                  <div class="form-group ">
                    <label class="sr-only" for="inputPassword">Message</label>
-                   <textarea class="form-control form-control-lg" placeholder="Message"></textarea>
+                   <textarea name="message" class="form-control form-control-lg" placeholder="Message"></textarea>
                  </div>
                </div>
                <div class="col-md-6 col-xl-3">
@@ -69,10 +69,6 @@
                  </div>
                </div>
              </div>
-             <!-- <label class="c-input c-checkbox">
-               <input type="checkbox" checked>
-               <span class="c-indicator"></span> J'ai oublié mon <a href="#">mot de passe</a>
-             </label> -->
            </form>
           </div>
         </div>

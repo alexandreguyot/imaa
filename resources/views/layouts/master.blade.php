@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
         <link rel="stylesheet/less" type="text/css" href="{{ URL::asset('web/less/styles.less') }}" />
 
 		@yield('styles')
