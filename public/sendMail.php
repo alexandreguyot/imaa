@@ -11,7 +11,7 @@ if(!empty($_POST["g-recaptcha-response"]))
 
 }
   else
-{
+{ 
     Redirect('http://www.preprod.imaa.eu', false);
 }
 	function Redirect($url, $permanent = false)
