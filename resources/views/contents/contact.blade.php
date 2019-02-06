@@ -41,7 +41,7 @@
                </div>
                <div class="col-md-6 col-xl-6">
                  <div class="form-group ">
-                   <label class="sr-only" for="inputEmail">Prénom</label>
+                   <label class="sr-only" for="inputEmail">Prénom</label> 
                    <input type="text" name="surname" class="form-control form-control-lg" id="surname" placeholder="Prénom *" autocomplete="off">
                  </div>
                </div>
@@ -61,11 +61,6 @@
                  <div class="form-group ">
                    <label class="sr-only" for="inputPassword">Message</label>
                    <textarea name="message" class="form-control form-control-lg" placeholder="Message"></textarea>
-                 </div>
-               </div>
-               <div class="col-md-6 col-xl-8">
-                 <div class="form-group">
-                   <div class="g-recaptcha" data-sitekey="6LdQq48UAAAAAIYSxf1bgqL5B-BU69e17zWWHSe4"></div>
                  </div>
                </div>
                <div class="col-md-6 col-xl-3">
