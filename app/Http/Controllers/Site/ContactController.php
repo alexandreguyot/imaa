@@ -11,5 +11,9 @@ class ContactController extends Controller
     {
     	return view('contents.contact');
     }
+    public function Confirmation()
+    {
+    	return view('contents.contact-confirmation');
+    }
     
 }

@@ -17,6 +17,7 @@ Route::namespace('Site')->group(function () {
     Route::get('/equipe/ce-qui-nous-differencie', ['name' => 'equipe.ce-qui-nous-differencie', 'uses' => 'TeamController@difference']);
     Route::get('/actualites', ['name' => 'actualites', 'uses' => 'NewsController@index']);
     Route::get('/contact', ['name' => 'contact', 'uses' => 'ContactController@index']);
+    Route::get('/contact/confirmation', ['name' => 'contact-confirmation', 'uses' => 'ContactController@Confirmation']);
 });
 
 
