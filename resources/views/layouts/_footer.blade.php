@@ -11,7 +11,7 @@
           </div>
           <small class="media-body media-bottom">
             &copy; IMAA 2019 - Tous droits réservés - <a class="nav-item {{ active_check('mentions-legales') }}" href="{{ url('mentions-legales') }}" >Mentions légales</a><br>
-            16 rue de la Maison Cochée, 44880 Sautron - 06 21 50 73 78
+           44880 Sautron
             </small>
         </div> 
       </div>

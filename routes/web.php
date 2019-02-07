@@ -18,6 +18,7 @@ Route::namespace('Site')->group(function () {
     Route::get('/actualites', ['name' => 'actualites', 'uses' => 'NewsController@index']);
     Route::get('/contact', ['name' => 'contact', 'uses' => 'ContactController@index']);
     Route::get('/contact/confirmation', ['name' => 'contact-confirmation', 'uses' => 'ContactController@Confirmation']);
+Route::get('/mentions-legales', ['name' => 'mentions-legales', 'uses' => 'LegalesController@Index']);
 });
 
 
@@ -32,7 +33,6 @@ Auth::routes();
 Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'DashboardController@index', 'middleware' => 'auth']);
 
 
-Route::get('/mentions-legales', ['name' => 'mentions-legales', 'uses' => 'LegalesController@Index']);
 
 /*
  * Route pour l'ERP
