@@ -26,7 +26,7 @@
           <div class="col-md-3">
           <div class="sidebar">
 		      	<ul>
-		      		<li><a href="#">01/02/2019</a></li>
+		      		<li><a href="#">07/02/2019</a></li>
 		      	</ul>
 	        </div>
           </div>
@@ -35,7 +35,7 @@
             <p>
         		<img src="{{ URL::asset('images/banners/newspaper.jpg') }}" class="banner"> 
             </p>
-           	<h3>01/02/2019</h3>
+           	<h3>07/02/2019</h3>
            	<p>Le lancement du site internet d'une entreprise est un moment important comportant sa part d'inconnu sur la façon dont il va être perçu mais surtout actant le démarrage d'une structure que nous souhaitons avant tout à votre écoute et novatrice dans la façon d'aborder la collaboration entre les différents acteurs de la construction. </p>
             <p>IMAA est le fruit d'une réflexion terrain sur ce qui fonctionne mais aussi sur ce qui ne fonctionne plus. Nous souhaitons la mettre en œuvre à vos côtés afin que votre satisfaction soit notre atout pour le futur. Les métiers de la construction évoluent, les acteurs ne sont plus les mêmes, leurs attentes s'aiguisent; nous en sommes tous témoins chaque jour. 
             <p>Il est donc important d'accompagner ces changements et de nous adapter en travaillant mieux mais surtout ensemble. Nous vous laissons appréhender ce qui nous anime au travers de notre EDITO, des différentes rubriques du site et vous laissons découvrir nos services et notre savoir-faire….. </p>

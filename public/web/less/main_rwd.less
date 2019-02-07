@@ -18,7 +18,30 @@ body {
 		nav.navbar  {
 			a.navbar-brand {
 				&.home {
-					top: 35px;
+					top: 15px;
+					left: 15px;
+					> img {
+						&:first-child {
+							width: 110px;
+						    top: 78px;
+						    left: 0;
+						    height: 70px;
+						}
+						&:nth-child(2) {
+							width: 40px;
+							top: 102px;
+							left: 108px;
+							height: 50px;
+						}
+						&:nth-child(3) {
+							width: 65px;
+							top: 30px;
+							left: 130px;
+						}
+					}
+				}
+				img {
+					max-width: 260px;
 				}
 			}
 			ul {
@@ -38,9 +61,9 @@ body {
 						height: 100vh;
 						width: 100%;
 						background-color: @darkblue;
-						padding: 30%;
+						padding: 16%;
 						> li {
-							padding: 30px 25px;
+							padding: 25px;
 							> a {
 								font-size: 30px;
 							}
@@ -77,8 +100,8 @@ body {
 			div.nav-bar-active {
 				z-index: 999;
 				position: absolute;
-				right: 60px;
-				top: 100px;
+				right: 40px;
+				top: 70px;
 				i {
 					font-size: 40px;
 					color: white;
@@ -96,12 +119,15 @@ body {
 			height: 80vh;
 			.container-header {
 				div.info-center {
-					h1 {
-						font-size: 32px;
+					h1 { 
+						font-size: 22px;
+						margin: 50px 0 20px;
 					}
 					p {
-						font-size: 20px;
-						line-height: 26px;
+						font-size: 16px;
+						line-height: 22px;
+						font-weight: 300;
+						margin: 20px 0;
 					}
 					ul {
 						li {
@@ -110,19 +136,31 @@ body {
 						}
 					}
 					a.btn {
-						display: none;
+						display: none; 
 					}
 				}
 			}
 			.social-share {
-				top: 65vh;
+				top: 67vh;
 				flex-direction: column;
 				li {
 					text-align: center;
+					a {
+						padding: 0 0 5px;
+						font-size: 14px;
+					}
 					&:first-child {
 						&:after {
 							display: none;
 						}
+					}
+				}
+			}
+			&.header-small {
+				height: 60vh;
+				div.info-center {
+					p {
+						margin: 35px 0 0;
 					}
 				}
 			}
@@ -195,10 +233,14 @@ body {
 					}
 					&:last-child {
 						margin: 0;
+						a {
+							box-shadow: none;
+						}
 					}
 					&.active {
 						box-shadow: none;
 						a {
+							box-shadow: none;
 							color: @lightblue;
 						}
 					}
