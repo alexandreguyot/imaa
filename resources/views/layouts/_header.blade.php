@@ -1,6 +1,6 @@
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp ">
    <div class="container">
-     <a class="navbar-brand" href="{{ url('/') }}">
+     <a class="navbar-brand" href="{{ url('/accueil') }}">
        <img src="{{ URL::asset('images/logo_imaa.png') }}">
        <span class="sr-only">IMAA</span>
      </a> 

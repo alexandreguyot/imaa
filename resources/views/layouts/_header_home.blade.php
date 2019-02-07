@@ -1,7 +1,7 @@
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp delay-2s">
    <div class="container">
-     <a class="navbar-brand home" href="{{ url('/') }}">
+     <a class="navbar-brand home" href="{{ url('/accueil') }}">
        <img src="{{ URL::asset('images/logo/_ima.svg') }}" class="animated fadeInDown delay-3s">
        <img src="{{ URL::asset('images/logo/_a.svg') }}" class="animated flipInX delay-5s">
        <img src="{{ URL::asset('images/logo/_chevrons.svg') }}" class="animated fadeInUp delay-4s">
