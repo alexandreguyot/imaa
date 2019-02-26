@@ -9,6 +9,6 @@ use Illuminate\Support\Facades\View;
 class WelcomeController extends Controller
 {
     function index() {
-        return view('contents.index-home');
+        return view('contents.erp.index');
     }
 }

@@ -35,7 +35,7 @@ Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'Dashboard
 
 
 /*
- * Route pour l'ERP
+ * Route pour l'ERP 
  * */
 
 //Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
