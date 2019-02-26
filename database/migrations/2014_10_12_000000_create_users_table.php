@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('telephone');
             $table->string('entreprise');
             $table->string('logo');
-            $table->enum('Administrateur', 'Client');
+            $table->enum('role', ['Administrateur', 'Client']);
             $table->rememberToken();
             $table->timestamps();
         });
