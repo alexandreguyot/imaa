@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'lastname' => 'Admin',
             'firstname' => 'Admin',
             'email' => 'admin@admin.com',
-            'password' => 'admin', // secret
+            'password' => bcrypt('admin'), // secret
             'remember_token' => str_random(10),
             'telephone' => '0606060606',
             'entreprise' => 'Admin',
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
             'lastname' => 'Essaie',
             'firstname' => 'Essaie',
             'email' => 'essaie@essaie.com',
-            'password' => 'essaie', // secret
+            'password' => bcrypt('essaie'), // secret
             'remember_token' => str_random(10),
             'telephone' => '0202020202',
             'entreprise' => 'ESSAIE',
