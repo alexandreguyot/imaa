@@ -37,11 +37,20 @@ Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'Dashboard
 /*
  * Route pour l'ERP
  * */
-Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
-    Route::middleware('admin')->prefix('admin')->group(function () {
-        Route::get('creation-projet/{$id}', ['name' => 'erp.get.create-project', 'uses' => 'ProjectController@index']);
-        Route::post('post-creation-projet', ['name' => 'erp.post.create-project', 'uses' =>'ProjectController@create']);
-        Route::put('edition-projet', ['name' => 'erp.put.edit-project', 'uses' => 'ProjectController@edit']);
-        Route::delete('suppression-projet', ['name' => 'erp.delete.delete-project','uses' => 'ProjectController@delete']);
-    });
+
+//Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
+//Route::middleware('admin')->prefix('admin')->group(function () {
+
+Route::namespace('ERP')->prefix('erp')->group(function () {
+    Route::get('/', ['name' => 'erp.welcome', 'uses' => 'WelcomeController@index']);
+
+    Route::get('creation-projet/{$id}', ['name' => 'erp.get.create-project', 'uses' => 'ProjectController@index']);
+    Route::post('post-creation-projet', ['name' => 'erp.post.create-project', 'uses' =>'ProjectController@create']);
+    Route::put('edition-projet', ['name' => 'erp.put.edit-project', 'uses' => 'ProjectController@edit']);
+    Route::delete('suppression-projet', ['name' => 'erp.delete.delete-project','uses' => 'ProjectController@delete']);
+
+    Route::get('creation-utilisateur/{$id}', ['name' => 'erp.get.create-user', 'uses' => 'UserController@index']);
+    Route::post('post-creation-utilisateur', ['name' => 'erp.post.create-user', 'uses' =>'UserController@create']);
+    Route::put('edition-utilisateur', ['name' => 'erp.put.edit-user', 'uses' => 'UserController@edit']);
+    Route::delete('suppression-utilisateur', ['name' => 'erp.delete.delete-user','uses' => 'UserController@delete']);
 });

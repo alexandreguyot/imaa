@@ -15,6 +15,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
+        dd('coucou');
         return $next($request);
     }
 }
