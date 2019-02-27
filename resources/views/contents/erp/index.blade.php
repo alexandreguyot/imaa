@@ -9,7 +9,7 @@
 @section('content')
 	<div class="app animated fadeInUp ">
 		<div class="projects">
-			<div class="projectList">
+			<div class="projectList animated fadeIn delay-02s">
 				<ul>
 					<li class="active">
 						<a href="#">
@@ -31,14 +31,14 @@
 					</li>
 				</ul>
 			</div>
-			<div class="mounth">
+			<div class="mounth animated fadeIn delay-06s">
 				<ul class="tabs">
 					<li class="tab-link current" data-tab="tab-1"><a href="#">Février <i class="fas fa-angle-right"></i></a></li>
 					<li class="tab-link" data-tab="tab-2"><a href="#">Janvier<i class="fas fa-angle-right"></i></a></li>
 					<li class="tab-link" data-tab="tab-3"><a href="#">Décembre<i class="fas fa-angle-right"></i></a></li>
 				</ul>
 			</div>
-			<div class="tabs-container">
+			<div class="tabs-container animated fadeIn delay-04s">
 				<div id="tab-1" class="tab-content current">
 					<div class="dashboard">
 						<div class="banner">
