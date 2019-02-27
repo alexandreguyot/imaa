@@ -1,8 +1,8 @@
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp ">
-   <!-- <a class="navbar-brand home" href="{{ url('/accueil') }}">
-     <img src="{{ URL::asset('images/logo_imaa.png') }}" class="animated fadeInDown ">
-   </a> -->
+   <a class="" href="{{ url('/accueil') }}">
+     <img src="{{ URL::asset('images/erp/logo_imaa.png') }}" class="animated fadeInDown ">
+   </a>
    <div id="collapsingNavbar" class="collapsingNavbar " > 
      <ul class="nav navbar-nav pull-xs-right">
        <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
