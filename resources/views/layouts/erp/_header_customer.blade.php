@@ -34,5 +34,5 @@
    </div>
    <div class="nav-bar-active">
      <i class="fas fa-bars"></i>
-   </div>
+   </div> 
  </nav>

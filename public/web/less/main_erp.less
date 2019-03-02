@@ -39,6 +39,9 @@ body {
 				display: flex;
 			    width: 100%;
 			    height: 100vh;
+			    &.admin {
+			    	flex-direction: column;
+			    }
 				div.projects {
 					display: flex;
 					flex-direction: row;
@@ -67,17 +70,19 @@ body {
 							ul {
 								width: 100%;
 								li {
-									padding: 40px;
+									padding: 0;
 									line-height: 20px;
 									width: 100%;
 									float: left; 
 									border-bottom: 1px solid rgba(255,255,255,0.2);
 									a {
+										padding: 40px;
 										color: white;
 										text-transform: uppercase;
 										font-size: 18px;
 										letter-spacing: 2px;
 										font-weight: 600;
+										float: left; 
 										opacity: 0.5;
 										span {
 											padding: 10px 0 0; 
@@ -180,8 +185,10 @@ body {
 								position: absolute;
 								left: 0;
 								top: 0;
+								z-index: 0;
 								&.current {
 									opacity: 1;
+									z-index: 1;
 								}
 							}
 							div.banner {
@@ -299,6 +306,48 @@ body {
 									margin: 0 0 30px;
 								}
 							}
+						}
+					}
+				}
+				&.admin {
+					div.head {
+						background-color: @lightblue;
+						padding: 50px 0;
+						margin: 0 0 50px;
+						h3 {
+							color: white; 
+							margin: 0;
+						}
+						button {
+							float: right;
+							border: 1px solid rgba(255,255,255,0.5);
+							&:hover {
+								border-color: rgba(255,225,255,0); 
+							}
+						}
+					}
+					> div {
+						width: 100%;
+					}
+					table {
+						td,
+						th {
+							line-height: 45px;
+						}
+						button {
+							float: right;
+						}
+					}
+					button {
+						border-radius: 5px;
+						padding: 7px 15px;
+						margin: 0 0 0 15px;
+						text-transform: inherit;
+						&.btn-secondary {
+							background-color: #37525b;
+						}
+						&.btn-danger {
+							background-color: #dc3545;
 						}
 					}
 				}

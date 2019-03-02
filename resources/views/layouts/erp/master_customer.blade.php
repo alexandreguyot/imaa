@@ -23,7 +23,7 @@
     </head>
     <body class="erp">
         <div class="animated fadeIn">
-            @include('layouts.erp._header_home')
+            @include('layouts.erp._header_customer')
             @yield('content') 
         </div>
 

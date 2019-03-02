@@ -1,5 +1,5 @@
  <!-- On définit la vue principale -->
-@extends('layouts.erp.master')
+@extends('layouts.erp.master_customer')
 @section('description')
     <!-- Meta description de la page -->
     <title>IMAA - Ingénierie Management d'Affaires Associés - Accueil</title>
@@ -12,19 +12,19 @@
 			<div class="projectList animated fadeIn delay-02s">
 				<ul>
 					<li class="active">
-						<a href="#">
+						<a href="projet-1">
 							Domaine des Pins
 							<span>Noirmoutier - 2016/2017</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="projet-2">
 							Î-Link
 							<span>Nantes - 2016/2019</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="projet-3">
 							Résidence Sociale / LES FONDERIES
 							<span>Nantes - 2015/2017</span>
 						</a>
