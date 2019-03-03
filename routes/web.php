@@ -30,14 +30,29 @@ Route::post('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 //Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'DashboardController@index', 'middleware' => 'auth']);
 
 /*
- * Route pour l'ERP
+ * Route pour l'ERP 
  * */
 
 //Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
 //Route::middleware('admin')->prefix('admin')->group(function () {
 
 Route::namespace('ERP')->prefix('erp')->group(function () {
-    Route::get('/', ['uses' => 'WelcomeController@index'])->name('erp.welcome');
+
+    // Routes de merde par Guigui
+
+    Route::get('/projet-1', ['uses' => 'WelcomeController@projet_1'])->name('erp.projet-1');
+    Route::get('/projet-2', ['uses' => 'WelcomeController@projet_2'])->name('erp.projet-2');
+    Route::get('/projet-3', ['uses' => 'WelcomeController@projet_3'])->name('erp.projet-3');
+    
+    // Projets    
+    Route::get('/projets', ['uses' => 'ProjectsController@Index'])->name('erp.projets-index');
+    Route::get('/projets/creation', ['uses' => 'ProjectsController@Creation'])->name('erp.projet-creation');
+    Route::get('/projets/modification', ['uses' => 'ProjectsController@Modification'])->name('erp.projet-modification');    
+
+    // Projets    
+    Route::get('/clients', ['uses' => 'ClientsController@Index'])->name('erp.clients-index');
+    Route::get('/clients/creation', ['uses' => 'ClientsController@Creation'])->name('erp.clients-creation');
+    Route::get('/clients/modification', ['uses' => 'ClientsController@Modification'])->name('erp.clients-modification');
 
     Route::get('creation-projet/{$id}', ['uses' => 'ProjectController@index'])->name('erp.get.create-project');
     Route::post('post-creation-projet', ['uses' =>'ProjectController@create'])->name('erp.post.create-project');
