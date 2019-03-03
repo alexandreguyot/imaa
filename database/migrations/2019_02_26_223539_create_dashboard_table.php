@@ -16,7 +16,7 @@ class CreateDashboardTable extends Migration
         Schema::create('dashboard', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('mois', ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre']);
-            
+            $table->integer('project_id');
             $table->timestamps();
         });
     }

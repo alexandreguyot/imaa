@@ -39,7 +39,6 @@ Route::post('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 Route::namespace('ERP')->prefix('erp')->group(function () {
 
     // Routes de merde par Guigui
-
     Route::get('/projet-1', ['uses' => 'WelcomeController@projet_1'])->name('erp.projet-1');
     Route::get('/projet-2', ['uses' => 'WelcomeController@projet_2'])->name('erp.projet-2');
     Route::get('/projet-3', ['uses' => 'WelcomeController@projet_3'])->name('erp.projet-3');
@@ -49,18 +48,22 @@ Route::namespace('ERP')->prefix('erp')->group(function () {
     Route::get('/projets/creation', ['uses' => 'ProjectsController@Creation'])->name('erp.projet-creation');
     Route::get('/projets/modification', ['uses' => 'ProjectsController@Modification'])->name('erp.projet-modification');    
 
-    // Projets    
+    // Clients    
     Route::get('/clients', ['uses' => 'ClientsController@Index'])->name('erp.clients-index');
     Route::get('/clients/creation', ['uses' => 'ClientsController@Creation'])->name('erp.clients-creation');
     Route::get('/clients/modification', ['uses' => 'ClientsController@Modification'])->name('erp.clients-modification');
 
-    Route::get('creation-projet/{$id}', ['uses' => 'ProjectController@index'])->name('erp.get.create-project');
-    Route::post('post-creation-projet', ['uses' =>'ProjectController@create'])->name('erp.post.create-project');
-    Route::put('edition-projet', ['uses' => 'ProjectController@edit'])->name('erp.put.edit-project');
-    Route::delete('suppression-projet', ['uses' => 'ProjectController@delete'])->name('erp.delete.delete-project');
-
-    Route::get('creation-utilisateur/{$id}', ['uses' => 'UserController@index'])->name('erp.get.create-user');
-    Route::post('post-creation-utilisateur', ['uses' =>'UserController@create'])->name('erp.post.create-user');
-    Route::put('edition-utilisateur', ['uses' => 'UserController@edit'])->name('erp.put.edit-user');
-    Route::delete('suppression-utilisateur', ['uses' => 'UserController@delete'])->name('erp.delete.delete-user');
+    Route::prefix('/projets', function () {
+        Route::get('creation-projet', ['uses' => 'ProjectController@index'])->name('erp.get.create-project');
+        Route::post('post-creation-projet', ['uses' =>'ProjectController@create'])->name('erp.post.create-project');
+        Route::put('edition-projet', ['uses' => 'ProjectController@edit'])->name('erp.put.edit-project');
+        Route::delete('suppression-projet', ['uses' => 'ProjectController@delete'])->name('erp.delete.delete-project');
+    });
+   
+    Route::prefix('/utilisateur', function () {
+        Route::get('creation-utilisateur', ['uses' => 'UserController@index'])->name('erp.get.create-user');
+        Route::post('post-creation-utilisateur', ['uses' =>'UserController@create'])->name('erp.post.create-user');
+        Route::put('edition-utilisateur', ['uses' => 'UserController@edit'])->name('erp.put.edit-user');
+        Route::delete('suppression-utilisateur', ['uses' => 'UserController@delete'])->name('erp.delete.delete-user');
+    });
 });
