@@ -26,40 +26,87 @@
 					<thead class="">
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Nom</th>
-							<th scope="col">Prénom</th>
 							<th scope="col">Société</th>
-							<th scope="col">Projet(s)</th>
+							<th scope="col">Email</th>
+							<th scope="col"></th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<th scope="row">1</th>
-							<td>COEURDEROY</td>
-							<td>Guillaume</td>
 							<td>IMAA</td>
-							<td>Lorem Ipsum</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
 							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
 						</tr>
 						<tr>
 							<th scope="row">2</th>
-							<td>SOURISSEAU</td>
-							<td>Guillaume</td>
-							<td>Biosense</td>
-							<td>Lorem Ipsum</td>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
 							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
 						</tr>
 						<tr>
 							<th scope="row">3</th>
-							<td>CAMARA</td>
-							<td>Maxime</td>
 							<td>IMAA</td>
-							<td>Lorem Ipsum</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">5</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">6</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">7</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">8</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
+							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+						</tr>
+						<tr>
+							<th scope="row">9</th>
+							<td>IMAA</td>
+							<td>contact@imaa.eu</td>
+							<td>+33 (0)0 41 40 39 38</td>
 							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
 						</tr>
 					</tbody>
 				</table>
+				<nav aria-label="...">
+				  <ul class="pagination pagination-lg">
+				    <li class="page-item disabled">
+				      <a class="page-link" href="#" tabindex="-1">1</a>
+				    </li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				  </ul>
+				</nav>
 			</div>
 		</div>
 	</div>

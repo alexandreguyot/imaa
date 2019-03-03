@@ -53,6 +53,11 @@ Route::namespace('ERP')->prefix('erp')->group(function () {
     Route::get('/clients/creation', ['uses' => 'ClientsController@Creation'])->name('erp.clients-creation');
     Route::get('/clients/modification', ['uses' => 'ClientsController@Modification'])->name('erp.clients-modification');
 
+    // Utilisateurs    
+    Route::get('/utilisateurs', ['uses' => 'UsersController@Index'])->name('erp.users-index');
+    Route::get('/utilisateurs/creation', ['uses' => 'UsersController@Creation'])->name('erp.users-creation');
+    Route::get('/utilisateurs/modification', ['uses' => 'UsersController@Modification'])->name('erp.users-modification');
+
     Route::prefix('/projets', function () {
         Route::get('creation-projet', ['uses' => 'ProjectController@index'])->name('erp.get.create-project');
         Route::post('post-creation-projet', ['uses' =>'ProjectController@create'])->name('erp.post.create-project');

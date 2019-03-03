@@ -7,10 +7,13 @@
      <div id="collapsingNavbar" class="collapsingNavbar " > 
        <ul class="nav navbar-nav pull-xs-right">
          <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
-           <a class="nav-link" href="{{ url('/accueil') }}">Projets</a>
+           <a class="nav-link" href="{{ url('/erp/projets') }}">Projets</a>
          </li> 
          <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
-           <a class="nav-link" href="{{ url('activites') }}">Clients</a>
+           <a class="nav-link" href="{{ url('erp/clients') }}">Clients</a>
+         </li>
+         <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
+           <a class="nav-link" href="{{ url('erp/utilisateurs') }}">Utilisateurs</a>
          </li>
          <li class="nav-item dropdown hidden-sm-down textselect-off">
            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

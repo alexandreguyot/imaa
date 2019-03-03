@@ -21,7 +21,7 @@
 
 		@yield('styles')
     </head>
-    <body class="erp">
+    <body class="erp overflow">
         <div class="animated fadeIn">
             @include('layouts.erp._header_admin')
             @yield('content') 
