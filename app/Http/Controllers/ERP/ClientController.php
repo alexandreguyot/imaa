@@ -5,22 +5,21 @@ namespace App\Http\Controllers\ERP;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class ClientController extends Controller
 {
     function index() {
-        return view('contents.erp.users.list');
+        return view('contents.erp.clients.list');
+    }
+    function create() {
+        return view('contents.erp.clients.create');
     }
 
-    function create() {
-        return view('contents.erp.users.create');
-    }
-     
     function store() {
 
     }
-
+    
     function edit() {
-        return view('contents.erp.users.edit');
+        return view('contents.erp.projects.edit');
     }
 
     function update() {

@@ -3,7 +3,7 @@
   <div class="container">
     <h3 class="text-xs-center m-b-3">Connectez-vous à votre espace IMAA</h3>
     <h4 class="text-xs-center m-b-3">Prochainement disponible</h4>
-      <form action="{{ url('connexion')}}" method="POST">
+      <form action="{{ route('login')}}" method="POST">
         {{ csrf_field() }}
         <div class="row">
           <div class="col-md-6 col-xl-4">

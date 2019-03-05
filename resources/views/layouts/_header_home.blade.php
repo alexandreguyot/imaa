@@ -1,7 +1,7 @@
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp delay-2s">
    <div class="container">
-     <a class="navbar-brand home" href="{{ url('/accueil') }}">
+     <a class="navbar-brand home" href="{{ route('accueil') }}">
        <img src="{{ URL::asset('images/logo/_ima.svg') }}" class="animated fadeInDown delay-3s">
        <img src="{{ URL::asset('images/logo/_a.svg') }}" class="animated flipInX delay-5s">
        <img src="{{ URL::asset('images/logo/_chevrons.svg') }}" class="animated fadeInUp delay-4s">
@@ -12,35 +12,35 @@
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('/accueil') }}">Accueil</a>
+           <a class="nav-link" href="{{ route('accueil') }}">Accueil</a>
          </li> 
          <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('activites') }}">Activités</a>
+           <a class="nav-link" href="{{ route('activites') }}">Activités</a>
            <ul>
-             <li class="{{ active_check('activites/nos-domaines') }}"><a href="{{ url('activites/nos-domaines') }}">Nos domaines</a></li>
-             <li class="{{ active_check('activites/nos-missions') }}"><a href="{{ url('activites/nos-missions') }}">Nos missions</a></li>
-             <li class="{{ active_check('activites/secteur-geographique') }}"><a href="{{ url('activites/secteur-geographique') }}">Secteur géographique</a></li>
+             <li class="{{ active_check('activites/nos-domaines') }}"><a href="{{ route('activites.nos-domaines') }}">Nos domaines</a></li>
+             <li class="{{ active_check('activites/nos-missions') }}"><a href="{{ route('activites.nos-missions') }}">Nos missions</a></li>
+             <li class="{{ active_check('activites/secteur-geographique') }}"><a href="{{ route('activites.secteur-geographique') }}">Secteur géographique</a></li>
            </ul>
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('equipe') }}">
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('equipe') }}">L'équipe</a>
+           <a class="nav-link" href="{{ route('equipe') }}">L'équipe</a>
            <ul>
-             <li class="{{ active_check('equipe/presentation') }}"><a href="{{ url('equipe/presentation') }}">Présentation</a></li>
-             <li class="{{ active_check('equipe/savoir-faire') }}"><a href="{{ url('equipe/savoir-faire') }}">Savoir faire</a></li>
-             <li class="{{ active_check('equipe/ce-qui-nous-differencie') }}"><a href="{{ url('equipe/ce-qui-nous-differencie') }}">Ce qui nous différencie</a></li>
+             <li class="{{ active_check('equipe/presentation') }}"><a href="{{ route('equipe.presentation') }}">Présentation</a></li>
+             <li class="{{ active_check('equipe/savoir-faire') }}"><a href="{{ route('equipe.savoir-faire') }}">Savoir faire</a></li>
+             <li class="{{ active_check('equipe/ce-qui-nous-differencie') }}"><a href="{{ route('equipe.ce-qui-nous-differencie') }}">Ce qui nous différencie</a></li>
            </ul>
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('actualites') }}">
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ url('actualites') }}">Actualités</a> 
+           <a class="nav-link" href="{{ route('actualites') }}">Actualités</a> 
          </li>
          <!-- <li class="nav-item dropdown hidden-sm-down textselect-off">
            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

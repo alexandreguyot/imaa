@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('entreprise');
             $table->string('logo');
             $table->enum('role', ['Administrateur', 'Client']);
+            $table->unsignedInteger('client_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

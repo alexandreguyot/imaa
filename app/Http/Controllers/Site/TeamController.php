@@ -9,19 +9,19 @@ class TeamController extends Controller
 {
     public function index()
     {
-    	return view('contents.team');
+    	return view('contents.site.team');
     }
     public function resume()
     {
-    	return view('contents.team.resume');
+    	return view('contents.site.team.resume');
     }
     public function talents()
     {
-    	return view('contents.team.talents');
+    	return view('contents.site.team.talents');
     }
     public function difference()
     {
-    	return view('contents.team.differences');
+    	return view('contents.site.team.differences');
     }
     
 }

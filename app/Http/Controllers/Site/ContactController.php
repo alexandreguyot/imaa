@@ -9,11 +9,11 @@ class ContactController extends Controller
 {
     public function index()
     {
-    	return view('contents.contact');
+    	return view('contents.site.contact');
     }
     public function Confirmation()
     {
-    	return view('contents.contact-confirmation');
+    	return view('contents.site.contact-confirmation');
     }
     
 }

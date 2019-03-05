@@ -15,12 +15,8 @@ class CreateProjectClientTable extends Migration
     {
         Schema::create('project_client', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('project_id')->references('id')->on('project')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->foreign('client_id')->references('id')->on('client')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            $table->integer('project_id')->unsigned()->nullable();
+            $table->integer('client_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

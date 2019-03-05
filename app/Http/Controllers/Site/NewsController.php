@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function Index()
     {
-    	return view('contents.news');
+    	return view('contents.site.news');
     }
     
 }

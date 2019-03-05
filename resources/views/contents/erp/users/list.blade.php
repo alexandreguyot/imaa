@@ -4,7 +4,7 @@
     <!-- Meta description de la page -->
     <title>IMAA - Ingénierie Management d'Affaires Associés - Accueil</title>
     <meta name="description" content="">
-@stop
+@endsection
 
 @section('content')
 	<div class="app admin animated fadeInUp ">
@@ -63,8 +63,8 @@
 			</div>
 		</div>
 	</div>
-@stop
+@endsection
 
 <!-- Facultatif, si l'on a des fichiers js spécifiques à la page -->
 @section('scripts')
-@stop
+@endsection

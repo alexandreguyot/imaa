@@ -17,22 +17,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return route('erp.welcome');
+        //if (Auth::user()->isAdmin()) {
+            return route('erp.index');
+        //}
+        //return route('');
     }
 
     public function doLogin()
     {
         $rules = array(
-            'email'    => 'required|email', // make sure the email is an actual email
-            'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+            'email'    => 'required|email', 
+            'password' => 'required|alphaNum|min:3'
         );
 
         $validator = Validator::make(Input::all(), $rules);
 
         if ($validator->fails()) {
             return Redirect::route('home')
-                ->withErrors($validator) // send back all errors to the login form
-                ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
+                ->withErrors($validator) 
+                ->withInput(Input::except('password'));
         } else {
 
                 // create our user data for the authentication

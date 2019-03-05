@@ -9,11 +9,11 @@ class IndexController extends Controller
 {
     public function index()
     {
-    	return view('contents.index');
+    	return view('contents.site.index');
     }
     public function home()
     {
-    	return view('contents.index-home');
+    	return view('contents.site.index-home');
     }
 }
 

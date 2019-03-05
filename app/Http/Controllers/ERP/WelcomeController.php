@@ -17,4 +17,8 @@ class WelcomeController extends Controller
     function projet_3() {
         return view('contents.erp.projet_3');
     }
+
+    function index() {
+        return view('contents.erp.welcome');
+    }
 }

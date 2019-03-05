@@ -9,7 +9,7 @@ class LegalesController extends Controller
 {
     public function index()
     {
-    	return view('contents.legales');
+    	return view('contents.site.legales');
     }
     
 }

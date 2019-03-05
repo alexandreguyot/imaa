@@ -1,15 +1,15 @@
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
   <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp ">
-   <a class="" href="{{ url('/accueil') }}">
+   <a class="" href="{{ route('accueil') }}">
      <img src="{{ URL::asset('images/erp/logo_imaa.png') }}" class="animated fadeInDown ">
    </a>
    <div id="collapsingNavbar" class="collapsingNavbar " > 
      <ul class="nav navbar-nav pull-xs-right">
        <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
-         <a class="nav-link" href="{{ url('/accueil') }}">Dashboard</a>
+         <a class="nav-link" href="{{ route('accueil') }}">Dashboard</a>
        </li> 
        <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
-         <a class="nav-link" href="{{ url('activites') }}">Mon compte</a>
+         <a class="nav-link" href="{{ route('activites') }}">Mon compte</a>
        </li>
        <li class="nav-item dropdown hidden-sm-down textselect-off">
          <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

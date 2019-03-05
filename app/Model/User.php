@@ -31,4 +31,9 @@ class User extends Authenticatable
     public function projetcts() {
         $this->belongsToMany(Project::class);
     }
+
+    public function isAdmin() {
+        dd($this->role);
+        return $this->role === 'Administrateur';
+    }
 }

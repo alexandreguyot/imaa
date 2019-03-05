@@ -15,9 +15,9 @@
 			<div class="info-center">
 				<h1 class="animated fadeInDown">L'équipe</h1>
 				<ul class="animated fadeInUp">
-					<li><a href="{{ url('equipe/presentation') }}">Présentation</a></li>
-					<li><a href="{{ url('equipe/savoir-faire') }}">Savoir faire</a></li>
-					<li><a href="{{ url('equipe/ce-qui-nous-differencie') }}">Ce qui nous differencie</a></li>
+					<li><a href="{{ route('equipe.presentation') }}">Présentation</a></li>
+					<li><a href="{{ route('equipe.savoir-faire') }}">Savoir faire</a></li>
+					<li><a href="{{ route('equipe.ce-qui-nous-differencie') }}">Ce qui nous differencie</a></li>
 				</ul>
 			</div>
 		</div>

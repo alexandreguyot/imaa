@@ -17,8 +17,8 @@
 				<h1 class="animated fadeInDown">Ce qui nous différencie</h1>
 				<p class="animated fadeInUp"><small>Un management collaboratif et de proximité</small></p>
 				<ul class="breadcrumb">
-					<li><a href="{{ url('/accueil') }}">Accueil</a></li>
-					<li><a href="{{ url('equipe') }}">L'équipe</a></li>
+					<li><a href="{{ route('accueil') }}">Accueil</a></li>
+					<li><a href="{{ route('equipe') }}">L'équipe</a></li>
 					<li>Ce qui nous différencie</li>
 				</ul>
 			</div>
