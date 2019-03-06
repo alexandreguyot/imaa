@@ -15,7 +15,7 @@
 						<h3>Liste des utilisateurs</h3>
 					</div>
 					<div class="col-md-6 col-xs-12">
-						<a type="button" href="{{ route('erp.get.create-user') }}" class="btn btn-primary pull-right">Créer un compte utilisateur</a>
+						<a type="" href="{{ route('erp.get.create-user') }}" class="btn btn-primary pull-right">Créer un compte utilisateur</a>
 					</div>
 				</div>
 			</div>

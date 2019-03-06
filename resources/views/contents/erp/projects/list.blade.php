@@ -15,7 +15,7 @@
 						<h3>Liste des projets</h3>
 					</div>
 					<div class="col-md-6 col-xs-12">
-						<a type="button" href="{{ route('erp.get.create-project') }}" class="btn btn-primary pull-right">Créer un compte projet</a>
+						<a type="" href="{{ route('erp.get.create-project') }}" class="btn btn-primary pull-right">Créer un compte projet</a>
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,10 @@
 							<td>Noirmoutiers</td>
 							<td>2016/2017</td>
 							<td>Lorem Ipsum</td>
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+							<td>
+								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
+							</td>
 						</tr>
 						<tr>
 							<th scope="row">2</th>
@@ -48,7 +51,10 @@
 							<td>Nantes</td>
 							<td>2016/2019</td>
 							<td>Lorem Ipsum</td>
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+							<td>
+								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
+							</td>						
 						</tr>
 						<tr>
 							<th scope="row">3</th>
@@ -56,7 +62,10 @@
 							<td>Nantes</td>
 							<td>2015/2017</td>
 							<td>Lorem Ipsum</td> 
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
+							<td>
+								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
+							</td>						
 						</tr>
 					</tbody>
 				</table>
