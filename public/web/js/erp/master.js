@@ -8,6 +8,10 @@ $(document).ready(function(){
 
 		$(this).addClass('current');
 		$("#"+tab_id).addClass('current');
-	})
+	});
+
+	function goBack() {
+		window.history.back();
+	}
 
 })

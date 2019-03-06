@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDashboardTable extends Migration
+class CreateDashboardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDashboardTable extends Migration
      */
     public function up()
     {
-        Schema::create('dashboard', function (Blueprint $table) {
+        Schema::create('dashboards', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('mois', ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre']);
             $table->integer('project_id');
@@ -28,6 +28,6 @@ class CreateDashboardTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dashboard');
+        Schema::dropIfExists('dashboards');
     }
 }

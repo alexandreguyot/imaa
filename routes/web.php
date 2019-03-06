@@ -54,15 +54,6 @@ Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
         Route::delete('suppression-projet', ['uses' => 'ProjectController@delete'])->name('erp.delete.delete-project');
     });
 
-    Route::prefix('/clients')->group( function () {
-        Route::get('/', ['uses' => 'ClientController@index'])->name('erp.get.index-client');
-        Route::get('creation-client', ['uses' => 'ClientController@create'])->name('erp.get.create-client');
-        Route::post('post-creation-client', ['uses' =>'ClientController@store'])->name('erp.post.store-client');
-        Route::get('edition-client', ['uses' => 'ClientController@edit'])->name('erp.get.edit-client');
-        Route::put('edition-projet', ['uses' => 'ClientController@update'])->name('erp.put.update-client');
-        Route::delete('suppression-client', ['uses' => 'ClientController@delete'])->name('erp.delete.delete-client');
-    });
-   
     Route::prefix('/utilisateurs')->group( function () {
         Route::get('/', ['uses' => 'UserController@index'])->name('erp.get.index-user');
         Route::get('creation-utilisateur', ['uses' => 'UserController@create'])->name('erp.get.create-user');

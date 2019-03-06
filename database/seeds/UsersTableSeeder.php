@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
             'telephone' => '0202020202',
             'entreprise' => 'ESSAIE',
             'logo' => 'LOGO',
-            'role' => 'Client',
+            'role' => 'Utilisateur',
         ]);
     }
 }

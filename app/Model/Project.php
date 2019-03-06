@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'city',
+        'start',
+        'end',
+    ];
     
     function dashboards() {
         return $this->hasMany(Dashboard::class);
     }
 
-    public function projetcts() {
+    public function users() {
         $this->belongsToMany(User::class);
     }
 }

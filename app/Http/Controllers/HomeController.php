@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return route('erp.index');
+        return route('erp.projets-index');
     }
 
     public function doLogin()
@@ -43,7 +43,7 @@ class HomeController extends Controller
 
                 // attempt to do the login
                 if (Auth::attempt($userdata)) {
-                    return Redirect::route('erp.index');
+                    return Redirect::route('erp.projets-index');
                 } else {        
                     // validation not successful, send back to form 
                     return Redirect::route('home');
