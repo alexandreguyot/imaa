@@ -15,7 +15,7 @@
 						<h3>Liste des projets</h3>
 					</div>
 					<div class="col-md-6 col-xs-12">
-						<a type="button" href="{{ route('erp.get.create-project') }}" class="btn btn-primary pull-right">Créer un compte project</a>
+						<a type="button" href="{{ route('erp.get.create-project') }}" class="btn btn-primary pull-right">Créer un compte projet</a>
 					</div>
 				</div>
 			</div>

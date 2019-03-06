@@ -8,9 +8,6 @@
        <ul class="nav navbar-nav pull-xs-right">
          <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
            <a class="nav-link" href="{{ route('erp.projets-index') }}">Projets</a>
-         </li> 
-         <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
-           <a class="nav-link" href="{{ route('erp.get.index-client') }}">Clients</a>
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
            <a class="nav-link" href="{{ route('erp.get.index-user') }}">Utilisateurs</a>

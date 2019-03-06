@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ERP;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Project;
 
 class ProjectController extends Controller
 {
@@ -12,7 +13,11 @@ class ProjectController extends Controller
     }
 
     function create() {
-        return view('contents.erp.projects.create');
+        $projects = Project::all();
+        return view('contents.erp.projects.create', 
+            [
+                'projects' => $projects,
+            ]);
     }
      
     function store() {
