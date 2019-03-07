@@ -47,7 +47,7 @@
 			<div class="form dark tabs-form">
 				<div class="container">
 					<div class="form-row">
-						<div class="col-md-12">
+						<div class="col-md-9">
 							<div class="tabs-container animated fadeIn delay-04s">
 								<div id="tab-1" class="tab-content current">
 									<div class="dashboard">
