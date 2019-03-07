@@ -1,3 +1,6 @@
+$.fn.select2.defaults.set('language', 'fr');
+$.fn.select2.defaults.set( "theme", "bootstrap" );
+
 $(document).ready(function(){
 	
 	$('ul.tabs li').click(function(){
@@ -13,5 +16,10 @@ $(document).ready(function(){
 	function goBack() {
 		window.history.back();
 	}
+
+	$('#list_projects').select2({
+		allowClear: true,
+		placeholder: "Sélectionner des projets",
+	});
 
 })

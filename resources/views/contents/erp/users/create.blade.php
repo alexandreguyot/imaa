@@ -26,6 +26,15 @@
 			<div class="form">
 				<div class="container">
 					<div class="form-row">
+							<div class="form-group col-md-12 col-xs-12">
+									<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
+										<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+											<option value="Administrateur">Administrateur</option>
+											<option value="Utilisateur">Utilisateur</option>
+										</select>
+								</div>
+					</div>
+					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputSurname">Nom *</label>
 							<input type="text" name="lastname" class="form-control" id="inputSurname" placeholder="" required>
@@ -46,16 +55,13 @@
 						</div>
 					</div>
 					<div class="form-row">
-							<div class="form-group col-md-6 col-xs-12">
-								<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
-									<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-										<option value="Administrateur">Administrateur</option>
-										<option value="Utilisateur">Utilisateur</option>
-									</select>
-							</div>
 						<div class="form-group col-md-6 col-xs-12">
-							<label for="inputTel">Téléphone</label>
-							<input type="text" name="telephone" class="form-control" id="inputTel" placeholder="" required>
+								<label for="inputTel">Téléphone</label>
+								<input type="text" name="telephone" class="form-control" id="inputTel" placeholder="" required>
+						</div>
+						<div class="form-group col-md-6 col-xs-12">
+							<label for="inputLogo">Logo</label>
+							<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="" required>
 						</div>
 					</div>
 				</div>
@@ -63,12 +69,13 @@
 			<div class="form dark">
 				<div class="container">
 					<div class="form-row">
-						<div class="form-group col-md-12">
-							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Clients *</label>
-							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
-							    <option value="1">Société 1</option>
-							    <option value="2">Société 2</option>
-							  </select>
+						<div class="form-group col-md-12 col-xs-12">
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Projets *</label>
+							  <select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
+									@foreach ($projects as $project)
+										<option value="{{ $project->id }}">{{ $project->name }}</option>
+									@endforeach
+								</select>
 						</div>
 					</div>
 				</div>

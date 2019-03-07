@@ -36,7 +36,7 @@ Route::post('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 //Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
 //Route::middleware('admin')->prefix('admin')->group(function () {
 
-Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
+Route::middleware('auth')->namespace('erp')->prefix('erp')->group(function () {
 
     // Routes de merde par Guigui
     Route::get('/projet-1', ['uses' => 'WelcomeController@projet_1'])->name('erp.projet-1');

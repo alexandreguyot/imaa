@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Model\Project;
 use Carbon\Carbon;
 
-class ProjectsSeeder extends Seeder
+class ProjectsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

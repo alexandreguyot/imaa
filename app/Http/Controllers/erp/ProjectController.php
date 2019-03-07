@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ERP;
+namespace App\Http\Controllers\erp;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
