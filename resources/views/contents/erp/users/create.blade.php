@@ -8,7 +8,7 @@
 
 @section('content')
 	<div class="app admin animated fadeInUp ">
-		<form action="{{ route('erp.post.store-user') }}">
+		<form action="{{ route('erp.post.store-user') }}" method="POST">
 			@csrf
 			<div class="head">
 				<div class="container">
@@ -61,7 +61,7 @@
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputLogo">Logo</label>
-							<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="" required>
+							<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="">
 						</div>
 					</div>
 				</div>

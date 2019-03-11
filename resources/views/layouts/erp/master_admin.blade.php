@@ -10,10 +10,10 @@
         <meta name="keywords" content="" />
         <meta name="author" content="" />
         <!-- Custom CSS -->
+        <link href="{{  URL::asset('web/css/erp/select2.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ URL::asset('web/css/reset.css') }}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link href="{{  URL::asset('web/css/erp/select2.min.css') }}" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\erp;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Project;
+use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
 {
@@ -18,7 +19,7 @@ class UserController extends Controller
     }
      
     function store() {
-
+        dd(Input::all());
     }
 
     function edit() {
