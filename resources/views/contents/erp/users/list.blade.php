@@ -35,27 +35,11 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">1</th>
-							<td>Administrateur</td>
-							<td>COEURDEROY</td>
-							<td>Guillaume</td>
-							<td>IMAA</td>
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
-						</tr>
-						<tr>
 							<th scope="row">2</th>
 							<td>Utilisateur</td>
 							<td>SOURISSEAU</td>
 							<td>Guillaume</td>
 							<td>Biosense</td>
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Administrateur</td>
-							<td>CAMARA</td>
-							<td>Maxime</td>
-							<td>IMAA</td>
 							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
 						</tr>
 					</tbody>

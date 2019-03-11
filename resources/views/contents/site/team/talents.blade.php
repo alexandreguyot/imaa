@@ -17,7 +17,7 @@
 				<h1 class="animated fadeInDown">Savoir faire</h1>
 				<p class="animated fadeInUp"><small>Rester avant tout à votre écoute et prendre en compte les enjeux spécifiques de votre projet</small></p>
 				<ul class="breadcrumb">
-					<li><a href="{{ route('/accueil') }}">Accueil</a></li>
+					<li><a href="{{ route('accueil') }}">Accueil</a></li>
 					<li><a href="{{ route('equipe') }}">L'équipe</a></li>
 					<li>Savoir faire</li>
 				</ul>

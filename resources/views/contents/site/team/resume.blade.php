@@ -15,7 +15,7 @@
 			<div class="info-center">
 				<h1 class="animated fadeInDown">Présentation</h1>
 				<ul class="breadcrumb">
-					<li><a href="{{ route('/accueil') }}">Accueil</a></li>
+					<li><a href="{{ route('accueil') }}">Accueil</a></li>
 					<li><a href="{{ route('equipe') }}">L'équipe</a></li>
 					<li>Présentation</li>
 				</ul>
