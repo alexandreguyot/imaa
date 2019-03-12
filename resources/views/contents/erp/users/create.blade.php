@@ -18,7 +18,7 @@
 						</div>
 						<div class="col-md-6 col-xs-12">
 							<button type="submit" class="btn btn-primary pull-right">Sauvegarder</button>
-							<button type="button" class="btn btn-primary pull-right" onclick="goBack()">Quitter sans sauvegarder</button>
+							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>
 					</div>
 				</div>
@@ -26,13 +26,17 @@
 			<div class="form">
 				<div class="container">
 					<div class="form-row">
-							<div class="form-group col-md-12 col-xs-12">
-									<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
-										<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-											<option value="Administrateur">Administrateur</option>
-											<option value="Utilisateur">Utilisateur</option>
-										</select>
-								</div>
+							<div class="form-group col-md-6 col-xs-12">
+								<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
+									<select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
+										<option value="Administrateur">Administrateur</option>
+										<option value="Utilisateur">Utilisateur</option>
+									</select>
+							</div>
+							<div class="form-group col-md-6 col-xs-12">
+								<label for="inputEntreprise">Entreprise</label>
+								<input type="text" name="entreprise" class="form-control" id="inputEntreprise" placeholder="" required>
+							</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">

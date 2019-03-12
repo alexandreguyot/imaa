@@ -6,8 +6,8 @@
     <meta name="description" content="">
 @stop
 
-@section('content')
-	<div class="app admin animated fadeInUp ">
+@section("content")
+	<div class="app admin animated fadeInUp">
 		<div class="head"> 
 			<div class="container">
 				<div class="row">
@@ -29,44 +29,22 @@
 							<th scope="col">Nom du projet</th>
 							<th scope="col">Ville</th>
 							<th scope="col">Année(s)</th>
-							<th scope="col">Client(s)</th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
 					<tbody>
+						@foreach($projects as $project)
 						<tr>
-							<th scope="row">1</th>
-							<td>Domaine des pins</td>
-							<td>Noirmoutiers</td>
-							<td>2016/2017</td>
-							<td>Lorem Ipsum</td>
+							<th scope="row">{{ $project->id }}</th>
+							<td>{{ $project->name }}</td>
+							<td>{{ $project->city }}</td>
+							<td>{{ $project->start->format('m/Y') }} - {{ $project->end->format('m/Y') }}</td>
 							<td>
-								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
-								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
+								<a type="" href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<a type="" href="{{ route('erp.delete.delete-project', $project->id) }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
 							</td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Î-LINK</td>
-							<td>Nantes</td>
-							<td>2016/2019</td>
-							<td>Lorem Ipsum</td>
-							<td>
-								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
-								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
-							</td>						
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Résidence sociale les Fonderies</td>
-							<td>Nantes</td>
-							<td>2015/2017</td>
-							<td>Lorem Ipsum</td> 
-							<td>
-								<a type="" href="{{ route('erp.put.edit-project') }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
-								<a type="" href="{{ route('erp.delete.delete-project') }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
-							</td>						
-						</tr>
+						@endforeach
 					</tbody>
 				</table>
 			</div>

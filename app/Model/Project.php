@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Model\User;
 
 class Project extends Model
 {
@@ -12,12 +13,19 @@ class Project extends Model
         'start',
         'end',
     ];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['start', 'end'];
     
     function dashboards() {
         return $this->hasMany(Dashboard::class);
     }
 
     public function users() {
-        $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'projects_users', 'project_id', 'user_id');
     }
 }

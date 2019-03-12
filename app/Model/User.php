@@ -5,6 +5,7 @@ namespace App\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Model\Project;
 
 class User extends Authenticatable
 {
@@ -28,11 +29,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function projetcts() {
-        $this->belongsToMany(Project::class);
+    public function projects() {
+        return $this->belongsToMany(Project::class, 'projects_users', 'user_id', 'project_id');
     }
 
     public function isAdmin() {
         return $this->role === 'Administrateur';
+    }
+
+    public function hasProject($project_id) {
+        return false;
     }
 }

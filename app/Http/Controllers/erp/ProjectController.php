@@ -9,7 +9,10 @@ use App\Model\Project;
 class ProjectController extends Controller
 {
     function index() {
-        return view('contents.erp.projects.list');
+        $projects = Project::all();
+        return view('contents.erp.projects.list', [
+            'projects' => $projects,
+        ]);
     }
 
     function create() {

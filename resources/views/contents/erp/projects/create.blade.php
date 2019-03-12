@@ -17,7 +17,7 @@
 						</div>
 						<div class="col-md-6 col-xs-12">
 							<button type="button" class="btn btn-primary pull-right">Sauvegarder</button>
-							<button type="button" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
+							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>
 					</div>
 				</div>

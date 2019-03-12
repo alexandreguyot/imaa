@@ -34,14 +34,23 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th scope="row">2</th>
-							<td>Utilisateur</td>
-							<td>SOURISSEAU</td>
-							<td>Guillaume</td>
-							<td>Biosense</td>
-							<td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="far fa-edit"></i></button></td>
-						</tr>
+						@foreach($users as $user)
+							<tr>
+								<th scope="row">{{ $user->id }}</th>
+								<td>{{ $user->role }}</td>
+								<td>{{ $user->lastname }}</td>
+								<td>{{ $user->firstname }}</td>
+								<td>{{ $user->entreprise }}</td>
+								<td>
+									<a type="button" class="btn btn-secondary" href="{{ route('erp.get.edit-user', $user->id)}}">
+										<i class="far fa-edit"></i>
+									</a>
+									<a type="button" class="btn btn-danger" href="{{ route('erp.delete.delete-user', $user->id)}}"">
+											<i class="fas fa-trash-alt"></i>
+										</a>
+								</td>
+							</tr>
+						@endforeach
 					</tbody>
 				</table>
 			</div>

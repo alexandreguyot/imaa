@@ -21,9 +21,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role', ['Administrateur', 'Utilisateur']);
-            $table->string('logo');
+            $table->string('logo')->nullable();
             $table->string('telephone');
-            $table->string('entreprise');
+            $table->string('entreprise')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
