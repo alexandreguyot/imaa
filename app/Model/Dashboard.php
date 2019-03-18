@@ -7,9 +7,11 @@ use App\Model\Project;
 
 class Dashboard extends Model
 {
-    protected $fillable = [];
+    protected $fillable = [
+        'project_id', 'month', 'comment', 'publish'
+    ];
 
-    function dashboards() {
+    function projects() {
         return $this->belongsTo(Project::class);
     }
 }
