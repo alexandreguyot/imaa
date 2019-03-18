@@ -25,6 +25,20 @@
 			<div class="form">
 				<div class="container">
 					<div class="form-row">
+						<div class="form-group col-md-12 col-xs-12">
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Projets *</label>
+							<select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
+								@foreach ($projects as $project)
+									<option value="{{ $project->id }}" {{ $user->hasProject($project->id) ? 'selected' : ''}} >{{ $project->name }}</option>
+								@endforeach
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form">
+				<div class="container">
+					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
 							  <select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
@@ -66,20 +80,6 @@
 							<label for="inputLogo">Logo</label>
 							<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="">
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="form dark">
-				<div class="container">
-					<div class="form-row">
-							<div class="form-group col-md-12 col-xs-12">
-									<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Projets *</label>
-									<select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
-										@foreach ($projects as $project)
-											<option value="{{ $project->id }}" {{ $user->hasProject($project->id) ? 'selected' : ''}} >{{ $project->name }}</option>
-										@endforeach
-									</select>
-							</div>
 					</div>
 				</div>
 			</div>
