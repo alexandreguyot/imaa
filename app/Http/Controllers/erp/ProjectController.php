@@ -17,10 +17,9 @@ class ProjectController extends Controller
 
     function create() {
         $projects = Project::all();
-        return view('contents.erp.projects.create', 
-            [
-                'projects' => $projects,
-            ]);
+        return view('contents.erp.projects.create', [
+            'projects' => $projects,
+        ]);
     }
      
     function store() {

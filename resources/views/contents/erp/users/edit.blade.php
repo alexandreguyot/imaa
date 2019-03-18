@@ -8,7 +8,9 @@
 
 @section('content')
 	<div class="app admin animated fadeInUp ">
-		<form >
+		<form action="{{ route('erp.put.update-user', $user->id )}}" method="POST">
+			<input name="_method" type="hidden" value="PUT">
+			@csrf
 			<div class="head">
 				<div class="container">
 					<div class="row">
@@ -16,7 +18,7 @@
 							<h3>Modification d'un compte utilisateur</h3>
 						</div>
 						<div class="col-md-6 col-xs-12">
-							<button type="button" class="btn btn-primary pull-right">Sauvegarder</button>
+							<button type="submit" class="btn btn-primary pull-right">Sauvegarder</button>
 							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>
 					</div>
@@ -29,7 +31,7 @@
 							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Projets *</label>
 							<select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
 								@foreach ($projects as $project)
-									<option value="{{ $project->id }}" {{ $user->hasProject($project->id) ? 'selected' : ''}} >{{ $project->name }}</option>
+									<option value="{{ $project->id }}" {{ in_array($project->id, $list_projects) ? 'selected' : ''}} >{{ $project->name }}</option>
 								@endforeach
 							</select>
 						</div>

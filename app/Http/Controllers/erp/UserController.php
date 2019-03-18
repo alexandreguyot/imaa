@@ -23,7 +23,7 @@ class UserController extends Controller
         $user = new User();
         $user->lastname = $req->get('lastname');
         $user->firstname = $req->get('firstname');
-        $user->password = $req->get('password');
+        $user->password = bcrypt($req->get('password'));
         $user->email = $req->get('email');
         $user->role = $req->get('role');
         $user->entreprise = $req->get('entreprise');
@@ -36,10 +36,12 @@ class UserController extends Controller
     }
 
     function edit($id) {
-        $user = User::where('id', $id)->first();
+        $user = User::where('id', $id)->with('projects')->first();
+        $list_projects = $user->projects->pluck('id')->toArray();
         $projects = Project::all();
         return view('contents.erp.users.edit', [
             'user' => $user,
+            'list_projects' => $list_projects,
             'projects' => $projects
         ]);
     }
@@ -48,7 +50,7 @@ class UserController extends Controller
         $user = User::where('id', $id)->first();
         $user->lastname = $req->get('lastname');
         $user->firstname = $req->get('firstname');
-        $user->password = $req->get('password');
+        $user->password = bcrypt($req->get('password'));
         $user->email = $req->get('email');
         $user->role = $req->get('role');
         $user->entreprise = $req->get('entreprise');
@@ -57,6 +59,7 @@ class UserController extends Controller
         if ($user->update()) {
             $user->projects()->sync($req->get('list_projects'));
         }
+        return $this->index();
     }
 
     function delete($id) {
