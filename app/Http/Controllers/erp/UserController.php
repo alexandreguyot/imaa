@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Project;
 use App\Model\User;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -32,7 +33,7 @@ class UserController extends Controller
         if ($user->save()) {
             $user->projects()->sync($req->get('list_projects'));
         }
-        return $this->index();
+        return Redirect::route('erp.get.index-user');
     }
 
     function edit($id) {
@@ -59,13 +60,16 @@ class UserController extends Controller
         if ($user->update()) {
             $user->projects()->sync($req->get('list_projects'));
         }
-        return $this->index();
+        return Redirect::route('erp.get.index-user');
     }
 
     function delete($id) {
         $user = User::where('id', $id)->first();
-        $user->projects->detach();
-        $user->detele();
-        return $this->index();
+        if (!$user->projects->isEmpty()) {
+            $list_projects = $user->projects->pluck('id')->toArray();
+            $user->projects()->detach($list_projects);
+        }
+        $user->destroy($id);
+        return Redirect::route('erp.get.index-user');
     }
 }

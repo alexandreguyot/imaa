@@ -4,6 +4,8 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Model\User;
+use Carbon\Carbon;
+
 
 class Project extends Model
 {
@@ -27,5 +29,13 @@ class Project extends Model
 
     public function users() {
         return $this->belongsToMany(User::class, 'projects_users', 'project_id', 'user_id');
+    }
+
+    public function getEndAttribute($value) {
+        return Carbon::parse($value)->format('Y-m-d');
+    }
+
+    public function getStartAttribute($value) {
+        return Carbon::parse($value)->format('Y-m-d');
     }
 }

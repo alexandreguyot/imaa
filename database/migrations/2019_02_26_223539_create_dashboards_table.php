@@ -18,6 +18,8 @@ class CreateDashboardsTable extends Migration
             $table->increments('id');
             $table->enum('month', ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre']);
             $table->longText('comment')->nullable();
+            $table->longText('photos')->nullable();
+            $table->longText('dashboard')->nullable();
             $table->boolean('publish');
             $table->integer('project_id');
             $table->timestamps();

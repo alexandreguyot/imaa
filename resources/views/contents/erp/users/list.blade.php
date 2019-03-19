@@ -45,9 +45,13 @@
 									<a type="button" class="btn btn-secondary" href="{{ route('erp.get.edit-user', $user->id)}}">
 										<i class="far fa-edit"></i>
 									</a>
-									<a type="button" class="btn btn-danger" href="{{ route('erp.delete.delete-user', $user->id)}}"">
-											<i class="fas fa-trash-alt"></i>
-										</a>
+									<form action="{{ route('erp.delete.delete-user', $user->id)}}" method="POST">
+										@csrf
+										@method('DELETE')
+										<button type="submit" class="btn btn-danger">
+												<i class="fas fa-trash-alt"></i>
+										</button>
+									</form>
 								</td>
 							</tr>
 						@endforeach

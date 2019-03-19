@@ -34,26 +34,40 @@ class ProjectController extends Controller
         if ($project->save()) {
             $period = CarbonPeriod::create($project->start, '1 month', $project->end);
             foreach ($period as $dt) {
-                dd($dt->format('F'));
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
                 $dashboard->publish = false;
-                $dashboard->month = $dt->format('F');
+                $dashboard->month = $dashboard->associateMonth($dt->format('F'));
                 $dashboard->save();
             }
         }
         return $this->index();
     }
 
-    function edit() {
-        return view('contents.erp.projects.edit');
+    function edit($id) {
+        $project = Project::where('id', $id)->with('dashboards')->first();
+        $dashboards = $project->dashboards;
+        return view('contents.erp.projects.edit', [
+            'project' => $project,
+            'dashboards' => $dashboards
+        ]);
     }
 
-    function update() {
-        
+    function update(Request $req, $id) {
+        $project = Project::where('id', $id)->with('dashboards')->first();
+    
+        if ($project->update()) {
+        }
+        return $this->index();
     }
 
-    function delete() {
-
+    function delete($id) {
+        $project = Project::where('id', $id)->first();
+        if (!$project->users->isEmpty()) {
+            $list_users = $project->users->pluck('id')->toArray();
+            $project->users()->detach($list_users);
+        }
+        $project->destroy($id);
+        return Redirect::route('erp.get.index-project');
     }
 }
