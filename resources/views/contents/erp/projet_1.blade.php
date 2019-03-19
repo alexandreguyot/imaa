@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+
 	<div class="app animated fadeInUp ">
 		<div class="projects">
 			<div class="projectList animated fadeIn delay-02s">
