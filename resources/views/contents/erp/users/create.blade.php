@@ -40,16 +40,16 @@
 			<div class="form ">
 				<div class="container">
 					<div class="form-row">
-							<div class="form-group col-md-6 col-xs-12">
-								<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
-									<select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
-										<option value="Administrateur">Administrateur</option>
-										<option value="Utilisateur">Utilisateur</option>
-									</select>
-							</div>
-							<div class="form-group col-md-6 col-xs-12">
-								<label for="inputEntreprise">Entreprise</label>
-								<input type="text" name="entreprise" class="form-control" id="inputEntreprise" placeholder="" required>
+						<div class="form-group col-md-6 col-xs-12">
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
+								<select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
+									<option value="Administrateur">Administrateur</option>
+									<option value="Utilisateur">Utilisateur</option>
+								</select>
+						</div>
+						<div class="form-group col-md-6 col-xs-12">
+							<label for="inputEntreprise">Entreprise</label>
+							<input type="text" name="entreprise" class="form-control" id="inputEntreprise" placeholder="" required>
 							</div>
 					</div>
 					<div class="form-row">

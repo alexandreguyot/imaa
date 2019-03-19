@@ -6,10 +6,10 @@
    <div id="collapsingNavbar" class="collapsingNavbar " > 
      <ul class="nav navbar-nav pull-xs-right">
        <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
-         <a class="nav-link" href="{{ route('accueil') }}">Dashboard</a>
+         <a class="nav-link" href="{{ route('erp.projet-1') }}">Dashboard</a>
        </li> 
        <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
-         <a class="nav-link" href="{{ route('activites') }}">Mon compte</a>
+         <a class="nav-link" href="{{ route('erp.get.index-user') }}">Mon compte</a>
        </li>
        <li class="nav-item dropdown hidden-sm-down textselect-off">
          <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
