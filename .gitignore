@@ -11,4 +11,4 @@ npm-debug.log
 yarn-error.log
 .idea/
 /storage/projects/*
-!/storage/projects/
+!/storage/projects
