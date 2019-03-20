@@ -523,7 +523,6 @@ body {
 			}
 			div.overlay {
 				position: fixed;
-				left: -100%;
 				top: 0;
 				right: 0;
 				bottom: 0;
@@ -574,10 +573,11 @@ body {
 				> a {
 					position: fixed;
 					left: calc(~'50% - 12px');
-					top: 10px;
 					font-size: 30px;
 					color: white;
 					opacity: 0.4;
+					z-index: 999999;
+					top: -100%;
 					&:hover {
 						opacity: 1;
 					}
@@ -590,6 +590,9 @@ body {
 					&:hover {
 						background-color: rgba(0,0,0,0.7);
 						cursor: pointer;
+					}
+					a {
+						top: 10px;
 					}
 				}
 			}
