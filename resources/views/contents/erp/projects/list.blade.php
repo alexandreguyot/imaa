@@ -38,10 +38,16 @@
 							<th scope="row">{{ $project->id }}</th>
 							<td>{{ $project->name }}</td>
 							<td>{{ $project->city }}</td>
-							<td>{{ $project->start->format('m/Y') }} - {{ $project->end->format('m/Y') }}</td>
+							<td>{{ Carbon\Carbon::parse($project->start)->format('m/Y') }} - {{ Carbon\Carbon::parse($project->end)->format('m/Y') }}</td>
 							<td>
-								<a type="" href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
-								<a type="" href="{{ route('erp.delete.delete-project', $project->id) }}" class="btn btn-danger pull-right"><i class="far fa-trash-alt"></i></a>
+								<a type="button" href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<form action="{{ route('erp.delete.delete-project', $project->id) }}" method="POST">
+									@csrf
+									@method('DELETE')
+									<button type="submit" class="btn btn-danger">
+											<i class="fas fa-trash-alt"></i>
+									</button>
+								</form>
 							</td>
 						</tr>
 						@endforeach
