@@ -8,7 +8,9 @@
 
 @section('content')
 	<div class="app admin animated fadeInUp ">
-		<form>
+		<form action="{{ route('erp.put.update-project', $project->id ) }}" method="POST">
+			<input name="_method" type="hidden" value="PUT">
+			@csrf
 			<div class="head">
 				<div class="container">
 					<div class="row">
@@ -16,7 +18,7 @@
 							<h3>Modification d'un projet</h3>
 						</div>
 						<div class="col-md-6 col-xs-12">
-							<button type="button" class="btn btn-primary pull-right">Sauvegarder</button>
+							<button type="submit" class="btn btn-primary pull-right">Sauvegarder</button>
 							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>
 					</div>
@@ -90,6 +92,7 @@
 								</div>
 								@foreach ($dashboards as $dashboard)	
 									<div id="tab-{{ $dashboard->id }}" class="tab-content">
+										<input type="hidden" class="form-control" id="month" name="dashboard[{{$dashboard->id}}][month]" value="{{ $dashboard->month }}">
 										<div class="dashboard">
 											<div class="col-md-12">
 												<div class="subtitle col-md-12">

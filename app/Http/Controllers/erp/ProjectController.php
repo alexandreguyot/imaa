@@ -62,7 +62,11 @@ class ProjectController extends Controller
         $project->end = Carbon::parse($req->get('end'));
     
         if ($project->update()) {
-            
+            foreach($req->get('dashboard') as $db) {
+                $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->first();
+                $dashboard->publish = $db['publish'];
+                $dashboard->comment = $db['comment'];
+            }
         }
         return $this->index();
     }
