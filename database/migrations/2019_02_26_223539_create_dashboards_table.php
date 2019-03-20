@@ -20,7 +20,7 @@ class CreateDashboardsTable extends Migration
             $table->longText('comment')->nullable();
             $table->longText('photos')->nullable();
             $table->longText('dashboard')->nullable();
-            $table->boolean('publish');
+            $table->boolean('publish')->nullable();
             $table->integer('project_id');
             $table->timestamps();
         });
