@@ -17,6 +17,7 @@ class CreateDashboardsTable extends Migration
         Schema::create('dashboards', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('month', ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre']);
+            $table->string('year')->nullable();
             $table->longText('comment')->nullable();
             $table->longText('photos')->nullable();
             $table->longText('dashboard')->nullable();

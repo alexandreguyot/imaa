@@ -8,6 +8,7 @@ use App\Model\Project;
 use App\Model\Dashboard;
 use Carbon\CarbonPeriod;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -32,13 +33,25 @@ class ProjectController extends Controller
         $project->start = Carbon::parse($req->get('start'));
         $project->end = Carbon::parse($req->get('end'));
         if ($project->save()) {
+            //Création d'un dossier pour le projet 
+            $path_project = $project->name . '_' . $project->id;
+            Storage::makeDirectory($path_project, 0775, true);
             $period = CarbonPeriod::create($project->start, '1 month', $project->end);
             foreach ($period as $dt) {
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
                 $dashboard->publish = false;
+                $dashboard->year = $dt->format('Y');
                 $dashboard->month = $dashboard->associateMonth($dt->format('F'));
-                $dashboard->save();
+                if ($dashboard->save()) {
+                    $pathMonth = $path_project . '/' . $dashboard->month.'_'.$dashboard->year;
+                    Storage::makeDirectory($pathMonth, 0775, true);
+                    $pathDashboard = $pathMonth . '/' . 'dashboard';
+                    $pathPhotos = $pathMonth . '/' . 'photos';
+                    Storage::makeDirectory($pathDashboard, 0775, true);
+                    Storage::makeDirectory($pathPhotos, 0775, true);
+                }
+
             }
         }
         return $this->index();
@@ -54,18 +67,39 @@ class ProjectController extends Controller
     }
 
     function update(Request $req, $id) {
-        dd($req);
         $project = Project::where('id', $id)->with('dashboards')->first();
         $project->name = $req->get('name');
         $project->city = $req->get('city');
         $project->start = Carbon::parse($req->get('start'));
         $project->end = Carbon::parse($req->get('end'));
+        $project->url = $req->get('url');
+        $project->identifiant = $req->get('identifiant');
+        $project->password = $req->get('password');
     
         if ($project->update()) {
-            foreach($req->get('dashboard') as $db) {
+            foreach(request('dashboard') as $db) {
                 $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->first();
-                $dashboard->publish = $db['publish'];
-                $dashboard->comment = $db['comment'];
+                if (array_key_exists('publish', $db)) {
+                    $dashboard->publish = $db['publish'];
+                }
+                if (array_key_exists('comment', $db)) {
+                    $dashboard->comment = $db['comment'];
+                }
+                if (array_key_exists('dashboard', $db)) {
+                    $pathDashboard = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'dashboard';
+                    $path = $db['dashboard']->store($pathDashboard);
+                    $dashboard->dashboard = $path;
+                }
+                if (array_key_exists('photos', $db)) {
+                    $pathPhotos = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'photos';
+                    $pathConcat = '';
+                    foreach($db['photos'] as $photo) {
+                        $path = $photo->store($pathPhotos);
+                        $pathConcat = $path.';'.$pathConcat;
+                    }
+                    $dashboard->photos = $pathConcat;
+                }
+                $dashboard->update();
             }
         }
         return $this->index();

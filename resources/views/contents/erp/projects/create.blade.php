@@ -43,6 +43,21 @@
 							<input type="date" name="end" class="form-control" id="inputEnd" value="">
 						</div>
 					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputUrl">URL du timelapse</label>
+							<input type="text" name="url" class="form-control" id="inputUrl" value="">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputIdentifiant">Identifiant</label>
+							<input type="text" name="identifiant" class="form-control" id="inputIdentifiant" value="">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputPassword">Password</label>
+							<input type="text" name="password" class="form-control" id="inputPassword" value="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</form>

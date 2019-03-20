@@ -19,6 +19,10 @@ class CreateProjectsTable extends Migration
             $table->string('city');
             $table->date('start');
             $table->date('end');
+            $table->boolean('finish')->nullable();
+            $table->string('url')->nullable();
+            $table->string('identifiant')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }

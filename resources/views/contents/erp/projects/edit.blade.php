@@ -8,7 +8,7 @@
 
 @section('content')
 	<div class="app admin animated fadeInUp ">
-		<form action="{{ route('erp.put.update-project', $project->id ) }}" method="POST">
+		<form action="{{ route('erp.put.update-project', $project->id ) }}" method="POST" enctype="multipart/form-data">
 			<input name="_method" type="hidden" value="PUT">
 			@csrf
 			<div class="head">
@@ -44,6 +44,20 @@
 							<input type="date" name="end" class="form-control" id="inputEnd" value="{{ $project->end }}">
 						</div>
 					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputUrl">URL du timelapse</label>
+							<input type="text" name="url" class="form-control" id="inputUrl" value="">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputIdentifiant">Identifiant</label>
+							<input type="text" name="identifiant" class="form-control" id="inputIdentifiant" value="">
+						</div>
+						<div class="form-group col-md-4 col-xs-12">
+							<label for="inputPassword">Ville</label>
+							<input type="text" name="password" class="form-control" id="inputPassword" value="">
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="form dark tabs-form">
@@ -51,7 +65,6 @@
 					<div class="form-row">
 						<div class="col-md-3">
 							<ul class="tabs">
-								<li class="tab-link current" data-tab="tab-1"><a href="#">Nouveau <i class="fas fa-plus"></i></a></li>
 								@foreach ($dashboards as $dashboard)
 									<li class="tab-link" data-tab="tab-{{ $dashboard->id }}"><a href="#">{{ $dashboard->month }} <i class="fas fa-file-alt"></i></a></li>
 								@endforeach
@@ -59,37 +72,6 @@
 						</div>
 						<div class="col-md-9">
 							<div class="tabs-container animated fadeIn delay-04s">
-								<div id="tab-0" class="tab-content current">
-									<div class="dashboard">
-										<div class="col-md-12">
-											<div class="subtitle col-md-12">
-												<h4>Création d'un nouveau Dashboard</h4>
-											</div>
-											<div class="form-group col-md-12">
-												<label for="inlineFormInputGroup">Dashboard du mois</label>
-												<div class="input-group mb-12">
-													<div class="input-group-prepend">
-														<div class="input-group-text">Choisir un fichier</div>
-													</div>
-													<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .PDF">
-												</div>
-											</div>
-											<div class="form-group col-md-12">
-												<label for="inputEnd">Photo(s) du mois *</label>
-												<div class="input-group mb-12">
-													<div class="input-group-prepend">
-														<div class="input-group-text">Choisir un fichier</div>
-													</div>
-													<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .JPG / .PNG">
-												</div>
-											</div>
-											<div class="form-group col-md-12">
-												<label for="commentaryMounth">Commentaire du mois</label>
-											    <textarea class="form-control" id="commentaryMounth" rows="5">Praesent pellentesque turpis quis purus fringilla congue. Sed luctus blandit mi, at elementum justo fringilla at. Vivamus vitae odio mollis, dignissim neque consequat, aliquet nibh. Aenean vel massa augue. Nam accumsan, risus ut dapibus vehicula, elit justo lacinia felis, ut euismod orci magna sed quam.</textarea>
-											</div>
-										</div>
-									</div>
-								</div>
 								@foreach ($dashboards as $dashboard)	
 									<div id="tab-{{ $dashboard->id }}" class="tab-content">
 										<input type="hidden" class="form-control" id="month" name="dashboard[{{$dashboard->id}}][month]" value="{{ $dashboard->month }}">
@@ -108,7 +90,7 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .PDF">
+														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" accept="application/pdf">
 													</div>
 												</div>
 												<div class="form-group col-md-12">
@@ -117,7 +99,7 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" multiple="multiple" name="dashboard[{{$dashboard->id}}][photos]" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .JPG / .PNG">
+														<input type="file" multiple="multiple" name="dashboard[{{$dashboard->id}}][photos][]" class="form-control" id="inlineFormInputGroup" accept="image/gif, image/jpeg, image/jpg, image/png">
 													</div>
 												</div>
 												<div class="form-group col-md-12">
