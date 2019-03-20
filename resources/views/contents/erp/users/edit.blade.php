@@ -28,8 +28,8 @@
 				<div class="container">
 					<div class="form-row">
 						<div class="form-group col-md-12 col-xs-12">
-							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Projets *</label>
-							<select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Liste des Projets</label>
+							<select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref">
 								@foreach ($projects as $project)
 									<option value="{{ $project->id }}" {{ in_array($project->id, $list_projects) ? 'selected' : ''}} >{{ $project->name }}</option>
 								@endforeach
@@ -43,7 +43,7 @@
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
-							  <select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
+							  <select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref" required>
 							    <option value="Administrateur" {{ $user->isAdmin() ? 'selected' : '' }}>Administrateur</option>
 							    <option value="Utilisateur" {{ $user->isAdmin() ? '' : 'selected' }}>Utilisateur</option>
 							  </select>
@@ -56,17 +56,17 @@
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputSurname">Nom *</label>
-							<input type="text" name="lastname" value="{{ $user->lastname }}" class="form-control" id="inputSurname">
+							<input type="text" name="lastname" value="{{ $user->lastname }}" class="form-control" id="inputSurname" required>
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputName">Prénom *</label>
-							<input type="text" name="firstname" value="{{ $user->firstname }}" class="form-control" id="inputName">
+							<input type="text" name="firstname" value="{{ $user->firstname }}" class="form-control" id="inputName" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputEmail4">Email *</label>
-							<input type="email" name="email"  value="{{ $user->email }}" class="form-control" id="inputEmail4">
+							<input type="email" name="email"  value="{{ $user->email }}" class="form-control" id="inputEmail4" required>
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputPassword4">Mot de passe *</label>

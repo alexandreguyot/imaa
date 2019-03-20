@@ -27,8 +27,8 @@
 				<div class="container">
 					<div class="form-row">
 						<div class="form-group col-md-12 col-xs-12">
-							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ajouter un ou plusieurs projet(s) *</label>
-							  <select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref" required>
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ajouter un ou plusieurs projet(s)</label>
+							  <select id="list_projects" name="list_projects[]" multiple="multiple" class="form-control" id="inlineFormCustomSelectPref">
 								@foreach ($projects as $project)
 									<option value="{{ $project->id }}">{{ $project->name }}</option>
 								@endforeach
@@ -42,7 +42,7 @@
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Type de compte *</label>
-								<select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref">
+								<select class="custom-select my-1 mr-sm-2" name="role" id="inlineFormCustomSelectPref" required>
 									<option value="Administrateur">Administrateur</option>
 									<option value="Utilisateur">Utilisateur</option>
 								</select>
