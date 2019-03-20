@@ -43,7 +43,32 @@
 				<div id="tab-1" class="tab-content current">
 					<div class="dashboard">
 						<div class="banner">
-							<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+							<div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators-1" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators-1" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleIndicators-1" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
 						</div>
 						<div class="download">
 							<div class="pdf">
@@ -85,7 +110,32 @@
 				<div id="tab-2" class="tab-content">
 					<div class="dashboard">
 						<div class="banner">
-							<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+							<div id="carouselExampleIndicators-2" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators-2" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators-2" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators-2" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleIndicators-2" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleIndicators-2" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
 						</div>
 						<div class="download">
 							<div class="pdf">
@@ -127,7 +177,32 @@
 				<div id="tab-3" class="tab-content">
 					<div class="dashboard">
 						<div class="banner">
-							<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+							<div id="carouselExampleIndicators-3" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators-3" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators-3" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators-3" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleIndicators-3" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleIndicators-3" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
 						</div>
 						<div class="download">
 							<div class="pdf">
@@ -169,7 +244,32 @@
 				<div id="tab-4" class="tab-content">
 					<div class="dashboard">
 						<div class="banner">
-							<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+							<div id="carouselExampleIndicators-4" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators-4" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators-4" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators-4" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+									</div>
+									<div class="carousel-item">
+										<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleIndicators-4" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleIndicators-4" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
 						</div>
 						<div class="download">
 							<div class="pdf">
