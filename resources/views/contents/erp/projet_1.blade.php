@@ -72,7 +72,7 @@
 						</div>
 						<div class="download">
 							<div class="pdf">
-								<a href="#" onclick="openNav()">
+								<a href="#" class="open-pdf">
 									<div>
 										<span>Consulter le dashboard (pdf)</span>
 										<span>Date : 21/02/2019</span>
@@ -220,17 +220,26 @@
 			</div>	
 		</div>
 	</div>
+	<div class="overlay overlay-pdf">
+		<object data="{{ URL::asset('images/erp/projets/test.pdf') }}" type="application/pdf" width="100%" height="100%">
+		  lie alternatif : <a href="{{ URL::asset('images/erp/projets/test.pdf') }}">dashboard.pdf</a>
+		</object>
+		<a href="#" class="close-pdf"><i class="fa fa-times" aria-hidden="true"></i></a>
+	</div>
+	<script>
+		$('.open-pdf').click(function() {
+		    $('.overlay-pdf').addClass('active');
+		});
+		$('.close-pdf').click(function() {
+		    $('.overlay-pdf').removeClass('active');
+		});
+		$('.overlay-pdf').click(function() {
+		    $('.overlay-pdf').removeClass('active');
+		});
+	</script>
 @stop
 
 <!-- Facultatif, si l'on a des fichiers js spécifiques à la page -->
 @section('scripts')
-<script>
-		function openNav() {
-		  document.getElementById("myNav").style.width = "100%";
-		}
 
-		function closeNav() {
-		  document.getElementById("myNav").style.width = "0%";
-		}
-	</script>
 @stop
