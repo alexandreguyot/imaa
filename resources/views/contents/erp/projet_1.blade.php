@@ -83,7 +83,7 @@
 								</a>
 							</div>
 							<div class="pdf">
-								<a href="#">
+								<a href="#" class="open-timelapse">
 									<div>
 										<span>Connexion au Timelapse</span>
 										<span>Mise à jour : 14/02/2019</span>
@@ -139,10 +139,10 @@
 						</div>
 						<div class="download">
 							<div class="pdf">
-								<a href="#">
+								<a href="#" class="open-pdf">
 									<div>
 										<span>Consulter le dashboard (pdf)</span>
-										<span>Date : 15/01/2019</span>
+										<span>Date : 21/02/2019</span>
 									</div>
 									<div>
 										<i class="fas fa-file-pdf"></i>
@@ -150,7 +150,7 @@
 								</a>
 							</div>
 							<div class="pdf">
-								<a href="#">
+								<a href="#" class="open-timelapse">
 									<div>
 										<span>Connexion au Timelapse</span>
 										<span>Mise à jour : 11/01/2019</span>
@@ -204,6 +204,30 @@
 								</a>
 							</div>
 						</div>
+						<div class="download">
+							<div class="pdf">
+								<a href="#" class="open-pdf">
+									<div>
+										<span>Consulter le dashboard (pdf)</span>
+										<span>Date : 21/02/2019</span>
+									</div>
+									<div>
+										<i class="fas fa-file-pdf"></i>
+									</div>
+								</a>
+							</div>
+							<div class="pdf">
+								<a href="#" class="open-timelapse">
+									<div>
+										<span>Connexion au Timelapse</span>
+										<span>Mise à jour : 11/01/2019</span>
+									</div>
+									<div>
+										<i class="fas fa-images"></i>
+									</div>
+								</a>
+							</div>
+						</div>
 						<div class="comment">
 							<div class="content">
 								<h1>Commentaire de IMAA</h1>
@@ -226,6 +250,16 @@
 		</object>
 		<a href="#" class="close-pdf"><i class="fa fa-times" aria-hidden="true"></i></a>
 	</div>
+	<div class="overlay overlay-timelapse">
+		<div class="external">
+			<ul>
+				<li>Identifiant : demo@demo.fr</li>
+				<li>Mot de passe : demo</li>
+			</ul>
+			<iframe src="https://www.imaa.eu/accueil"></iframe>
+		</div>
+		<a href="#" class="close-timelapse"><i class="fa fa-times" aria-hidden="true"></i></a>
+	</div>
 	<script>
 		$('.open-pdf').click(function() {
 		    $('.overlay-pdf').addClass('active');
@@ -235,6 +269,17 @@
 		});
 		$('.overlay-pdf').click(function() {
 		    $('.overlay-pdf').removeClass('active');
+		});
+	</script>
+	<script>
+		$('.open-timelapse').click(function() {
+		    $('.overlay-timelapse').addClass('active');
+		});
+		$('.close-timelapse').click(function() {
+		    $('.overlay-timelapse').removeClass('active');
+		});
+		$('.overlay-timelapse').click(function() {
+		    $('.overlay-timelapse').removeClass('active');
 		});
 	</script>
 @stop

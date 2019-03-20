@@ -523,33 +523,70 @@ body {
 			}
 			div.overlay {
 				position: fixed;
-				left: 0;
+				left: -100%;
 				top: 0;
 				right: 0;
 				bottom: 0;
 				width: 0;
 				height: 100%;
+				width: 0;
 				background-color: rgba(0,0,0,0.0);
 				z-index: 99999;
 				opacity: 0;
+				overflow: hidden;
+				transition: all 1.2s;
 				object { 
 					position: absolute;
-					height: 90%;
-					width: 90%;
-					left: 5%;
-					top: 5%;
+					height: calc(~'100% - 90px');
+					width: calc(~'100% - 60px');
+					left: 30px;
+					top: 60px;
+				}
+				div.external {
+					position: absolute;
+					height: calc(~'100% - 90px');
+					width: calc(~'100% - 60px');
+					left: 30px;
+					top: 60px;
+					overflow: hidden;
+					display: flex;
+					flex-direction: column;
+					iframe {
+						width: 100%;
+						height: 100%;
+						border: none;
+					}
+					ul {
+						margin: 0;
+						background-color: @darkblue;
+						color: white;
+						display: flex;
+						flex-direction: row;
+						font-size: 20px;
+						li {
+							list-style-type: none;
+							width: 50%;
+							text-align: center;
+							padding: 20px 0 30px;
+						}
+					}
 				}
 				> a {
 					position: fixed;
-					top: 50%;
-					left: 20px;
+					left: calc(~'50% - 12px');
+					top: 10px;
 					font-size: 30px;
 					color: white;
+					opacity: 0.4;
+					&:hover {
+						opacity: 1;
+					}
 				}
 				&.active {
-					width: 100%;
 					background-color: rgba(0,0,0,0.9);
 					opacity: 1;
+					left: 0;	
+					width: 100%;
 					&:hover {
 						background-color: rgba(0,0,0,0.7);
 						cursor: pointer;
