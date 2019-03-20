@@ -97,7 +97,7 @@
 												</div>
 												<div class="form-group col-md-12">
 													<label for="publish">Publier</label>
-													<input type="checkbox" class="form-control" id="publish" name="publish_{{ $dashboard->id }}" value="{{ $dashboard->publish }}">
+													<input type="checkbox" class="form-control" id="publish" name="dashboard[{{$dashboard->id}}][publish]" value="{{ $dashboard->publish }}">
 												</div>
 												<div class="form-group col-md-12">
 													<label for="inlineFormInputGroup">Dashboard du mois</label>
@@ -105,7 +105,7 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" name="dashboard_{{ $dashboard->id }}" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .PDF">
+														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .PDF">
 													</div>
 												</div>
 												<div class="form-group col-md-12">
@@ -114,12 +114,12 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" name="photos_{{ $dashboard->id }}" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .JPG / .PNG">
+														<input type="file" multiple="multiple" name="dashboard[{{$dashboard->id}}][photos]" class="form-control" id="inlineFormInputGroup" placeholder="Fichier .JPG / .PNG">
 													</div>
 												</div>
 												<div class="form-group col-md-12">
 													<label for="commentaryMounth">Commentaire du mois</label>
-													<textarea class="form-control" id="commentaryMounth" name="comment_{{ $dashboard->id }}" rows="5">{{ $dashboard->comment }}</textarea>
+													<textarea class="form-control" id="commentaryMounth" name="dashboard[{{$dashboard->id}}][comment]" rows="5">{{ $dashboard->comment }}</textarea>
 												</div>
 											</div>
 										</div>

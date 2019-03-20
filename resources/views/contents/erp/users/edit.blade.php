@@ -70,7 +70,7 @@
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputPassword4">Mot de passe *</label>
-							<input type="password" name="password"  value="{{ $user->password }}" class="form-control" id="inputPassword4">
+							<input type="password" name="password"  value="" class="form-control" id="inputPassword4">
 						</div>
 					</div>
 					<div class="form-row">

@@ -51,7 +51,9 @@ class UserController extends Controller
         $user = User::where('id', $id)->first();
         $user->lastname = $req->get('lastname');
         $user->firstname = $req->get('firstname');
-        $user->password = bcrypt($req->get('password'));
+        if ($user->password !== bcrypt($req->get('password')) && !empty($req->get('password'))) {
+            $user->password = bcrypt($req->get('password'));
+        }
         $user->email = $req->get('email');
         $user->role = $req->get('role');
         $user->entreprise = $req->get('entreprise');

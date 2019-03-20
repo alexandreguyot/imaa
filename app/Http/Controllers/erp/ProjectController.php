@@ -54,9 +54,15 @@ class ProjectController extends Controller
     }
 
     function update(Request $req, $id) {
+        dd($req);
         $project = Project::where('id', $id)->with('dashboards')->first();
+        $project->name = $req->get('name');
+        $project->city = $req->get('city');
+        $project->start = Carbon::parse($req->get('start'));
+        $project->end = Carbon::parse($req->get('end'));
     
         if ($project->update()) {
+            
         }
         return $this->index();
     }
