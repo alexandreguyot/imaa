@@ -43,11 +43,13 @@ class HomeController extends Controller
 
                 // attempt to do the login
                 if (Auth::attempt($userdata)) {
-                    return Redirect::route('erp.projets-index');
+                    if (Auth::user()->isAdmin()) {
+                        return Redirect::route('erp.projets-index');
+                    }
+                    return Redirect::route('erp.dashboard');
                 } else {        
                     // validation not successful, send back to form 
                     return Redirect::route('home');
-
                 }
 
         }

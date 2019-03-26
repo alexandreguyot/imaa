@@ -6,7 +6,7 @@
    <div id="collapsingNavbar" class="collapsingNavbar " > 
      <ul class="nav navbar-nav pull-xs-right">
        <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
-         <a class="nav-link" href="{{ route('erp.projet-1') }}">Dashboard</a>
+         <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
        </li> 
        <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
          <a class="nav-link" href="{{ route('erp.get.index-user') }}">Mon compte</a>
@@ -21,13 +21,13 @@
                <img src="{{ URL::asset('images/user.png') }}" height="60" width="60" alt="Avatar" class="img-circle">
              </div>
              <div class="media-body media-middle">
-               <h5 class="media-heading">John Doe</h5>
-               <h6>johndoe@imaa.eu</h6>
+               <h5 class="media-heading">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h5>
+               <h6>{{ Auth::user()->email }}</h6>
              </div>
            </div>
            <a href="#" class="dropdown-item text-uppercase">Dashboard</a>
            <a href="#" class="dropdown-item text-uppercase">Boite à plans</a>
-           <a href="#" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
+           <a href="{{ route('logout') }}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
          </div>
        </li>
      </ul>

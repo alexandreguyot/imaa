@@ -25,6 +25,11 @@
           </div>
         </div>
       </form>
+      <div class="row">
+          <div class="col-md-6 col-xl-4">
+          <a href="{{ route('password.request') }}">Mot de passe oublié</a>
+          </div>
+      </div>
   </div>
 </section> 
 @endguest

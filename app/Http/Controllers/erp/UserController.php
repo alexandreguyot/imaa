@@ -16,7 +16,7 @@ class UserController extends Controller
     }
 
     function create() {
-        $projects = Project::all();
+        $projects = Project::where('finish', 0)->get();
         return view('contents.erp.users.create', ['projects' => $projects]);
     }
      
@@ -39,7 +39,7 @@ class UserController extends Controller
     function edit($id) {
         $user = User::where('id', $id)->with('projects')->first();
         $list_projects = $user->projects->pluck('id')->toArray();
-        $projects = Project::all();
+        $projects = Project::where('finish', '=' , 0)->get();
         return view('contents.erp.users.edit', [
             'user' => $user,
             'list_projects' => $list_projects,

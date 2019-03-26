@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('city');
             $table->date('start');
             $table->date('end');
-            $table->boolean('finish')->nullable();
+            $table->boolean('finish')->default(0)->nullable();
             $table->string('url')->nullable();
             $table->string('identifiant')->nullable();
             $table->string('password')->nullable();

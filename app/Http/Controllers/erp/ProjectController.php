@@ -72,6 +72,7 @@ class ProjectController extends Controller
         $project->city = $req->get('city');
         $project->start = Carbon::parse($req->get('start'));
         $project->end = Carbon::parse($req->get('end'));
+        $project->finish = $req->get('finish');
         $project->url = $req->get('url');
         $project->identifiant = $req->get('identifiant');
         $project->password = $req->get('password');
@@ -87,11 +88,13 @@ class ProjectController extends Controller
                 }
                 if (array_key_exists('dashboard', $db)) {
                     $pathDashboard = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'dashboard';
+                    Storage::cleanDirectory($pathDashboard);
                     $path = $db['dashboard']->store($pathDashboard);
                     $dashboard->dashboard = $path;
                 }
                 if (array_key_exists('photos', $db)) {
                     $pathPhotos = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'photos';
+                    Storage::cleanDirectory($pathPhotos);
                     $pathConcat = '';
                     foreach($db['photos'] as $photo) {
                         $path = $photo->store($pathPhotos);

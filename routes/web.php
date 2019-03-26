@@ -22,13 +22,14 @@ Route::namespace('Site')->group(function () {
 });
 
 Route::post('connexion', ['uses' => 'HomeController@doLogin'])->name('login');
-Route::post('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
+Route::get('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 
 /*
  * Route pour les clients pour consulter le projet
  * */
-//Route::get('/dashboard/{token}', ['name' => 'erp.dashboard', 'uses'=> 'DashboardController@index', 'middleware' => 'auth']);
+Route::get('/dashboard', ['uses'=> 'erp\DashboardController@index', 'middleware' => 'auth'])->name('dashboard');
 
+Auth::routes(['register' => false, 'login'=> false, 'logout' => false]);
 /*
  * Route pour l'ERP 
  * */
@@ -37,11 +38,6 @@ Route::post('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 //Route::middleware('admin')->prefix('admin')->group(function () {
 
 Route::middleware('auth')->namespace('erp')->prefix('erp')->group(function () {
-
-    // Routes de merde par Guigui
-    Route::get('/projet-1', ['uses' => 'WelcomeController@projet_1'])->name('erp.projet-1');
-    Route::get('/projet-2', ['uses' => 'WelcomeController@projet_2'])->name('erp.projet-2');
-    Route::get('/projet-3', ['uses' => 'WelcomeController@projet_3'])->name('erp.projet-3');
 
     Route::get('/', ['uses' => 'WelcomeController@index'])->name('erp.index');
 
