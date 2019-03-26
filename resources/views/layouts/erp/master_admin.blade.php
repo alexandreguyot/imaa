@@ -20,7 +20,6 @@
         <script type="text/javascript" src="{{ URL::asset('web/js/erp/master.js') }}"></script>
 
         <link rel="stylesheet/less" type="text/css" href="{{ URL::asset('web/less/styles.less') }}" />
-        <script type="text/javascript" src="{{ URL::asset('web/js/erp/master.js') }}"></script>
         
 		@yield('styles')
     </head>

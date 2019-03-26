@@ -90,7 +90,7 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" accept="application/pdf">
+														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" accept="application/pdf, csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
 													</div>
 												</div>
 												<div class="form-group col-md-12">
@@ -99,7 +99,11 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" multiple="multiple" name="dashboard[{{$dashboard->id}}][photos][]" class="form-control" id="inlineFormInputGroup" accept="image/gif, image/jpeg, image/jpg, image/png">
+														<input type="file" multiple="multiple" name="dashboard[{{$dashboard->id}}][photos][]" data-id="{{$dashboard->id}}" class="form-control" id="addPhotos_{{ $dashboard->id }}" 
+														onchange="test(event)" accept="image/*">
+													</div>
+													<div id="preview_{{ $dashboard->id }}">
+														
 													</div>
 												</div>
 												<div class="form-group col-md-12">
