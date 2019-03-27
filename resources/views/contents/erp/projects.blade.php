@@ -62,7 +62,7 @@
 								</div>
 								<div class="download">
 									<div class="pdf">
-										<a href="#" class="open-pdf" data-id="{{ $dashboard->id }}">
+										<a href="#" class="open-pdf" id="open-pdf-{{ $dashboard->id }}" >
 											<div>
 												<span>Consulter le dashboard (pdf)</span>
 											</div>
@@ -72,7 +72,7 @@
 										</a>
 									</div>
 									<div class="pdf">
-										<a href="#" class="open-timelapse">
+										<a href="#" class="open-timelapse" id="open-timelapse-{{ $dashboard->id }}" >
 											<div>
 												<span>Connexion au Timelapse</span>
 											</div>
@@ -92,22 +92,42 @@
 								</div>
 							</div>
 						</div>
-						<div class="overlay overlay-pdf">
+						<div class="overlay overlay-pdf" id="overlay-pdf-{{ $dashboard->id }}">
 							<object data="{{ URL::asset('images/erp/projets/test.pdf') }}" type="application/pdf" width="100%" height="100%">
 							  lie alternatif : <a href="{{ URL::asset('images/erp/projets/test.pdf') }}">dashboard.pdf</a>
 							</object>
-							<a href="#" class="close-pdf"><i class="fa fa-times" aria-hidden="true"></i></a>
+							<a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a>
 						</div>
-						<div class="overlay overlay-timelapse">
+						<div class="overlay overlay-timelapse" id="overlay-timelapse-{{ $dashboard->id }}">
 							<div class="external">
 								<ul>
-									<li>Identifiant : demo@demo.fr</li>
-									<li>Mot de passe : demo</li>
+									<li>Identifiant : {{ $projectDashboard->identifiant }}</li>
+									<li>Mot de passe : {{ $projectDashboard->password }}</li>
 								</ul>
-								<iframe src="https://www.imaa.eu/accueil"></iframe>
+								<iframe src="{{ $projectDashboard->url }}"></iframe>
 							</div>
-							<a href="#" class="close-timelapse"><i class="fa fa-times" aria-hidden="true"></i></a>
+							<a href="#" class="close-timelapse" id="close-timelapse-{{ $dashboard->id }}" ><i class="fa fa-times" aria-hidden="true"></i></a>
 						</div>
+						<script>
+								$('#open-pdf-' + {{ $dashboard->id }} ).click(function() {
+									$('#overlay-pdf-' + {{ $dashboard->id }}).addClass('active');
+								});
+								$('#close-pdf-' + {{ $dashboard->id }}).click(function() {
+									$('#overlay-pdf-' + {{ $dashboard->id }}).removeClass('active');
+								});
+								$('#overlay-pdf-' + {{ $dashboard->id }}).click(function() {
+									$('#overlay-pdf-' + {{ $dashboard->id }}).removeClass('active');
+								});
+								$('#open-timelapse-' + {{ $dashboard->id }}).click(function() {
+									$('#overlay-timelapse-' + {{ $dashboard->id }}).addClass('active');
+								});
+								$('#close-timelapse-' + {{ $dashboard->id }}).click(function() {
+									$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
+								});
+								$('#overlay-timelapse-' + {{ $dashboard->id }}).click(function() {
+									$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
+								});
+						</script>
 					@endforeach
 				@endif
 			</div>	
@@ -117,5 +137,6 @@
 
 <!-- Facultatif, si l'on a des fichiers js spécifiques à la page -->
 @section('scripts')
+
 
 @stop
