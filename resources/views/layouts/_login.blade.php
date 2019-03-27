@@ -39,11 +39,11 @@
   <div class="container">
     <h3 class="text-xs-center m-b-3">Vous êtes connecté</h3>
     @if(Auth::user()->isAdmin())
-    <div class="col-md-6 col-xl-4">
+    <div class="col-md-12 ">
         <a href="{{ route('erp.get.index-project') }}">Retourner à l'ERP</a>
     </div>
     @else 
-      <div class="col-md-6 col-xl-4">
+      <div class="col-md-12">
         <a href="{{ route('dashboard') }}">Retourner au dashboard</a>
       </div>
     @endif
