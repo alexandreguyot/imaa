@@ -24,12 +24,15 @@ Route::namespace('Site')->group(function () {
 Route::post('connexion', ['uses' => 'HomeController@doLogin'])->name('login');
 Route::get('deconnexion', ['uses' => 'HomeController@logout'])->name('logout');
 
+Route::get('password/reset', ['uses' => 'Auth\ForgotPasswordController@showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ 'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', ['uses' => 'Auth\ResetPasswordController@showResetForm'])->name('password.reset.token');
+Route::post('password/reset', [ 'uses' => 'Auth\ResetPasswordController@reset'])->name('password.reset.post');
+
 /*
  * Route pour les clients pour consulter le projet
  * */
-Route::get('/dashboard', ['uses'=> 'erp\DashboardController@index', 'middleware' => 'auth'])->name('dashboard');
-
-Auth::routes(['register' => false, 'login'=> false, 'logout' => false]);
+Route::get('/dashboard/{id?}', ['uses'=> 'erp\DashboardController@index', 'middleware' => 'auth'])->name('dashboard');
 /*
  * Route pour l'ERP 
  * */
@@ -37,12 +40,12 @@ Auth::routes(['register' => false, 'login'=> false, 'logout' => false]);
 //Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
 //Route::middleware('admin')->prefix('admin')->group(function () {
 
-Route::middleware('auth')->namespace('erp')->prefix('erp')->group(function () {
+Route::middleware(['auth', 'admin'])->namespace('erp')->prefix('erp')->group(function () {
 
     Route::get('/', ['uses' => 'WelcomeController@index'])->name('erp.index');
 
     Route::prefix('/projets')->group( function () {
-        Route::get('/', ['uses' => 'ProjectController@index'])->name('erp.projets-index');
+        Route::get('/', ['uses' => 'ProjectController@index'])->name('erp.get.index-project');
         Route::get('creation-projet', ['uses' => 'ProjectController@create'])->name('erp.get.create-project');
         Route::post('creation-projet', ['uses' =>'ProjectController@store'])->name('erp.post.store-project');
         Route::get('edition-projet/{id}', ['uses' => 'ProjectController@edit'])->name('erp.get.edit-project');

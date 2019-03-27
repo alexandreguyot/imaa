@@ -34,4 +34,8 @@ class Dashboard extends Model
     function associateMonth($month) {
         return $this->getMonths()[$month];
     }
+
+    function getPhotosAttribute($value) {
+        return array_map('trim', explode(',', $value));
+    }
 }

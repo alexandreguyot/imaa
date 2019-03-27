@@ -54,4 +54,23 @@ $(document).ready(function(){
 		$("#"+tab_id).addClass('current');
 		return false;
 	});
+
+	$('.open-pdf').click(function() {
+			$('.overlay-pdf').addClass('active');
+	});
+	$('.close-pdf').click(function() {
+			$('.overlay-pdf').removeClass('active');
+	});
+	$('.overlay-pdf').click(function() {
+			$('.overlay-pdf').removeClass('active');
+	});
+	$('.open-timelapse').click(function() {
+			$('.overlay-timelapse').addClass('active');
+	});
+	$('.close-timelapse').click(function() {
+			$('.overlay-timelapse').removeClass('active');
+	});
+	$('.overlay-timelapse').click(function() {
+			$('.overlay-timelapse').removeClass('active');
+	});
 });

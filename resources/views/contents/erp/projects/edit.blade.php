@@ -47,19 +47,19 @@
 					<div class="form-row">
 						<div class="form-group col-md-3 col-xs-12">
 							<label for="inputUrl">URL du timelapse</label>
-							<input type="text" name="url" class="form-control" id="inputUrl" value="">
+							<input type="text" name="url" class="form-control" id="inputUrl" value="{{ $project->url }}">
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
 							<label for="inputIdentifiant">Identifiant</label>
-							<input type="text" name="identifiant" class="form-control" id="inputIdentifiant" value="">
+							<input type="text" name="identifiant" class="form-control" id="inputIdentifiant" value="{{ $project->identifiant }}">
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
-							<label for="inputPassword">Ville</label>
-							<input type="text" name="password" class="form-control" id="inputPassword" value="">
+							<label for="inputPassword">Mot de passe</label>
+							<input type="text" name="password" class="form-control" id="inputPassword" value="{{ $project->password }}">
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
 								<label for="inputTermine">Termine ? </label>
-								<input type="checkbox" name="finish" class="form-control" id="inputTermine" value="">
+								<input type="checkbox" name="finish" class="form-control" id="inputTermine" {{ $project->finish ? 'checked': '' }}>
 							</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 														<div class="input-group-prepend">
 															<div class="input-group-text">Choisir un fichier</div>
 														</div>
-														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" accept="application/pdf, csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+														<input type="file" name="dashboard[{{$dashboard->id}}][dashboard]" class="form-control" id="inlineFormInputGroup" accept="application/pdf">
 													</div>
 												</div>
 												<div class="form-group col-md-12">

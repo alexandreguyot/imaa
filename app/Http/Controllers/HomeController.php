@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return route('erp.projets-index');
+        return route('erp.get.index-project');
     }
 
     public function doLogin()
@@ -44,9 +44,9 @@ class HomeController extends Controller
                 // attempt to do the login
                 if (Auth::attempt($userdata)) {
                     if (Auth::user()->isAdmin()) {
-                        return Redirect::route('erp.projets-index');
+                        return Redirect::route('erp.get.index-project');
                     }
-                    return Redirect::route('erp.dashboard');
+                    return Redirect::route('dashboard');
                 } else {        
                     // validation not successful, send back to form 
                     return Redirect::route('home');

@@ -9,6 +9,8 @@ use App\Model\Dashboard;
 use Carbon\CarbonPeriod;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Filesystem\Filesystem;
 
 class ProjectController extends Controller
 {
@@ -72,7 +74,7 @@ class ProjectController extends Controller
         $project->city = $req->get('city');
         $project->start = Carbon::parse($req->get('start'));
         $project->end = Carbon::parse($req->get('end'));
-        $project->finish = $req->get('finish');
+        $project->finish = $req->get('finish') ? 1 : 0;
         $project->url = $req->get('url');
         $project->identifiant = $req->get('identifiant');
         $project->password = $req->get('password');
@@ -88,13 +90,15 @@ class ProjectController extends Controller
                 }
                 if (array_key_exists('dashboard', $db)) {
                     $pathDashboard = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'dashboard';
-                    Storage::cleanDirectory($pathDashboard);
+                    $files = Storage::allFiles($pathDashboard);
+                    Storage::delete($files);
                     $path = $db['dashboard']->store($pathDashboard);
                     $dashboard->dashboard = $path;
                 }
                 if (array_key_exists('photos', $db)) {
                     $pathPhotos = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'photos';
-                    Storage::cleanDirectory($pathPhotos);
+                    $files = Storage::allFiles($pathPhotos);
+                    Storage::delete($files);
                     $pathConcat = '';
                     foreach($db['photos'] as $photo) {
                         $path = $photo->store($pathPhotos);
