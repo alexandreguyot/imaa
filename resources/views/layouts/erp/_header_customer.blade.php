@@ -8,9 +8,9 @@
        <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
          <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
        </li> 
-       <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
+      <!--  <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
          <a class="nav-link" href="{{ route('erp.get.index-user') }}">Mon compte</a>
-       </li>
+       </li> -->
        <li class="nav-item dropdown hidden-sm-down textselect-off">
          <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
@@ -26,7 +26,6 @@
              </div>
            </div>
            <a href="#" class="dropdown-item text-uppercase">Dashboard</a>
-           <a href="#" class="dropdown-item text-uppercase">Boite à plans</a>
            <a href="{{ route('logout') }}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
          </div>
        </li>

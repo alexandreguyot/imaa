@@ -26,9 +26,10 @@
                  <h6>{{ Auth::user()->email }}</h6>
                </div>
              </div>
-             <a href="#" class="dropdown-item text-uppercase">Dashboard</a>
-             <a href="#" class="dropdown-item text-uppercase">Boite à plans</a>
-             <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
+
+             <a href="{{ route('erp.get.index-project') }}" class="dropdown-item text-uppercase">Projets</a>
+             <a href="{{ route('erp.get.index-user') }}" class="dropdown-item text-uppercase">Utilisateurs</a>
+            <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
            </div>
          </li>
        </ul>
