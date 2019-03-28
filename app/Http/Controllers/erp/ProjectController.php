@@ -59,7 +59,7 @@ class ProjectController extends Controller
                 }
             }
         }
-        return $this->index();
+        return Redirect::route('erp.get.index-project');
     }
 
     function edit($id) {
@@ -133,7 +133,7 @@ class ProjectController extends Controller
                 $dashboard->update();
             }
         }
-        return $this->index();
+        return Redirect::route('erp.get.index-project');
     }
 
     function delete($id) {
