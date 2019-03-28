@@ -51,6 +51,7 @@ return [
         'projects' => [
             'driver' => 'local',
             'root' => storage_path('projects'),
+            'visibility' => 'public',
         ],
 
         'public' => [
