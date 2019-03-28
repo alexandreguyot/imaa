@@ -34,6 +34,10 @@ class ProjectController extends Controller
         $project->city = $req->get('city');
         $project->start = Carbon::parse($req->get('start'));
         $project->end = Carbon::parse($req->get('end'));
+        $project->finish = $req->get('finish') ? 1 : 0;
+        $project->url = $req->get('url');
+        $project->identifiant = $req->get('identifiant');
+        $project->password = $req->get('password');
         if ($project->save()) {
             //Création d'un dossier pour le projet 
             $path_project = $project->name . '_' . $project->id;
@@ -53,7 +57,6 @@ class ProjectController extends Controller
                     Storage::makeDirectory($pathDashboard, 0775, true);
                     Storage::makeDirectory($pathPhotos, 0775, true);
                 }
-
             }
         }
         return $this->index();
@@ -70,14 +73,35 @@ class ProjectController extends Controller
 
     function update(Request $req, $id) {
         $project = Project::where('id', $id)->with('dashboards')->first();
+        $end = Carbon::parse($req->get('end'));
         $project->name = $req->get('name');
         $project->city = $req->get('city');
         $project->start = Carbon::parse($req->get('start'));
-        $project->end = Carbon::parse($req->get('end'));
         $project->finish = $req->get('finish') ? 1 : 0;
         $project->url = $req->get('url');
         $project->identifiant = $req->get('identifiant');
         $project->password = $req->get('password');
+        if ($end->greaterThan(Carbon::parse($project->end)) ) {
+            $period = CarbonPeriod::create($project->end, '1 month', $end);
+            $path_project = $project->name . '_' . $project->id;
+            foreach ($period as $dt) {
+                $dashboard = new Dashboard();
+                $dashboard->project_id = $project->id;
+                $dashboard->publish = false;
+                $dashboard->year = $dt->format('Y');
+                $dashboard->month = $dashboard->associateMonth($dt->format('F'));
+                if ($dashboard->save()) {
+                    $pathMonth = $path_project . '/' . $dashboard->month.'_'.$dashboard->year;
+                    Storage::makeDirectory($pathMonth, 0775, true);
+                    $pathDashboard = $pathMonth . '/' . 'dashboard';
+                    $pathPhotos = $pathMonth . '/' . 'photos';
+                    Storage::makeDirectory($pathDashboard, 0775, true);
+                    Storage::makeDirectory($pathPhotos, 0775, true);
+                }
+            }
+        } 
+        $project->end = $end;
+
     
         if ($project->update()) {
             foreach(request('dashboard') as $db) {
@@ -117,6 +141,9 @@ class ProjectController extends Controller
         if (!$project->users->isEmpty()) {
             $list_users = $project->users->pluck('id')->toArray();
             $project->users()->detach($list_users);
+        }
+        if (!$project->dashboards->isEmpty()) {
+            $project->dashboards()->detach();
         }
         $project->destroy($id);
         return Redirect::route('erp.get.index-project');

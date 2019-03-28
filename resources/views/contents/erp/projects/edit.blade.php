@@ -37,11 +37,11 @@
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
 							<label for="inputStart">Date début *</label>
-							<input type="date" name="start" class="form-control" id="inputStart" value="{{ $project->start }}">
+							<input type="date" name="start" class="form-control" id="inputStart" value="{{ $project->start }}" disabled>
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
 							<label for="inputEnd">Date fin *</label>
-							<input type="date" name="end" class="form-control" id="inputEnd" value="{{ $project->end }}">
+							<input type="date" name="end" class="form-control" id="inputEnd" min="{{ $project->end }}" value="{{ $project->end }}">
 						</div>
 					</div>
 					<div class="form-row">
