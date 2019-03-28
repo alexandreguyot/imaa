@@ -16,6 +16,7 @@
             <div class="form-group has-icon-left form-control-password">
               <label class="sr-only" for="inputPassword">Mot de passe</label>
               <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Mot de passe" autocomplete="off">
+              <a href="{{ route('password.request') }}">Mot de passe oublié</a>
             </div>
           </div>
           <div class="col-md-6 col-xl-3">
@@ -25,11 +26,6 @@
           </div>
         </div>
       </form>
-      <div class="row">
-          <div class="col-md-6 col-xl-4 right">
-              <a href="{{ route('password.request') }}">Mot de passe oublié</a>
-          </div>
-      </div>
   </div>
 </section> 
 @endguest
@@ -40,11 +36,11 @@
     <h3 class="text-xs-center m-b-3">Vous êtes connecté</h3>
     @if(Auth::user()->isAdmin())
     <div class="col-md-12 ">
-        <a href="{{ route('erp.get.index-project') }}">Retourner à l'ERP</a>
+        <a href="{{ route('erp.get.index-project') }}" class="large-link">Retourner à l'ERP</a>
     </div>
     @else 
       <div class="col-md-12">
-        <a href="{{ route('dashboard') }}">Retourner au dashboard</a>
+        <a href="{{ route('dashboard') }}" class="large-link">Retourner au dashboard</a>
       </div>
     @endif
   </div>
