@@ -40,7 +40,7 @@
 							<td>{{ $project->city }}</td>
 							<td>{{ Carbon\Carbon::parse($project->start)->format('m/Y') }} - {{ Carbon\Carbon::parse($project->end)->format('m/Y') }}</td>
 							<td>
-								<a  type="button" href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
+								<a href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
 								<form action="{{ route('erp.delete.delete-project', $project->id) }}" onclick="return confirm('Etes vous sur de vouloir supprimer ce projet ?')"  method="POST">
 									@csrf
 									@method('DELETE')
