@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<div class="app admin animated fadeInUp ">
+	<div class="app admin animated fadeIn ">
 		<form action="{{ route('erp.put.update-user', $user->id )}}" method="POST">
 			<input name="_method" type="hidden" value="PUT">
 			@csrf

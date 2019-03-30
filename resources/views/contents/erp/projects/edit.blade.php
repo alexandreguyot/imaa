@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<div class="app admin animated fadeInUp ">
+	<div class="app admin animated fadeIn ">
 		<form action="{{ route('erp.put.update-project', $project->id ) }}" method="POST" enctype="multipart/form-data">
 			<input name="_method" type="hidden" value="PUT">
 			@csrf
@@ -58,7 +58,7 @@
 							<input type="text" name="password" class="form-control" id="inputPassword" value="{{ $project->password }}">
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
-								<label for="inputTermine">Termine ? </label>
+								<label for="inputTermine">Cloturer</label>
 								<input type="checkbox" name="finish" class="form-control" id="inputTermine" {{ $project->finish ? 'checked': '' }}>
 							</div>
 					</div>

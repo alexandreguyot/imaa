@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<div class="app admin animated fadeInUp ">
+	<div class="app admin animated fadeIn ">
 		<form action="{{ route('erp.post.store-project') }}" method="POST">
 			@csrf
 			<div class="head">

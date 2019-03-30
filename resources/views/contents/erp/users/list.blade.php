@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-	<div class="app admin animated fadeInUp ">
+	<div class="app admin animated fadeIn ">
 		<div class="head">
 			<div class="container">
 				<div class="row">
@@ -46,7 +46,7 @@
 
 								@endif
 								<td>
-									<a type="button" class="btn btn-secondary" href="{{ route('erp.get.edit-user', $user->id)}}">
+									<a class="btn btn-secondary" href="{{ route('erp.get.edit-user', $user->id)}}">
 										<i class="far fa-edit"></i>
 									</a>
 									<form action="{{ route('erp.delete.delete-user', $user->id)}}" method="POST">
