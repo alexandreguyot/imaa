@@ -104,7 +104,7 @@ class ProjectController extends Controller
                 } else {
                     $dashboard->publish = 0;
                 }
-                if (array_key_exists('comment', $db)) {git
+                if (array_key_exists('comment', $db)) {
                     $dashboard->comment = $db['comment'];
                 }
                 if (array_key_exists('dashboard', $db)) {
