@@ -37,7 +37,7 @@
 				@if (!$projectDashboard->dashboards->isEmpty())
 					@foreach ($projectDashboard->dashboards as $dashboard)
 						@if($dashboard->publish)
-							<div id="tab-{{ $dashboard->id }}" class="tab-content current">
+							<div id="tab-{{ $dashboard->id }}" class="tab-content">
 								<div class="dashboard">
 									<div class="banner">
 										<div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
@@ -47,11 +47,19 @@
 												<li data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
 											</ol>
 											<div class="carousel-inner">
-												@foreach($dashboard->photos as $photo)
+												@if($dashboard->photos)
+													@foreach(explode(';', $dashboard->photos[0]) as $photo)
+														@if($photo)
+															<div class="carousel-item @if ($loop->first) active @endif" >
+																<img src="{{ url("storage/".str_replace(';','',$photo)) }}">
+															</div>
+														@endif
+													@endforeach
+												@else
 													<div class="carousel-item active">
-														<img src="{{ URL::asset(str_replace(';', '', Storage::url("projects/{$photo}"))) }}">
+														<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
 													</div>
-												@endforeach
+												@endif
 											</div>
 											<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
 												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -96,8 +104,8 @@
 								</div>
 							</div>
 							<div class="overlay overlay-pdf" id="overlay-pdf-{{ $dashboard->id }}">
-								<object data="{{ URL::asset($dashboard->dashboard) }}" type="application/pdf" width="100%" height="100%">
-								lie alternatif : <a href="{{ URL::asset($dashboard->dashboard) }}">dashboard.pdf</a>
+								<object data="{{ url("storage/".$dashboard->dashboard) }}" type="application/pdf" width="100%" height="100%">
+								lie alternatif : <a href="{{ url("storage/".$dashboard->dashboard) }}">dashboard.pdf</a>
 								</object>
 								<a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a>
 							</div>

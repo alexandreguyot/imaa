@@ -48,8 +48,11 @@ class HomeController extends Controller
                     }
                     return Redirect::route('dashboard');
                 } else {        
-                    // validation not successful, send back to form 
-                    return Redirect::route('home');
+                    // validation not successful, send back to form
+                    Auth::logout();
+                    return Redirect::route('home')->withErrors([
+                        'both' => 'Mauvais compte mail ou mauvais mot de passe',
+                    ]);
                 }
 
         }

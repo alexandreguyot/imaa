@@ -23,6 +23,11 @@ class CreateForeignKeys extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
+
+        Schema::table('dashboards', function(Blueprint $table) {
+            $table->foreign('project_id')->references('id')->on('projects')
+                ->onDelete('cascade');
+        });
     }
 
     /**

@@ -40,4 +40,17 @@ class User extends Authenticatable
     public function hasProject($project_id) {
         return false;
     }
+    
+    public function renderProject() {
+        $names = $this->projects->pluck('name');
+        $string = '';
+        foreach($names as $key => $name) {
+            $string .= $name .', ';
+        }
+        return $string;
+    }
+
+    public function registerLogo() {
+        
+    }
 }

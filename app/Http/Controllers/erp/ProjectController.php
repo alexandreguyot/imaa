@@ -10,7 +10,6 @@ use Carbon\CarbonPeriod;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Filesystem\Filesystem;
 
 class ProjectController extends Controller
 {
@@ -39,23 +38,20 @@ class ProjectController extends Controller
         $project->identifiant = $req->get('identifiant');
         $project->password = $req->get('password');
         if ($project->save()) {
-            //Création d'un dossier pour le projet 
-            $path_project = $project->name . '_' . $project->id;
-            Storage::makeDirectory($path_project, 0775, true);
-            $period = CarbonPeriod::create($project->start, '1 month', $project->end);
+            //Création d'un dossier pour le projet
+            $project->createFolder();
+            $period = CarbonPeriod::create(Carbon::parse($project->start)->firstOfMonth(), '1 month', Carbon::parse($project->end)->firstOfMonth());
             foreach ($period as $dt) {
+                var_dump($dt);
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
                 $dashboard->publish = false;
                 $dashboard->year = $dt->format('Y');
                 $dashboard->month = $dashboard->associateMonth($dt->format('F'));
                 if ($dashboard->save()) {
-                    $pathMonth = $path_project . '/' . $dashboard->month.'_'.$dashboard->year;
-                    Storage::makeDirectory($pathMonth, 0775, true);
-                    $pathDashboard = $pathMonth . '/' . 'dashboard';
-                    $pathPhotos = $pathMonth . '/' . 'photos';
-                    Storage::makeDirectory($pathDashboard, 0775, true);
-                    Storage::makeDirectory($pathPhotos, 0775, true);
+                    $dashboard->createMonthFolder($project->id);
+                    $dashboard->createDashboardFolder($project->id);
+                    $dashboard->createPhotosFolder($project->id);
                 }
             }
         }
@@ -83,49 +79,46 @@ class ProjectController extends Controller
         $project->password = $req->get('password');
         if ($end->greaterThan(Carbon::parse($project->end)) ) {
             $period = CarbonPeriod::create($project->end, '1 month', $end);
-            $path_project = $project->name . '_' . $project->id;
             foreach ($period as $dt) {
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
                 $dashboard->publish = false;
                 $dashboard->year = $dt->format('Y');
                 $dashboard->month = $dashboard->associateMonth($dt->format('F'));
-                if ($dashboard->save()) {
-                    $pathMonth = $path_project . '/' . $dashboard->month.'_'.$dashboard->year;
-                    Storage::makeDirectory($pathMonth, 0775, true);
-                    $pathDashboard = $pathMonth . '/' . 'dashboard';
-                    $pathPhotos = $pathMonth . '/' . 'photos';
-                    Storage::makeDirectory($pathDashboard, 0775, true);
-                    Storage::makeDirectory($pathPhotos, 0775, true);
+                $exist = Dashboard::where('project_id', $project->id)->where('month', $dashboard->month)->where('year', $dashboard->year)->first();
+                if ($dashboard->save() && !$exist) {
+                    $dashboard->createMonthFolder($project->id);
+                    $dashboard->createDashboardFolder($project->id);
+                    $dashboard->createPhotosFolder($project->id);
                 }
             }
         } 
         $project->end = $end;
 
     
-        if ($project->update()) {
+        if ($project->update() && request('dashboard')) {
             foreach(request('dashboard') as $db) {
                 $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->first();
                 if (array_key_exists('publish', $db)) {
-                    $dashboard->publish = $db['publish'];
+                    $dashboard->publish = 1;
+                } else {
+                    $dashboard->publish = 0;
                 }
-                if (array_key_exists('comment', $db)) {
+                if (array_key_exists('comment', $db)) {git
                     $dashboard->comment = $db['comment'];
                 }
                 if (array_key_exists('dashboard', $db)) {
-                    $pathDashboard = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'dashboard';
-                    $files = Storage::allFiles($pathDashboard);
+                    $files = Storage::allFiles($dashboard->getPathDashboardFolder($project->id));
                     Storage::delete($files);
-                    $path = $db['dashboard']->store($pathDashboard);
-                    $dashboard->dashboard = $path;
+                    $pathDashboard = Storage::disk('public')->put($dashboard->getPathDashboardFolder($project->id), $db['dashboard']);
+                    $dashboard->dashboard = $pathDashboard;
                 }
                 if (array_key_exists('photos', $db)) {
-                    $pathPhotos = $project->name . '_' . $project->id . '/' .  $dashboard->month.'_'.$dashboard->year . '/' . 'photos';
-                    $files = Storage::allFiles($pathPhotos);
+                    $files = Storage::allFiles($dashboard->getPathPhotosFolder($project->id));
                     Storage::delete($files);
                     $pathConcat = '';
                     foreach($db['photos'] as $photo) {
-                        $path = $photo->store($pathPhotos);
+                        $path = Storage::disk('public')->put($dashboard->getPathPhotosFolder($project->id), $photo);
                         $pathConcat = $path.';'.$pathConcat;
                     }
                     $dashboard->photos = $pathConcat;
@@ -141,9 +134,6 @@ class ProjectController extends Controller
         if (!$project->users->isEmpty()) {
             $list_users = $project->users->pluck('id')->toArray();
             $project->users()->detach($list_users);
-        }
-        if (!$project->dashboards->isEmpty()) {
-            $project->dashboards()->detach();
         }
         $project->destroy($id);
         return Redirect::route('erp.get.index-project');

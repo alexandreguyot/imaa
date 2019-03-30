@@ -29,7 +29,7 @@
 							<th scope="col">Statut</th>
 							<th scope="col">Nom</th>
 							<th scope="col">Prénom</th>
-							<th scope="col">Clients</th>
+							<th scope="col">Projets</th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
@@ -40,7 +40,11 @@
 								<td>{{ $user->role }}</td>
 								<td>{{ $user->lastname }}</td>
 								<td>{{ $user->firstname }}</td>
-								<td>{{ $user->entreprise }}</td>
+								@if($user->projects())
+									<td>{{ $user->renderProject() }}</td>
+								@else
+
+								@endif
 								<td>
 									<a type="button" class="btn btn-secondary" href="{{ route('erp.get.edit-user', $user->id)}}">
 										<i class="far fa-edit"></i>
@@ -48,7 +52,7 @@
 									<form action="{{ route('erp.delete.delete-user', $user->id)}}" method="POST">
 										@csrf
 										@method('DELETE')
-										<button type="submit" class="btn btn-danger">
+										<button type="submit" onclick="return confirm('Etes vous sur de vouloir supprimer cette utilisateur ?')" class="btn btn-danger">
 												<i class="fas fa-trash-alt"></i>
 										</button>
 									</form>

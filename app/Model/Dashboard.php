@@ -3,7 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Model\Project;
+use Illuminate\Support\Facades\Storage;
 
 class Dashboard extends Model
 {
@@ -37,5 +37,25 @@ class Dashboard extends Model
 
     function getPhotosAttribute($value) {
         return array_map('trim', explode(',', $value));
+    }
+
+    public function createMonthFolder($project_id) {
+        Storage::disk('public')->makeDirectory('/projects/project_'.$project_id .'/'. $this->month.'_'.$this->year, 775, true);
+    }
+
+    public function createDashboardFolder($project_id) {
+        Storage::disk('public')->makeDirectory('/projects/project_'.$project_id .'/'. $this->month.'_'.$this->year.'/dashboard', 775, true);
+    }
+
+    public function createPhotosFolder($project_id) {
+        Storage::disk('public')->makeDirectory('/projects/project_'.$project_id .'/'. $this->month.'_'.$this->year.'/photos', 775, true);
+    }
+
+    public function getPathPhotosFolder($project_id) {
+        return '/projects/project_'.$project_id .'/'. $this->month.'_'.$this->year.'/photos';
+    }
+
+    public function getPathDashboardFolder($project_id) {
+        return '/projects/project_'.$project_id .'/'. $this->month.'_'.$this->year.'/dashboard';
     }
 }

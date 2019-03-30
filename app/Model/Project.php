@@ -3,13 +3,14 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Model\User;
 use Carbon\Carbon;
+Use Illuminate\Support\Facades\Storage;
 
 
 class Project extends Model
 {
     protected $fillable = [
+        'id',
         'name',
         'city',
         'start',
@@ -38,4 +39,8 @@ class Project extends Model
     public function getStartAttribute($value) {
         return Carbon::parse($value)->format('Y-m-d');
     }
+
+    public function createFolder() {
+    Storage::disk('public')->makeDirectory('/projects/project_'.$this->id, 775, true);
+}
 }

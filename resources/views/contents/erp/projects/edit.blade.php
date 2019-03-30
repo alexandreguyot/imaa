@@ -86,7 +86,7 @@
 												</div>
 												<div class="form-group col-md-12">
 													<label for="publish">Publier</label>
-													<input type="checkbox" class="form-control" id="publish" name="dashboard[{{$dashboard->id}}][publish]" value="{{ $dashboard->publish }}">
+													<input type="checkbox" class="form-control" id="publish" name="dashboard[{{$dashboard->id}}][publish]" {{ $dashboard->publish ? 'checked' : '' }}>
 												</div>
 												<div class="form-group col-md-12">
 													<label for="inlineFormInputGroup">Dashboard du mois</label>
