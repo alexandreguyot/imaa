@@ -78,7 +78,7 @@ class ProjectController extends Controller
         $project->identifiant = $req->get('identifiant');
         $project->password = $req->get('password');
         if ($end->greaterThan(Carbon::parse($project->end)) ) {
-            $period = CarbonPeriod::create($project->end, '1 month', $end);
+            $period = CarbonPeriod::create(Carbon::parse($project->end)->firstOfMonth(), '1 month', Carbon::parse($end)->firstOfMonth());
             foreach ($period as $dt) {
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
@@ -86,13 +86,14 @@ class ProjectController extends Controller
                 $dashboard->year = $dt->format('Y');
                 $dashboard->month = $dashboard->associateMonth($dt->format('F'));
                 $exist = Dashboard::where('project_id', $project->id)->where('month', $dashboard->month)->where('year', $dashboard->year)->first();
-                if ($dashboard->save() && !$exist) {
+                if ($exist === null) {
+                    $dashboard->save();
                     $dashboard->createMonthFolder($project->id);
                     $dashboard->createDashboardFolder($project->id);
                     $dashboard->createPhotosFolder($project->id);
                 }
             }
-        } 
+        }
         $project->end = $end;
 
     
@@ -136,6 +137,7 @@ class ProjectController extends Controller
             $project->users()->detach($list_users);
         }
         $project->destroy($id);
+        $project->deleteFolder();
         return Redirect::route('erp.get.index-project');
     }
 }

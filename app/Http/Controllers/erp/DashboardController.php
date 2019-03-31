@@ -18,7 +18,7 @@ class DashboardController extends Controller
         } else if ($projects->first()){
             $project_id = $projects->first()->id;
         } else {
-            return Redirect::route('home');
+            return Redirect::route('home')->withErrors(['infos' => "Vous n'avez pas encore de projet lié à votre compte"]);
         }
         $projectDashboard = Project::where('id', $project_id)->with('dashboards')->first();
         return view('contents.erp.projects', [

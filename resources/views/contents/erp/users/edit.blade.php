@@ -8,7 +8,7 @@
 
 @section('content')
 	<div class="app admin animated fadeIn ">
-		<form action="{{ route('erp.put.update-user', $user->id )}}" method="POST">
+		<form action="{{ route('erp.put.update-user', $user->id )}}" method="POST" enctype="multipart/form-data">
 			<input name="_method" type="hidden" value="PUT">
 			@csrf
 			<div class="head">
@@ -50,7 +50,7 @@
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputEntreprise">Entreprise</label>
-							<input type="text" name="entreprise" value="{{ $user->entreprise }}" class="form-control" id="inputEntreprise" placeholder="" required>
+							<input type="text" name="entreprise" value="{{ $user->entreprise }}" class="form-control" id="inputEntreprise" placeholder="">
 						</div>
 					</div>
 					<div class="form-row">

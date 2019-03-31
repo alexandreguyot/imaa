@@ -62,6 +62,15 @@
         <a href="{{ route('dashboard') }}" class="large-link">Retourner au dashboard</a>
       </div>
     @endif
+    @if ($errors->has('infos'))
+      <div class="row">
+        <div class="col-md-12">
+            <span class="help-block">
+              <strong>{{ $errors->first('infos') }}</strong>
+            </span>
+        </div>
+      </div>
+    @endif
   </div>
 </section> 
 @endauth

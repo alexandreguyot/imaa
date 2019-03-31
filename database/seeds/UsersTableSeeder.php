@@ -13,14 +13,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'lastname' => 'Admin',
-            'firstname' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('admin'), // secret
+            'lastname' => 'Guillaume',
+            'firstname' => 'Sourisseau',
+            'email' => 'sourisseauguillaume@gmail.com',
+            'password' => bcrypt('imaaGuillaume'), // secret
             'remember_token' => str_random(10),
             'telephone' => '0606060606',
-            'entreprise' => 'Admin',
-            'logo' => 'LOGO',
+            'entreprise' => '',
             'role' => 'Administrateur',
         ]);
 
@@ -32,7 +31,6 @@ class UsersTableSeeder extends Seeder
             'remember_token' => str_random(10),
             'telephone' => '0202020202',
             'entreprise' => 'ESSAIE',
-            'logo' => 'LOGO',
             'role' => 'Utilisateur',
         ]);
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Project;
 use App\Model\User;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -20,18 +21,20 @@ class UserController extends Controller
         return view('contents.erp.users.create', ['projects' => $projects]);
     }
      
-    function store(Request $req) {
+    function store() {
         $user = new User();
-        $user->lastname = $req->get('lastname');
-        $user->firstname = $req->get('firstname');
-        $user->password = bcrypt($req->get('password'));
-        $user->email = $req->get('email');
-        $user->role = $req->get('role');
-        $user->entreprise = $req->get('entreprise');
-        $user->logo = $req->get('logo');
-        $user->telephone = $req->get('telephone');
+        $user->lastname = request('lastname');
+        $user->firstname = request('firstname');
+        $user->password = bcrypt(request('password'));
+        $user->email = request('email');
+        $user->role = request('role');
+        $user->entreprise = request('entreprise');
+        $user->telephone = request('telephone');
         if ($user->save()) {
-            $user->projects()->sync($req->get('list_projects'));
+            $user->createUserFolder();
+            $user->logo = Storage::disk('public')->put($user->getPathLogoFolder(), request('logo'));
+            $user->update();
+            $user->projects()->sync(request('list_projects'));
         }
         return Redirect::route('erp.get.index-user');
     }
@@ -47,20 +50,22 @@ class UserController extends Controller
         ]);
     }
 
-    function update(Request $req, $id) {
+    function update($id) {
         $user = User::where('id', $id)->first();
-        $user->lastname = $req->get('lastname');
-        $user->firstname = $req->get('firstname');
-        if ($user->password !== bcrypt($req->get('password')) && !empty($req->get('password'))) {
-            $user->password = bcrypt($req->get('password'));
+        $user->lastname = request('lastname');
+        $user->firstname = request('firstname');
+        if ($user->password !== bcrypt(request('password')) && !empty(request('password'))) {
+            $user->password = bcrypt(request('password'));
         }
-        $user->email = $req->get('email');
-        $user->role = $req->get('role');
-        $user->entreprise = $req->get('entreprise');
-        $user->logo = $req->get('logo');
-        $user->telephone = $req->get('telephone');
+        $user->email = request('email');
+        $user->role = request('role');
+        $user->entreprise = request('entreprise');
+        $user->telephone = request('telephone');
+        if(request('logo')) {
+            $user->logo = Storage::disk('public')->put($user->getPathLogoFolder(), request('logo'));
+        }
         if ($user->update()) {
-            $user->projects()->sync($req->get('list_projects'));
+            $user->projects()->sync(request('list_projects'));
         }
         return Redirect::route('erp.get.index-user');
     }
@@ -72,6 +77,7 @@ class UserController extends Controller
             $user->projects()->detach($list_projects);
         }
         $user->destroy($id);
+        $user->deleteFolder();
         return Redirect::route('erp.get.index-user');
     }
 }

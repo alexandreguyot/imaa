@@ -29,16 +29,18 @@
 							<th scope="col">Nom du projet</th>
 							<th scope="col">Ville</th>
 							<th scope="col">Année(s)</th>
+							<th scope="col" id="finish" style="cursor: pointer">Cloturer</th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="list_projects_table">
 						@foreach($projects as $project)
-						<tr>
+						<tr class="project_{{$project->finish ? 'finish' : 'not_finish'}}" style="{{$project->finish ? 'display:none': ''}}">
 							<th scope="row">{{ $project->id }}</th>
 							<td>{{ $project->name }}</td>
 							<td>{{ $project->city }}</td>
 							<td>{{ Carbon\Carbon::parse($project->start)->format('m/Y') }} - {{ Carbon\Carbon::parse($project->end)->format('m/Y') }}</td>
+							<td>{{ $project->finish ? 'Oui' : 'Non'}}</td>
 							<td>
 								<a href="{{ route('erp.get.edit-project', $project->id) }}" class="btn btn-primary pull-right"><i class="far fa-edit"></i></a>
 								<form action="{{ route('erp.delete.delete-project', $project->id) }}" onclick="return confirm('Etes vous sur de vouloir supprimer ce projet ?')"  method="POST">
@@ -53,6 +55,7 @@
 						@endforeach
 					</tbody>
 				</table>
+				<div id="Pagination" class="pagination">
 			</div>
 		</div>
 	</div>

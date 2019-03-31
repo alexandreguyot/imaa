@@ -41,6 +41,10 @@ class Project extends Model
     }
 
     public function createFolder() {
-    Storage::disk('public')->makeDirectory('/projects/project_'.$this->id, 775, true);
-}
+        Storage::disk('public')->makeDirectory('/projects/project_'.$this->id, 775, true);
+    }
+
+    public function deleteFolder() {
+        Storage::disk('public')->deleteDirectory('/projects/project_'.$this->id);
+    }
 }

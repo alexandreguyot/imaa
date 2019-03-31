@@ -12,14 +12,16 @@
 		<div class="projects">
 			<div class="projectList animated fadeIn delay-02s">
 				<ul>
-					@foreach ($projects as $project)
-						<li>
-							<a href="{{ route('dashboard', $project->id)}}">
-								{{ $project->name }}
-								<span>{{ $project->city }} - {{ Carbon\Carbon::parse($project->start)->format('Y')}}/{{ Carbon\Carbon::parse($project->end)->format('Y')}}</span>
-							</a>
-						</li>
-					@endforeach
+					@if ($projects)
+						@foreach ($projects as $project)
+							<li>
+								<a href="{{ route('dashboard', $project->id)}}">
+									{{ $project->name }}
+									<span>{{ $project->city }} - {{ Carbon\Carbon::parse($project->start)->format('Y')}}/{{ Carbon\Carbon::parse($project->end)->format('Y')}}</span>
+								</a>
+							</li>
+						@endforeach
+					@endif
 				</ul>
 			</div>
 			<div class="mounth animated fadeIn delay-06s">

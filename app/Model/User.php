@@ -5,7 +5,7 @@ namespace App\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Model\Project;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -37,10 +37,6 @@ class User extends Authenticatable
         return $this->role === 'Administrateur';
     }
 
-    public function hasProject($project_id) {
-        return false;
-    }
-    
     public function renderProject() {
         $names = $this->projects->pluck('name');
         $string = '';
@@ -50,7 +46,15 @@ class User extends Authenticatable
         return $string;
     }
 
-    public function registerLogo() {
-        
+    public function createUserFolder() {
+        Storage::disk('public')->makeDirectory('/users/user_'.$this->id, 775, true);
+    }
+
+    public function getPathLogoFolder() {
+        return '/users/user_'.$this->id.'/logo';
+    }
+
+    public function deleteFolder() {
+        Storage::disk('public')->deleteDirectory('/users/user_'.$this->id);
     }
 }
