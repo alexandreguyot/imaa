@@ -18,6 +18,7 @@
 				<h1 class="animated fadeInUp delay-1s">Ingénierie Management d'Affaires Associés</h1>
 				<p class="animated fadeInDown delay-3s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
         <a class="animated fadeInDown delay-2s btn btn-primay" href="#edito" role="button">L'édito <i class="fas fa-angle-down"></i></a>
+        <h2 class="animated fadeInUp delay-2s">Construction • Immobilier</h2>
 			</div>
 		</div>
     @include('layouts._social')
