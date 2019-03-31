@@ -95,10 +95,9 @@ class ProjectController extends Controller
         }
         $project->end = $end;
 
-    
         if ($project->update() && request('dashboard')) {
             foreach(request('dashboard') as $db) {
-                $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->first();
+                $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->where('year', $db['year'])->first();
                 if (array_key_exists('publish', $db)) {
                     $dashboard->publish = 1;
                 } else {
