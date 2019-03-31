@@ -62,6 +62,8 @@ class UserController extends Controller
         $user->entreprise = request('entreprise');
         $user->telephone = request('telephone');
         if(request('logo')) {
+            $files = Storage::allFiles($user->getPathLogoFolder());
+            Storage::delete($files);
             $user->logo = Storage::disk('public')->put($user->getPathLogoFolder(), request('logo'));
         }
         if ($user->update()) {
