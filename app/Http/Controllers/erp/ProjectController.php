@@ -42,7 +42,6 @@ class ProjectController extends Controller
             $project->createFolder();
             $period = CarbonPeriod::create(Carbon::parse($project->start)->firstOfMonth(), '1 month', Carbon::parse($project->end)->firstOfMonth());
             foreach ($period as $dt) {
-                var_dump($dt);
                 $dashboard = new Dashboard();
                 $dashboard->project_id = $project->id;
                 $dashboard->publish = false;
