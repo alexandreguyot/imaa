@@ -137,6 +137,7 @@ class ProjectController extends Controller
             $project->users()->detach($list_users);
         }
         $project->destroy($id);
+        $project->dashboards()->delete();
         $project->deleteFolder();
         return Redirect::route('erp.get.index-project');
     }

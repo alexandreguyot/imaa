@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a6672dd-671c-4e50-bcc5-b17fe2458ae3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" afterPath="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +22,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_header_admin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/erp/_header_admin.blade.php">
+      <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="396">
+              <caret line="139" column="41" lean-forward="false" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+              <folding>
+                <element signature="e#44#72#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019_03_04_104829_create_foreign_keys.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2019_03_04_104829_create_foreign_keys.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -61,8 +64,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019_02_26_223549_create_projects_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php">
+      <file leaf-file-name="2019_02_25_223549_create_projects_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_25_223549_create_projects_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
@@ -187,7 +190,6 @@
         <option value="$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/erp/DashboardController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/_login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" />
         <option value="$PROJECT_DIR$/app/Model/Project.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
@@ -203,6 +205,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/erp/master_admin.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" />
       </list>
     </option>
   </component>
@@ -366,18 +369,18 @@
       <workItem from="1548696849771" duration="2474000" />
       <workItem from="1551131922533" duration="727000" />
       <workItem from="1553935702353" duration="13197000" />
-      <workItem from="1554039557852" duration="6386000" />
+      <workItem from="1554039557852" duration="6596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41064000" />
+    <option name="totallyTimeSpent" value="41274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4339019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2217484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25529543" sideWeight="0.5021322" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -695,16 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1429">
-          <caret line="139" column="33" lean-forward="false" selection-start-line="139" selection-start-column="6" selection-end-line="139" selection-end-column="33" />
-          <folding>
-            <element signature="e#44#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/users/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -784,7 +777,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_25_223549_create_projects_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
@@ -830,8 +823,18 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="139" column="41" lean-forward="false" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+          <folding>
+            <element signature="e#44#72#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
