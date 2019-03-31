@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a6672dd-671c-4e50-bcc5-b17fe2458ae3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,12 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="64" column="63" lean-forward="false" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
+            <state relative-caret-position="406">
+              <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="72" column="129" lean-forward="false" selection-start-line="72" selection-start-column="129" selection-end-line="72" selection-end-column="129" />
+              <folding>
+                <marker date="1554052964871" expanded="true" signature="2783:2928" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="118" column="44" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
+              <caret line="118" column="44" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
               <folding>
                 <element signature="e#44#72#0#PHP" expanded="true" />
               </folding>
@@ -47,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -125,7 +137,6 @@
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/storage/app/public/text.txt" />
         <option value="$PROJECT_DIR$/app/Model/Dashboard.php" />
-        <option value="$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/erp/DashboardController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/_login.blade.php" />
@@ -145,6 +156,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -257,7 +269,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Projets/orpan-backend.asto" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
@@ -308,12 +320,12 @@
       <workItem from="1548696849771" duration="2474000" />
       <workItem from="1551131922533" duration="727000" />
       <workItem from="1553935702353" duration="13197000" />
-      <workItem from="1554039557852" duration="7885000" />
+      <workItem from="1554039557852" duration="9429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42563000" />
+    <option name="totallyTimeSpent" value="44107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -617,16 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="10" column="119" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="119" />
-          <folding>
-            <marker date="1553963319626" expanded="true" signature="2783:2928" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/users/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -717,8 +719,8 @@
         <state relative-caret-position="389">
           <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="50" />
           <folding>
-            <element signature="e#964#987#0#HTML" expanded="true" />
-            <element signature="e#1206#1255#0#HTML" expanded="true" />
+            <element signature="e#964#987#0#HTML" expanded="false" />
+            <element signature="e#1206#1255#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,7 +744,7 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -760,7 +762,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="118" column="44" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
+          <caret line="118" column="44" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
           <folding>
             <element signature="e#44#72#0#PHP" expanded="true" />
           </folding>
@@ -769,9 +771,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="64" column="63" lean-forward="false" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
+        <state relative-caret-position="406">
+          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="72" column="129" lean-forward="false" selection-start-line="72" selection-start-column="129" selection-end-line="72" selection-end-column="129" />
+          <folding>
+            <marker date="1554052964871" expanded="true" signature="2783:2928" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

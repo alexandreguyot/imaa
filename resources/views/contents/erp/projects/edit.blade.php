@@ -70,7 +70,7 @@
 						<div class="col-md-3">
 							<ul class="tabs">
 								@foreach ($dashboards as $dashboard)
-									<li class="tab-link" data-tab="tab-{{ $dashboard->id }}"><a href="#">{{ $dashboard->month }} <i class="fas fa-file-alt"></i></a></li>
+									<li class="tab-link" data-tab="tab-{{ $dashboard->id }}"><a href="#">{{ $dashboard->month }} {{ $dashboard->year }} <i class="fas fa-file-alt"></i></a></li>
 								@endforeach
 							</ul>
 						</div>
@@ -82,7 +82,7 @@
 										<div class="dashboard">
 											<div class="col-md-12">
 												<div class="subtitle col-md-12">
-													<h4>Historique du mois de <strong>{{ $dashboard->month }}</strong></h4>
+													<h4>Historique du mois de <strong>{{ $dashboard->month }} {{ $dashboard->year }}</strong></h4>
 												</div>
 												<div class="form-group col-md-12">
 													<label for="publish">Publier</label>
