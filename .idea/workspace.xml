@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a6672dd-671c-4e50-bcc5-b17fe2458ae3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/web/css/erp/simplePagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/web/js/erp/jquery.simplePagination.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/erp/DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/erp/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Project.php" afterPath="$PROJECT_DIR$/app/Model/Project.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/User.php" afterPath="$PROJECT_DIR$/app/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/web/js/erp/master.js" afterPath="$PROJECT_DIR$/public/web/js/erp/master.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php" afterPath="$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contents/erp/projects/list.blade.php" afterPath="$PROJECT_DIR$/resources/views/contents/erp/projects/list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contents/erp/users/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/contents/erp/users/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contents/erp/users/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/contents/erp/users/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/_login.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/_login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/erp/_header_admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/erp/_header_admin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/erp/_header_customer.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/erp/_header_customer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" afterPath="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,18 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="54" column="46" lean-forward="true" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-              <folding>
-                <element signature="e#44#72#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_header_admin.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/erp/_header_admin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,11 +31,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master_admin.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="master_admin.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/erp/master_admin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="95" lean-forward="false" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+            <state relative-caret-position="260">
+              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_03_04_104829_create_foreign_keys.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_02_26_223539_create_dashboards_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223539_create_dashboards_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_02_26_223549_create_projects_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_03_03_152520_projects_users_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_03_152520_projects_users_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,41 +119,6 @@
               <folding>
                 <element signature="e#964#987#0#HTML" expanded="true" />
                 <element signature="e#1206#1255#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="55" column="77" lean-forward="false" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-              <folding>
-                <marker date="1553965355772" expanded="true" signature="5089:5184" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5101:5151" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5242:5340" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5254:5304" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5400:5498" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5412:5462" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5561:5662" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5573:5629" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5726:5830" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5738:5794" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5896:6000" ph="..." />
-                <marker date="1553965355772" expanded="true" signature="5908:5964" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/erp/ProjectController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1429">
-              <caret line="139" column="33" lean-forward="false" selection-start-line="139" selection-start-column="6" selection-end-line="139" selection-end-column="33" />
-              <folding>
-                <element signature="e#44#72#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,7 +183,6 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/storage/app/public/text.txt" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" />
         <option value="$PROJECT_DIR$/app/Model/Dashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/contents/erp/projects/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/contents/erp/projects.blade.php" />
@@ -227,6 +202,7 @@
         <option value="$PROJECT_DIR$/resources/views/contents/erp/projects/list.blade.php" />
         <option value="$PROJECT_DIR$/public/web/js/erp/master.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/erp/master_admin.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php" />
       </list>
     </option>
   </component>
@@ -313,43 +289,19 @@
             <path>
               <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
               <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
               <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
               <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="erp" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="imaa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imaa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="erp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -414,27 +366,27 @@
       <workItem from="1548696849771" duration="2474000" />
       <workItem from="1551131922533" duration="727000" />
       <workItem from="1553935702353" duration="13197000" />
-      <workItem from="1554039557852" duration="5348000" />
+      <workItem from="1554039557852" duration="6193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40026000" />
+    <option name="totallyTimeSpent" value="40871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17217484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4339019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25529543" sideWeight="0.5021322" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56744707" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67335564" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25529543" sideWeight="0.4978678" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
@@ -488,20 +440,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Site/ActivityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Site/TeamController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Site/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -671,22 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,8 +797,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/erp/master_admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="95" lean-forward="false" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+        <state relative-caret-position="260">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223539_create_dashboards_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_26_223549_create_projects_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_03_152520_projects_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_04_104829_create_foreign_keys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
           <folding />
         </state>
       </provider>
