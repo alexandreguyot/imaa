@@ -2,7 +2,7 @@
 <section class="section-signup">
   <div class="container">
     <h3 class="text-xs-center m-b-3">Connectez-vous à votre espace IMAA</h3>
-    <h4 class="text-xs-center m-b-3">Prochainement disponible</h4>
+    <h4 class="text-xs-center m-b-3">Disponible dès maintenant</h4>
       <form action="{{ route('login')}}" method="POST">
         {{ csrf_field() }}
         <div class="row">
@@ -21,7 +21,7 @@
             <div class="form-group has-icon-left form-control-password">
               <label class="sr-only" for="inputPassword">Mot de passe</label>
               <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Mot de passe" autocomplete="off">
-              <a href="{{ route('password.request') }}">Mot de passe oublié</a>
+              <!-- <a href="{{ route('password.request') }}">Mot de passe oublié</a> -->
             </div>
             @if ($errors->has('password'))
               <span class="help-block">

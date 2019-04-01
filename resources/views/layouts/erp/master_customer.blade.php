@@ -25,7 +25,7 @@
     <body class="erp">
         <div class="animated fadeIn">
             @auth
-                @include('layouts.erp._header_customer')
+                @include('layouts.erp._header')
             @endauth
             @yield('content') 
         </div>
