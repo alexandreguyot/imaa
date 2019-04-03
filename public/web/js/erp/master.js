@@ -39,4 +39,8 @@ $(document).ready(function(){
 			$('.project_not_finish').show();
 		}
 	});
+	$('#carouselExampleIndicators-1').carousel({
+	  interval: 4000,
+	  cycle: true
+	});
 });

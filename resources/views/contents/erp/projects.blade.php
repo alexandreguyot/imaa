@@ -114,7 +114,7 @@
 								</div>
 							</div>
 							<div class="overlay overlay-pdf" id="overlay-pdf-{{ $dashboard->id }}">
-								<object data="{{ url("storage/".$dashboard->dashboard) }}" type="application/pdf" width="100%" height="100%">
+								<object data="{{ url("storage/".$dashboard->dashboard) }}#view=FitH" type="application/pdf" width="100%" height="100%">
 								lie alternatif : <a href="{{ url("storage/".$dashboard->dashboard) }}">dashboard.pdf</a>
 								</object>
 								<a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a>

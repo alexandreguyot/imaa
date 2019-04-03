@@ -29,7 +29,7 @@
 							<th scope="col">Nom du projet</th>
 							<th scope="col">Ville</th>
 							<th scope="col">Année(s)</th>
-							<th scope="col" id="finish" style="cursor: pointer">Cloturer</th>
+							<th scope="col" id="finish" style="cursor: pointer">Cloturer <i class="fas fa-sync-alt"></i></th>
 							<th scope="col"></th>
 						</tr>
 					</thead>

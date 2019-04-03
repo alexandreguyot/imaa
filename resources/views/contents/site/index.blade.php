@@ -20,6 +20,7 @@
         <p class="home anim-typewriter animated fadeInDown delay-7s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
 				<p class="rwd animated fadeInDown delay-7s">« Parce que nous souhaitons , tout simplement, vous accompagner autrement »</p>
         <a class="animated fadeInDown delay-2s btn btn-primay" href="#edito" role="button">L'édito <i class="fas fa-angle-down"></i></a>
+        <h2 class="animated fadeInUp delay-3s">Construction • Immobilier</h2>
 			</div>
 		</div>
     @include('layouts._social_home')

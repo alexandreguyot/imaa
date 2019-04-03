@@ -28,13 +28,27 @@ body {
 						}
 						a.nav-dropdown-user {
 							border: 2px solid #ddd;
+							&:after {
+								display: none;
+							}
+							&.nav-link {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
 							img {
-								transform: scale(1.5);
+								transform: scale(1);
+								width: inherit;
 							}
 						}
 					}
 				}
-				.collapsingNavbar {
+				.media-left {
+					display: flex;
+					justify-content: center;
+					img {
+						width: inherit;
+					}
 				}
 			}
 			div.app {
@@ -286,12 +300,10 @@ body {
 												}
 												&:first-child {
 													span {
-														left: 10px;
 													}
 												}
 												&:last-child {
 													i {
-														font-size: 36px;
 														color: @darkblue;
 													}
 												}
@@ -416,6 +428,10 @@ body {
 							}
 							ul.tabs {
 								padding: 0;
+								float: left;
+								width: 100%;
+								max-height: 575px;
+								overflow-y: scroll;
 								li {
 									list-style-type: none;
 									a {
@@ -526,17 +542,17 @@ body {
 				transition: all 1.2s;
 				object { 
 					position: absolute;
-					height: calc(~'100% - 90px');
+					height: calc(~'100% - 140px');
 					width: calc(~'100% - 60px');
-					left: 30px;
-					top: 60px;
+					left: 25px;
+					top: 120px;
 				}
 				div.external {
 					position: absolute;
-					height: calc(~'100% - 90px');
+					height: calc(~'100% - 140px');
 					width: calc(~'100% - 60px');
-					left: 30px;
-					top: 60px;
+					left: 25px;
+					top: 120px;
 					overflow: hidden;
 					display: flex;
 					flex-direction: column;

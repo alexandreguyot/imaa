@@ -58,6 +58,7 @@
                 </div>
               </div>
               @if(Auth::user()->isAdmin())
+                <a href="{{ route('dashboard') }}" class="dropdown-item text-uppercase">Dashboard</a>
                 <a href="{{ route('erp.get.index-project') }}" class="dropdown-item text-uppercase">Projets</a>
                 <a href="{{ route('erp.get.index-user') }}" class="dropdown-item text-uppercase">Utilisateurs</a>
               @else 

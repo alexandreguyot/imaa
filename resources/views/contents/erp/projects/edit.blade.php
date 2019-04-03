@@ -79,6 +79,7 @@
 								@foreach ($dashboards as $dashboard)	
 									<div id="tab-{{ $dashboard->id }}" class="tab-content">
 										<input type="hidden" class="form-control" id="month" name="dashboard[{{$dashboard->id}}][month]" value="{{ $dashboard->month }}">
+										<input type="hidden" class="form-control" id="year" name="dashboard[{{$dashboard->id}}][year]" value="{{ $dashboard->year }}">
 										<div class="dashboard">
 											<div class="col-md-12">
 												<div class="subtitle col-md-12">
