@@ -17,7 +17,7 @@
 						<div class="col-md-6 col-xs-12">
 							<h3>Modification d'un projet</h3>
 						</div>
-						<div class="col-md-6 col-xs-12">
+						<div class="col-md-6 col-xs-12 btnHead">
 							<button type="submit" class="btn btn-primary pull-right">Sauvegarder</button>
 							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>
@@ -59,7 +59,7 @@
 						</div>
 						<div class="form-group col-md-3 col-xs-12">
 								<label for="inputTermine">Cloturer</label>
-								<input type="checkbox" name="finish" class="form-control" id="inputTermine" {{ $project->finish ? 'checked': '' }}>
+								<input type="checkbox" name="finish" class="form-control input-checkbox" id="inputTermine" {{ $project->finish ? 'checked': '' }}>
 							</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@
 												</div>
 												<div class="form-group col-md-12">
 													<label for="publish">Publier</label>
-													<input type="checkbox" class="form-control" id="publish" name="dashboard[{{$dashboard->id}}][publish]" {{ $dashboard->publish ? 'checked' : '' }}>
+													<input type="checkbox" class="form-control input-checkbox" id="publish" name="dashboard[{{$dashboard->id}}][publish]" {{ $dashboard->publish ? 'checked' : '' }}>
 												</div>
 												<div class="form-group col-md-12">
 													<label for="inlineFormInputGroup">Dashboard du mois</label>

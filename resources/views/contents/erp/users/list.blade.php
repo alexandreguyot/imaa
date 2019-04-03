@@ -14,7 +14,7 @@
 					<div class="col-md-6 col-xs-12">
 						<h3>Liste des utilisateurs</h3>
 					</div>
-					<div class="col-md-6 col-xs-12">
+					<div class="col-md-6 col-xs-12 btnHead">
 						<a type="" href="{{ route('erp.get.create-user') }}" class="btn btn-primary pull-right">Créer un compte utilisateur</a>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="list">
 			<div class="container">
-				<table class="table">
+				<table class="table table_projects">
 					<thead class="">
 						<tr>
 							<th scope="col">#</th>
@@ -36,7 +36,7 @@
 					<tbody>
 						@foreach($users as $user)
 							<tr>
-								<th scope="row">{{ $user->id }}</th>
+								<td scope="row">{{ $user->id }}</td>
 								<td>{{ $user->role }}</td>
 								<td>{{ $user->lastname }}</td>
 								<td>{{ $user->firstname }}</td>

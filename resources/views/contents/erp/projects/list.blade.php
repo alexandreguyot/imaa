@@ -14,7 +14,7 @@
 					<div class="col-md-6 col-xs-12">
 						<h3>Liste des projets</h3>
 					</div>
-					<div class="col-md-6 col-xs-12">
+					<div class="col-md-6 col-xs-12 btnHead">
 						<a type="" href="{{ route('erp.get.create-project') }}" class="btn btn-primary pull-right">Créer un projet</a>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="list">
 			<div class="container">
-				<table class="table">
+				<table class="table table_projects">
 					<thead class="">
 						<tr>
 							<th scope="col">#</th>
@@ -36,7 +36,7 @@
 					<tbody id="list_projects_table">
 						@foreach($projects as $project)
 						<tr class="project_{{$project->finish ? 'finish' : 'not_finish'}}" style="{{$project->finish ? 'display:none': ''}}">
-							<th scope="row">{{ $project->id }}</th>
+							<td scope="row">{{ $project->id }}</td>
 							<td>{{ $project->name }}</td>
 							<td>{{ $project->city }}</td>
 							<td>{{ Carbon\Carbon::parse($project->start)->format('m/Y') }} - {{ Carbon\Carbon::parse($project->end)->format('m/Y') }}</td>

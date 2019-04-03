@@ -17,7 +17,7 @@
 						<div class="col-md-6 col-xs-12">
 							<h3>Modification d'un compte utilisateur</h3>
 						</div>
-						<div class="col-md-6 col-xs-12">
+						<div class="col-md-6 col-xs-12 btnHead">
 							<button type="submit" class="btn btn-primary pull-right">Sauvegarder</button>
 							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Quitter sans sauvegarder</button>
 						</div>

@@ -519,6 +519,11 @@ body {
 								box-shadow: 0 0 0 0.2rem rgba(38, 198, 218, 0.16);
 							}
 						}
+						input {
+							&.input-checkbox {
+								width: 20px;
+							}
+						}
 						label {
 							font-weight: 500;
 							color: @darkblue;
@@ -656,7 +661,6 @@ body {
 							ul {
 								margin: 0;
 								li {
-									display: none;
 									text-align: center;
 									border: none;
 									padding: 50px 30px;
@@ -698,29 +702,58 @@ body {
 		}
 	}
 }
-@media (max-width: 740px) {
+@media (max-width: 770px) {
 	body {
 		&.erp {
-			> div {
-				div.app {
-					div.projects {
-						> div.tabs-container {
-							div.download {
-								flex-direction: column;
-								> div.pdf {
-									margin: 0 0 30px;
-									width: 100%;
-									&:first-child {
-										margin: 0 0 30px;
-									}
-									&:last-child {
-										margin: 0;
+			div.app {
+				&.admin {
+					table {
+						th {
+							line-height: 18px!important;
+						}
+						&.table_projects {
+							tr {
+								> td,
+								> th {
+									&:first-child,
+									&:nth-child(3),
+									&:nth-child(4) {
+										display: none;
 									}
 								}
 							}
-							div.comment {
-								text-align: center;
+						}
+					}
+				}
+				div.head {
+					h3 {
+						text-align: center;
+						padding: 0 0 15px;
+					}
+					div.btnHead {
+						text-align: center;
+						a, button {
+							float: none;
+						}
+					}
+				}
+				div.projects { 
+					> div.tabs-container {
+						div.download {
+							flex-direction: column;
+							> div.pdf {
+								margin: 0 0 30px;
+								width: 100%;
+								&:first-child {
+									margin: 0 0 30px;
+								}
+								&:last-child {
+									margin: 0;
+								}
 							}
+						}
+						div.comment {
+							text-align: center;
 						}
 					}
 				}
