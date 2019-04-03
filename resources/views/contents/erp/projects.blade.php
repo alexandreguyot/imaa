@@ -14,7 +14,7 @@
 				<ul>
 					@if ($projects)
 						@foreach ($projects as $project)
-							<li>
+							<li @if($project->id === $projectDashboard->id) class="active" @endif>
 								<a href="{{ route('dashboard', $project->id)}}">
 									{{ $project->name }}
 									<span>{{ $project->city }} - {{ Carbon\Carbon::parse($project->start)->format('Y')}}/{{ Carbon\Carbon::parse($project->end)->format('Y')}}</span>
@@ -44,9 +44,13 @@
 									<div class="banner">
 										<div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
 											<ol class="carousel-indicators">
-												<li data-target="#carouselExampleIndicators-1" data-slide-to="0" class="active"></li>
-												<li data-target="#carouselExampleIndicators-1" data-slide-to="1"></li>
-												<li data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
+												@if($dashboard->photos)
+													@foreach(explode(';', $dashboard->photos[0]) as $key => $photo)
+														@if($photo)
+															<li data-target="#carouselExampleIndicators-1" data-slide-to="{{ $key }}" @if ($loop->first) class="active" @endif></li>
+														@endif
+													@endforeach
+												@endif
 											</ol>
 											<div class="carousel-inner">
 												@if($dashboard->photos)
@@ -63,14 +67,16 @@
 													</div>
 												@endif
 											</div>
-											<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="carousel-control-next" href="#carouselExampleIndicators-1" role="button" data-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="sr-only">Next</span>
-											</a>
+											@if($dashboard->photos && explode(';', $dashboard->photos[0]).length)
+												<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="carousel-control-next" href="#carouselExampleIndicators-1" role="button" data-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
+											@endif
 										</div>
 									</div>
 									<div class="download">
@@ -84,16 +90,18 @@
 												</div>
 											</a>
 										</div>
-										<div class="pdf">
-											<a href="#" class="open-timelapse" id="open-timelapse-{{ $dashboard->id }}" >
-												<div>
-													<span>Connexion au Timelapse</span>
-												</div>
-												<div>
-													<i class="fas fa-images"></i>
-												</div>
-											</a>
-										</div>
+										@if ($projectDashboard->url)
+											<div class="pdf">
+												<a href="#" class="open-timelapse" id="open-timelapse-{{ $dashboard->id }}" >
+													<div>
+														<span>Connexion au Timelapse</span>
+													</div>
+													<div>
+														<i class="fas fa-images"></i>
+													</div>
+												</a>
+											</div>
+										@endif
 									</div>
 									<div class="comment">
 										<div class="content">
@@ -111,16 +119,18 @@
 								</object>
 								<a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a>
 							</div>
-							<div class="overlay overlay-timelapse" id="overlay-timelapse-{{ $dashboard->id }}">
-								<div class="external">
-									<ul>
-										<li>Identifiant : {{ $projectDashboard->identifiant }}</li>
-										<li>Mot de passe : {{ $projectDashboard->password }}</li>
-									</ul>
-									<iframe src="{{ $projectDashboard->url }}"></iframe>
+							@if ($projectDashboard->url)
+								<div class="overlay overlay-timelapse" id="overlay-timelapse-{{ $dashboard->id }}">
+									<div class="external">
+										<ul>
+											<li>Identifiant : {{ $projectDashboard->identifiant }}</li>
+											<li>Mot de passe : {{ $projectDashboard->password }}</li>
+										</ul>
+										<iframe src="{{ $projectDashboard->url }}"></iframe>
+									</div>
+									<a href="#" class="close-timelapse" id="close-timelapse-{{ $dashboard->id }}" ><i class="fa fa-times" aria-hidden="true"></i></a>
 								</div>
-								<a href="#" class="close-timelapse" id="close-timelapse-{{ $dashboard->id }}" ><i class="fa fa-times" aria-hidden="true"></i></a>
-							</div>
+							@endif
 							<script>
 									$('#open-pdf-' + {{ $dashboard->id }} ).click(function() {
 										$('#overlay-pdf-' + {{ $dashboard->id }}).addClass('active');
@@ -131,15 +141,17 @@
 									$('#overlay-pdf-' + {{ $dashboard->id }}).click(function() {
 										$('#overlay-pdf-' + {{ $dashboard->id }}).removeClass('active');
 									});
-									$('#open-timelapse-' + {{ $dashboard->id }}).click(function() {
-										$('#overlay-timelapse-' + {{ $dashboard->id }}).addClass('active');
-									});
-									$('#close-timelapse-' + {{ $dashboard->id }}).click(function() {
-										$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
-									});
-									$('#overlay-timelapse-' + {{ $dashboard->id }}).click(function() {
-										$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
-									});
+									@if ($projectDashboard->url)
+										$('#open-timelapse-' + {{ $dashboard->id }}).click(function() {
+											$('#overlay-timelapse-' + {{ $dashboard->id }}).addClass('active');
+										});
+										$('#close-timelapse-' + {{ $dashboard->id }}).click(function() {
+											$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
+										});
+										$('#overlay-timelapse-' + {{ $dashboard->id }}).click(function() {
+											$('#overlay-timelapse-' + {{ $dashboard->id }}).removeClass('active');
+										});
+									@endif
 							</script>
 						@endif
 					@endforeach
