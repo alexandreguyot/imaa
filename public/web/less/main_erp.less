@@ -663,16 +663,20 @@ body {
 								li {
 									text-align: center;
 									border: none;
-									padding: 50px 30px;
+									padding: 0px 30px;
 									a {
-										font-size: 28px;
+										font-size: 18px;
 										width: 100%;
 										span {
 											padding: 5px 0 0;
 										}
 									}
 									&.active {
+										padding: 30px 30px;
 										display: block;
+										a {
+											font-size: 28px;
+										}
 									}
 								}
 							}
@@ -691,6 +695,7 @@ body {
 							}
 						}
 						> div.tabs-container {
+							overflow: inherit!important;
 							width: 100%;
 							div.dashboard {
 								width: 100%;
@@ -702,58 +707,74 @@ body {
 		}
 	}
 }
+@media (max-width: 991px) { 
+	body nav.navbar div.collapsingNavbar.on ul > li {
+		&:hover {
+			a {
+				color: lighten(@lightblue, 80%)!important;
+			}
+		}
+	}
+}
 @media (max-width: 770px) {
 	body {
 		&.erp {
-			div.app {
-				&.admin {
-					table {
-						th {
-							line-height: 18px!important;
-						}
-						&.table_projects {
-							tr {
-								> td,
-								> th {
-									&:first-child,
-									&:nth-child(3),
-									&:nth-child(4) {
-										display: none;
+			> div {
+				div.app {
+					&.admin {
+						table {
+							th {
+								line-height: 18px!important;
+							}
+							&.table_projects {
+								tr {
+									> td,
+									> th {
+										&:first-child,
+										&:nth-child(3),
+										&:nth-child(4) {
+											display: none;
+										}
 									}
 								}
 							}
 						}
 					}
-				}
-				div.head {
-					h3 {
-						text-align: center;
-						padding: 0 0 15px;
-					}
-					div.btnHead {
-						text-align: center;
-						a, button {
-							float: none;
+					div.head {
+						h3 {
+							text-align: center;
+							padding: 0 0 15px;
 						}
-					}
-				}
-				div.projects { 
-					> div.tabs-container {
-						div.download {
-							flex-direction: column;
-							> div.pdf {
-								margin: 0 0 30px;
-								width: 100%;
-								&:first-child {
-									margin: 0 0 30px;
-								}
-								&:last-child {
-									margin: 0;
-								}
+						div.btnHead {
+							text-align: center;
+							a, button {
+								float: none;
 							}
 						}
-						div.comment {
-							text-align: center;
+					}
+					div.projects { 
+						> div.mounth {
+							i {
+								display: none;
+							}
+						}
+						> div.tabs-container {
+							div.download {
+								flex-direction: column;
+								> div.pdf {
+									margin: 0 0 30px;
+									width: 100%!important;
+									&:first-child {
+										margin: 0 0 30px;
+									}
+									&:last-child {
+										margin: 0;
+									}
+								}
+							}
+							div.comment {
+								text-align: center;
+							}
 						}
 					}
 				}
