@@ -67,7 +67,7 @@
 													</div>
 												@endif
 											</div>
-											@if($dashboard->photos && count(explode(';', $dashboard->photos[0]))
+											@if($dashboard->photos && count(explode(';', $dashboard->photos[0])))
 												<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
 													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 													<span class="sr-only">Previous</span>
