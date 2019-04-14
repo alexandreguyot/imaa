@@ -69,7 +69,12 @@
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputPassword">Mot de passe *</label>
-							<input type="password" name="password" class="form-control" id="inputPassword" placeholder="" required>
+							<div class="input-group" id="show_hide_password">
+								<input type="password" name="password" class="form-control" id="inputPassword" placeholder="" required>
+								<div class="input-group-addon">
+							        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+							    </div>
+							</div>
 						</div>
 					</div>
 					<div class="form-row">

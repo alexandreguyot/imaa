@@ -61,14 +61,28 @@ body {
 						height: 100vh;
 						width: 100%;
 						background-color: @darkblue;
-						padding: 16%;
+						padding: 40px 0 0;
 						> li {
-							padding: 25px;
+							padding: 35px;
+							margin: 0 0 0 35px;
 							> a {
 								font-size: 30px;
 							}
 							ul {
-								display: none;
+								position: initial!important;
+								height: inherit;
+								padding: 0!important;
+								background: none!important;
+								box-shadow: none!important;
+								li {
+									padding: 0;
+									margin: 0;
+									list-style-type: none;
+									a {
+										font-size: 20px;
+										color: white;
+									}
+								}
 							}
 							div {
 								&.chevron {
@@ -92,8 +106,8 @@ body {
 								display: none;
 							}
 							&:hover {
-								ul {
-									display: none;
+								li {
+
 								}
 							}
 						}
