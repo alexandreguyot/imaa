@@ -9,7 +9,7 @@
 				<li class="{{ active_check('activites/secteur-geographique') }}"><a href="{{ route('activites.secteur-geographique') }}">Secteur géographique</a></li>
 			</ul>
 		</li>
-		<li class="{{ active_check('equipe') }}"><a href="{{ route('equipe') }}">L'équipe</a></li>
+		<li class="{{ active_check('equipe') }}"><a href="{{ route('equipe') }}">L'Équipe</a></li>
 		<li class="{{ active_check('actualites') }}"><a href="{{ route('actualites') }}">Actualités</a></li>
 		<li class="{{ active_check('contact') }}"><a href="{{ route('contact') }}">Contact</a></li>
 	</ul>

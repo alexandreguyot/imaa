@@ -13,7 +13,7 @@
 	<header>
 		<div class="container-header" style="background-image: url({{ URL::asset('images/bg-contact.jpg') }});">
 			<div class="info-center">
-				<h1 class="animated fadeInDown">L'équipe</h1>
+				<h1 class="animated fadeInDown">L'Équipe</h1>
 				<ul class="animated fadeInUp">
 					<li><a href="{{ route('equipe.presentation') }}">Présentation</a></li>
 					<li><a href="{{ route('equipe.savoir-faire') }}">Savoir faire</a></li>

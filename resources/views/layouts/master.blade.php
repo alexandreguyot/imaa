@@ -20,6 +20,16 @@
         <link rel="stylesheet/less" type="text/css" href="{{ URL::asset('web/less/styles.less') }}" />
 
 		@yield('styles')
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134157825-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-134157825-1');
+        </script>
+
     </head>
     <body>
         <div class="bg-blue animated fadeIn">
