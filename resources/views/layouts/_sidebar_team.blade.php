@@ -3,7 +3,7 @@
 		<li class="{{ active_check('home') }}"><a href="{{ route('accueil') }}">Accueil</a></li>
 		<li class="{{ active_check('activites') }}"><a href="{{ route('activites') }}">Activités</a></li>
 		<li class="{{ active_check('equipe') }}">
-			<a href="{{ route('equipe') }}">L'équipe</a>
+			<a href="{{ route('equipe') }}">L'Équipe</a>
 			<ul>
 				<li class="{{ active_check('equipe/presentation') }}"><a href="{{ route('equipe.presentation') }}">Présentation</a></li>
 				<li class="{{ active_check('equipe/savoir-faire') }}"><a href="{{ route('equipe.savoir-faire') }}">Savoir faire</a></li>

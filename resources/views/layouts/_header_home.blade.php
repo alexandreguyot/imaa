@@ -29,7 +29,7 @@
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-6s">
            </div>
-           <a class="nav-link" href="{{ route('equipe') }}">L'équipe</a>
+           <a class="nav-link" href="{{ route('equipe') }}">L'Équipe</a>
            <ul>
              <li class="{{ active_check('equipe/presentation') }}"><a href="{{ route('equipe.presentation') }}">Présentation</a></li>
              <li class="{{ active_check('equipe/savoir-faire') }}"><a href="{{ route('equipe.savoir-faire') }}">Savoir faire</a></li>
@@ -44,10 +44,21 @@
          </li>
 
          @guest
+           <li class="nav-item dropdown hidden-sm-down textselect-off">
+             <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
+             </a>
+             <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
+               <div class="media">
+                 <div class="">
+                  <h6 class="media-heading">Votre espace IMAA</h6>
+                 </div>
+               <a href="{{ route('logout') }}" class="dropdown-item text-uppercase text-muted">Connexion</a>
+             </div>
+           </li>
          @endguest
 
          @auth
-
           <li class="nav-item dropdown hidden-sm-down textselect-off">
             <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>

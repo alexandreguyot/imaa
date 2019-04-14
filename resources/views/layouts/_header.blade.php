@@ -24,7 +24,7 @@
            </ul>
          </li>
          <li class="nav-item nav-item-toggable {{ active_check('equipe') }}">
-           <a class="nav-link" href="{{ route('equipe') }}">L'équipe</a>
+           <a class="nav-link" href="{{ route('equipe') }}">L'Équipe</a>
            <div class="chevron">
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-1s">
            </div>
@@ -40,6 +40,22 @@
              <img src="{{ URL::asset('images/chevron.svg') }}" class="animated fadeIn delay-1s">
            </div>
          </li>
+
+         @guest
+           <li class="nav-item dropdown hidden-sm-down textselect-off">
+             <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
+             </a>
+             <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
+               <div class="media">
+                 <div class="">
+                  <h6 class="media-heading">Votre espace IMAA</h6>
+                 </div>
+               </div>
+               <a href="#connexion" class="dropdown-item text-uppercase text-muted">Connexion</a>
+             </div>
+           </li>
+         @endguest
 
          @auth
 
