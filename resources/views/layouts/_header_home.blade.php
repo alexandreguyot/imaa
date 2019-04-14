@@ -53,7 +53,8 @@
                  <div class="">
                   <h6 class="media-heading">Votre espace IMAA</h6>
                  </div>
-               <a href="{{ route('logout') }}" class="dropdown-item text-uppercase text-muted">Connexion</a>
+               </div>
+               <a href="#connexion" class="dropdown-item text-uppercase text-muted">Connexion</a>
              </div>
            </li>
          @endguest
