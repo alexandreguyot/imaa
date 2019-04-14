@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Project;
 use App\Model\Dashboard;
+use App\Model\User;
 use Carbon\CarbonPeriod;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
@@ -53,6 +54,10 @@ class ProjectController extends Controller
                     $dashboard->createPhotosFolder($project->id);
                 }
             }
+        }
+        $users = User::where('role','=', 'Administrateur')->get();
+        foreach ($users as $user) {
+            $user->projects()->attach($project->id);
         }
         return Redirect::route('erp.get.index-project');
     }

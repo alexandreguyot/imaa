@@ -6,22 +6,26 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Project;
 use App\Model\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    function index() {
+    function index()
+    {
         $users = User::all();
         return view('contents.erp.users.list', ['users' => $users]);
     }
 
-    function create() {
+    function create()
+    {
         $projects = Project::where('finish', 0)->get();
         return view('contents.erp.users.create', ['projects' => $projects]);
     }
-     
-    function store() {
+
+    function store()
+    {
         $user = new User();
         $user->lastname = request('lastname');
         $user->firstname = request('firstname');
@@ -39,18 +43,16 @@ class UserController extends Controller
         return Redirect::route('erp.get.index-user');
     }
 
-    function edit($id) {
+    function edit($id)
+    {
         $user = User::where('id', $id)->with('projects')->first();
         $list_projects = $user->projects->pluck('id')->toArray();
-        $projects = Project::where('finish', '=' , 0)->get();
-        return view('contents.erp.users.edit', [
-            'user' => $user,
-            'list_projects' => $list_projects,
-            'projects' => $projects
-        ]);
+        $projects = Project::where('finish', '=', 0)->get();
+        return view('contents.erp.users.edit', ['user' => $user, 'list_projects' => $list_projects, 'projects' => $projects]);
     }
 
-    function update($id) {
+    function update($id)
+    {
         $user = User::where('id', $id)->first();
         $user->lastname = request('lastname');
         $user->firstname = request('firstname');
@@ -58,10 +60,10 @@ class UserController extends Controller
             $user->password = bcrypt(request('password'));
         }
         $user->email = request('email');
-        $user->role = request('role');
+        $user->role = request('role') ? request('role') : 'Utilisateur';
         $user->entreprise = request('entreprise');
         $user->telephone = request('telephone');
-        if(request('logo')) {
+        if (request('logo')) {
             $files = Storage::allFiles($user->getPathLogoFolder());
             Storage::delete($files);
             $user->logo = Storage::disk('public')->put($user->getPathLogoFolder(), request('logo'));
@@ -69,10 +71,15 @@ class UserController extends Controller
         if ($user->update()) {
             $user->projects()->sync(request('list_projects'));
         }
-        return Redirect::route('erp.get.index-user');
+        if (Auth::user()->isAdmin()) {
+            return Redirect::route('erp.get.index-user');
+        } else {
+            return Redirect::route('dashboard');
+        }
     }
 
-    function delete($id) {
+    function delete($id)
+    {
         $user = User::where('id', $id)->first();
         if (!$user->projects->isEmpty()) {
             $list_projects = $user->projects->pluck('id')->toArray();

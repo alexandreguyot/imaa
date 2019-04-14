@@ -70,8 +70,10 @@
                <h6>{{ Auth::user()->email }}</h6>
              </div>
            </div>
-           <a href="#" class="dropdown-item text-uppercase">Dashboard</a>
-           <a href="{{ route('logout') }}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
+             <a href="{{ route('dashboard') }}" class="dropdown-item text-uppercase">Dashboard</a>
+             <a href="{{ route('erp.get.edit-user', Auth::user()->id) }}" class="dropdown-item text-uppercase">Editer mon profil</a>
+             <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
+
          </div>
        </li>
      </ul>

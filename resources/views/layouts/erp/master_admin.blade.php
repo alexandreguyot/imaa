@@ -16,8 +16,12 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+        <script type="text/javascript" src='https://cloud.tinymce.com/5/tinymce.min.js?apiKey=qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc'></script>
         <script type="text/javascript" src="{{  URL::asset('web/js/erp/select2.full.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('web/js/erp/master.js') }}"></script>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=xlj1knxdsunh55klu129afcchi834bs5o3m483tvi6ocds5j"></script>
+
 
         <link rel="stylesheet/less" type="text/css" href="{{ URL::asset('web/less/styles.less') }}" />
         
@@ -30,7 +34,6 @@
         </div>
 
         @yield('scripts') 
-        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
     </body>
 </html>

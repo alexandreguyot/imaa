@@ -40,11 +40,11 @@ Route::get('/dashboard/{id?}', ['uses'=> 'erp\DashboardController@index', 'middl
 //Route::middleware('auth')->namespace('ERP')->prefix('erp')->group(function () {
 //Route::middleware('admin')->prefix('admin')->group(function () {
 
-Route::middleware(['auth', 'admin'])->namespace('erp')->prefix('erp')->group(function () {
+Route::middleware('auth')->namespace('erp')->prefix('erp')->group(function () {
 
     Route::get('/', ['uses' => 'WelcomeController@index'])->name('erp.index');
 
-    Route::prefix('/projets')->group( function () {
+    Route::middleware('admin')->prefix('/projets')->group( function () {
         Route::get('/', ['uses' => 'ProjectController@index'])->name('erp.get.index-project');
         Route::get('creation-projet', ['uses' => 'ProjectController@create'])->name('erp.get.create-project');
         Route::post('creation-projet', ['uses' =>'ProjectController@store'])->name('erp.post.store-project');
@@ -54,11 +54,11 @@ Route::middleware(['auth', 'admin'])->namespace('erp')->prefix('erp')->group(fun
     });
 
     Route::prefix('/utilisateurs')->group( function () {
-        Route::get('/', ['uses' => 'UserController@index'])->name('erp.get.index-user');
-        Route::get('creation-utilisateur', ['uses' => 'UserController@create'])->name('erp.get.create-user');
-        Route::post('creation-utilisateur', ['uses' =>'UserController@store'])->name('erp.post.store-user');
+        Route::get('/', ['uses' => 'UserController@index'])->name('erp.get.index-user')->middleware('admin');
+        Route::get('creation-utilisateur', ['uses' => 'UserController@create'])->name('erp.get.create-user')->middleware('admin');
+        Route::post('creation-utilisateur', ['uses' =>'UserController@store'])->name('erp.post.store-user')->middleware('admin');
         Route::get('edition-utilisateur/{id}', ['uses' => 'UserController@edit'])->name('erp.get.edit-user');
         Route::put('edition-utilisateur/{id}', ['uses' => 'UserController@update'])->name('erp.put.update-user');
-        Route::delete('suppression-utilisateur/{id}', ['uses' => 'UserController@delete'])->name('erp.delete.delete-user');
+        Route::delete('suppression-utilisateur/{id}', ['uses' => 'UserController@delete'])->name('erp.delete.delete-user')->middleware('admin');
     });
 });

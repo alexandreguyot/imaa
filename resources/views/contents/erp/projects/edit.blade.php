@@ -76,7 +76,7 @@
 						</div>
 						<div class="col-md-9">
 							<div class="tabs-container animated fadeIn delay-04s">
-								@foreach ($dashboards as $dashboard)	
+								@foreach ($dashboards as $dashboard)
 									<div id="tab-{{ $dashboard->id }}" class="tab-content">
 										<input type="hidden" class="form-control" id="month" name="dashboard[{{$dashboard->id}}][month]" value="{{ $dashboard->month }}">
 										<input type="hidden" class="form-control" id="year" name="dashboard[{{$dashboard->id}}][year]" value="{{ $dashboard->year }}">
@@ -113,7 +113,15 @@
 												</div>
 												<div class="form-group col-md-12">
 													<label for="commentaryMounth">Commentaire du mois</label>
-													<textarea class="form-control" id="commentaryMounth" name="dashboard[{{$dashboard->id}}][comment]" rows="5">{{ $dashboard->comment }}</textarea>
+													<textarea class="form-control" id="commentaryMounth_{{$dashboard->id}}" name="dashboard[{{$dashboard->id}}][comment]" rows="15">{{ $dashboard->comment }}</textarea>
+													<script>
+														tinymce.init({
+															selector:'#commentaryMounth_'+{{$dashboard->id}},
+															menubar: false,
+															toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+															toolbar_items_size: 'small',
+														});
+													</script>
 												</div>
 											</div>
 										</div>

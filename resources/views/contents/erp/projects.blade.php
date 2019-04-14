@@ -104,11 +104,9 @@
 										@endif
 									</div>
 									<div class="comment">
-										<div class="content">
+										<div class="content" style="white-space: pre-line;">
 											<h1>Commentaire de IMAA</h1>
-											<p>
-												{{ $dashboard->comment }}	
-											</p>
+												{!! $dashboard->comment !!}
 										</div>
 									</div>
 								</div>
