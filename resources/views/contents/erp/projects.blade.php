@@ -80,18 +80,27 @@
 										</div>
 									</div>
 									<div class="download">
-										<div class="pdf">
-											<a href="#" class="open-pdf" id="open-pdf-{{ $dashboard->id }}" >
-												<div>
-													<span>Consulter le dashboard (pdf)</span>
-												</div>
-												<div>
-													<i class="fas fa-file-pdf"></i>
-												</div>
-											</a>
-										</div>
-										@if ($projectDashboard->url)
+										@if ($dashboard->id)
 											<div class="pdf">
+												<div class="">
+													<a href="#" class="open-pdf" id="open-pdf-{{ $dashboard->id }}" >
+														<div>
+															<span>Consulter le dashboard (pdf)</span>
+														</div>
+														<div>
+															<i class="fas fa-file-pdf"></i>
+														</div>
+													</a> 
+													<a href="{{ url("storage/".$dashboard->dashboard) }}" download>
+														<div>
+															<i class="fas fa-file-download"></i>
+														</div>
+													</a>
+												</div>
+											</div>
+										@endif
+										@if ($projectDashboard->url)
+											<div class="timelapse">
 												<a href="#" class="open-timelapse" id="open-timelapse-{{ $dashboard->id }}" >
 													<div>
 														<span>Connexion au Timelapse</span>

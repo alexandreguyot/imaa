@@ -118,7 +118,7 @@
 														tinymce.init({
 															selector:'#commentaryMounth_'+{{$dashboard->id}},
 															menubar: false,
-															toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+															toolbar: 'undo redo | formatselect | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
 															toolbar_items_size: 'small',
 														});
 													</script>
