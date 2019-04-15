@@ -136,8 +136,10 @@
 								<div class="overlay overlay-timelapse" id="overlay-timelapse-{{ $dashboard->id }}">
 									<div class="external">
 										<ul>
+											<li>Site : {{ $projectDashboard->url }}</li>
 											<li>Identifiant : {{ $projectDashboard->identifiant }}</li>
 											<li>Mot de passe : {{ $projectDashboard->password }}</li>
+											<li><a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a></li>
 										</ul>
 										<iframe src="{{ $projectDashboard->url }}"></iframe>
 									</div>
