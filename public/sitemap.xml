@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.imaa.eu/</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/accueil</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/activites</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/activites/nos-domaines</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/activites/nos-missions</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/activites/secteur-geographique</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/equipe</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/equipe/presentation</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/equipe/savoir-faire</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/equipe/ce-qui-nous-differencie</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/actualites</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/contact</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imaa.eu/mentions-legales</loc>
+  <lastmod>2019-04-14T12:42:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
