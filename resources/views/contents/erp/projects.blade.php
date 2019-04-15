@@ -53,7 +53,7 @@
 												@endif
 											</ol>
 											<div class="carousel-inner">
-												@if($dashboard->photos)
+												@if($dashboard->photos[0])
 													@foreach(explode(';', $dashboard->photos[0]) as $photo)
 														@if($photo)
 															<div class="carousel-item @if ($loop->first) active @endif" >
@@ -64,6 +64,12 @@
 												@else
 													<div class="carousel-item active">
 														<img src="{{ URL::asset('images/erp/projets/demo.jpg') }}">
+													</div>
+													<div class="carousel-item ">
+														<img src="{{ URL::asset('images/erp/projets/demo_2.jpg') }}">
+													</div>
+													<div class="carousel-item ">
+														<img src="{{ URL::asset('images/erp/projets/demo_3.jpg') }}">
 													</div>
 												@endif
 											</div>
