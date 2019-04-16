@@ -75,7 +75,7 @@
            </div>
              <a href="{{ route('dashboard') }}" class="dropdown-item text-uppercase">Dashboard</a>
              <a href="#" class="dropdown-item text-uppercase comingsoon" title="Prochainement disponible">Boîte à plan</a>
-             <a href="{{ route('erp.get.edit-user', Auth::user()->id) }}" class="dropdown-item text-uppercase">Mon compte</a>
+             <a href="{{ route('site.edit-user') }}" class="dropdown-item text-uppercase">Mon compte</a>
              <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
          </div>
        </li>
