@@ -55,11 +55,16 @@
 									<option value="Utilisateur" {{ $user->isAdmin() ? '' : 'selected' }}>Utilisateur</option>
 								  </select>
 							</div>
+							<div class="form-group col-md-6 col-xs-12">
+								<label for="inputEntreprise">Entreprise</label>
+								<input type="text" name="entreprise" value="{{ $user->entreprise }}" class="form-control" id="inputEntreprise" placeholder="">
+							</div>
+						@else
+							<div class="form-group col-md-12 col-xs-12">
+								<label for="inputEntreprise">Entreprise</label>
+								<input type="text" name="entreprise" value="{{ $user->entreprise }}" class="form-control" id="inputEntreprise" placeholder="">
+							</div>
 						@endif
-						<div class="form-group col-md-6 col-xs-12">
-							<label for="inputEntreprise">Entreprise</label>
-							<input type="text" name="entreprise" value="{{ $user->entreprise }}" class="form-control" id="inputEntreprise" placeholder="">
-						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
@@ -79,7 +84,7 @@
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputPassword4">Mot de passe *</label>
 							<div class="input-group" id="show_hide_password">
-								<input type="password" name="password" class="form-control" id="inputPassword4" placeholder="" required>
+								<input type="password" name="password"  class="form-control" id="inputPassword4" placeholder="" >
 								<div class="input-group-addon">
 							        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
 							    </div>
@@ -91,15 +96,11 @@
 								<label for="inputTel">Téléphone</label>
 								<input type="text" name="telephone"  value="{{ $user->telephone }}" class="form-control" id="inputTel" placeholder="" required>
 						</div>
-						<div class="form-group col-md-6 col-xs-12">
+						<div class="form-group col-md-6 col-xs-12 logo">
 							@if($user->logo)
-								<div class="form-group col-md-4">
-									<img src="{{ $user->logo ? url('storage/'.$user->logo) : URL::asset('images/user.png') }}" height="60" width="60" alt="Avatar" class="img-circle">
-								</div>
-								<div class="form-group col-md-8">
-									<label for="inputLogo">Logo</label>
-									<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="">
-								</div>
+								<label for="inputLogo">Logo</label>
+								<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="">
+								<img src="{{ $user->logo ? url('storage/'.$user->logo) : URL::asset('images/user.png') }}" height="60" width="60" alt="Avatar" class="img-circle">
 							@else
 								<label for="inputLogo">Logo</label>
 								<input type="file" name="logo" class="form-control" id="inputLogo" placeholder="">

@@ -43,7 +43,7 @@
 
          @guest
            <li class="nav-item dropdown hidden-sm-down textselect-off">
-             <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" >
                <img src="{{ URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
              </a>
              <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
@@ -60,7 +60,7 @@
          @auth
 
           <li class="nav-item dropdown hidden-sm-down textselect-off">
-            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" >
               <img src="{{ Auth::user()->logo ? url('storage/'.Auth::user()->logo) : URL::asset('images/user.png') }}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
