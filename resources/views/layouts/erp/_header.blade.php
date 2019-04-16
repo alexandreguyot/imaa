@@ -31,10 +31,13 @@
                   <h6>{{ Auth::user()->email }}</h6>
                 </div>
               </div>
-
               <a href="{{ route('dashboard') }}" class="dropdown-item text-uppercase">Dashboard</a>
-              <a href="{{ route('erp.get.index-project') }}" class="dropdown-item text-uppercase">Projets</a>
-              <a href="{{ route('erp.get.index-user') }}" class="dropdown-item text-uppercase">Utilisateurs</a>
+              <ul>
+                <li><a href="{{ route('erp.get.index-project') }}" class="dropdown-item text-uppercase">Projets</a></li>
+                <li><a href="{{ route('erp.get.index-user') }}" class="dropdown-item text-uppercase">Utilisateurs</a></li>
+              </ul>
+              <a href="#" class="dropdown-item text-uppercase comingsoon" title="Prochainement disponible">Boîte à plan</a>
+             <a href="{{ route('erp.get.edit-user', Auth::user()->id) }}" class="dropdown-item text-uppercase">Mon compte</a>
              <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
             </div>
           </li>
@@ -71,9 +74,9 @@
              </div>
            </div>
              <a href="{{ route('dashboard') }}" class="dropdown-item text-uppercase">Dashboard</a>
-             <a href="{{ route('erp.get.edit-user', Auth::user()->id) }}" class="dropdown-item text-uppercase">Editer mon profil</a>
+             <a href="#" class="dropdown-item text-uppercase comingsoon" title="Prochainement disponible">Boîte à plan</a>
+             <a href="{{ route('erp.get.edit-user', Auth::user()->id) }}" class="dropdown-item text-uppercase">Mon compte</a>
              <a href="{{ route('logout')}}" class="dropdown-item text-uppercase text-muted">Déconnexion</a>
-
          </div>
        </li>
      </ul>
