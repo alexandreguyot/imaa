@@ -32,6 +32,10 @@ Route::post('password/reset', [ 'uses' => 'Auth\ResetPasswordController@reset'])
 /*
  * Route pour les clients pour consulter le projet
  * */
+Route::get('/espace-imaa', ['uses'=> 'erp\HomeController@index', 'middleware' => 'auth'])->name('welcome');
+/*
+ * Route pour les clients pour consulter le projet
+ * */
 Route::get('/dashboard/{id?}', ['uses'=> 'erp\DashboardController@index', 'middleware' => 'auth'])->name('dashboard');
 /*
  * Route pour l'ERP 

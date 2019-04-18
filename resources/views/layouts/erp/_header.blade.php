@@ -2,12 +2,14 @@
  @if(Auth::user()->isAdmin())
    <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
    <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp ">
-    <div class="container">
       <a class="" href="{{ route('accueil') }}">
         <img src="{{ URL::asset('images/erp/logo_imaa.png') }}" class="animated fadeInDown ">
       </a>
       <div id="collapsingNavbar" class="collapsingNavbar " > 
         <ul class="nav navbar-nav pull-xs-right">
+          <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
+            <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
+          </li> 
           <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
             <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
           </li> 
@@ -46,7 +48,6 @@
       <div class="nav-bar-active">
         <i class="fas fa-bars"></i>
       </div> 
-    </div>
   </nav>
  @else 
   <!-- <nav class="navbar navbar-dark bg-inverse-custom navbar-fixed-top animated fadeInUp "> -->
@@ -56,9 +57,15 @@
    </a>
    <div id="collapsingNavbar" class="collapsingNavbar " > 
      <ul class="nav navbar-nav pull-xs-right">
-      <!--  <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
-         <a class="nav-link" href="{{ route('erp.get.index-user') }}">Mon compte</a>
-       </li> -->
+       <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
+         <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
+       </li> 
+       <li class="nav-item nav-item-toggable {{ active_check('/') }} ">
+         <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+       </li> 
+       <li class="nav-item nav-item-toggable {{ active_check('activites') }}">
+         <a class="nav-link" href="{{ route('site.edit-user') }}">Mon compte</a>
+       </li>
        <li class="nav-item dropdown hidden-sm-down textselect-off">
           <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" >
            <img src="{{ Auth::user()->logo ? url('storage/'.Auth::user()->logo) : URL::asset('images/user.png') }}" height="" width="" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>

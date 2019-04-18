@@ -80,7 +80,7 @@
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 								<label for="inputTel">Téléphone</label>
-								<input type="text" name="telephone" class="form-control" id="inputTel" placeholder="" required>
+								<input type="text" name="telephone" class="form-control" id="inputTel" placeholder="" >
 						</div>
 						<div class="form-group col-md-6 col-xs-12">
 							<label for="inputLogo">Logo</label>

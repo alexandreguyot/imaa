@@ -85,7 +85,7 @@
 					<div class="form-row">
 						<div class="form-group col-md-6 col-xs-12">
 								<label for="inputTel">Téléphone</label>
-								<input type="text" name="telephone"  value="{{ $user->telephone }}" class="form-control" id="inputTel" placeholder="" required>
+								<input type="text" name="telephone"  value="{{ $user->telephone }}" class="form-control" id="inputTel" placeholder="" >
 						</div>
 						<div class="form-group col-md-6 col-xs-12 logo">
 							@if($user->logo)

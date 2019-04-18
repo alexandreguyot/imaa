@@ -59,6 +59,53 @@ body {
 			    &.admin {
 			    	flex-direction: column;
 			    }
+				&.home {
+					background-image: url('../../images/bg-activites.jpg');
+					background-size: cover;
+					padding: 0;
+					div.logoNav {
+						display: flex;
+						width: 100%;
+						justify-content: center;
+						align-items: center;
+						ul {
+							display: none;
+						}
+						a {
+							position: relative;
+							.st1 {
+								fill: #ccc;
+							}
+							&:hover {
+								text-decoration: none;
+								polygon {
+									fill: rgba(232, 232, 232, 0.08);
+									stroke: #27c6da;
+								}
+								text {
+									.st1 {
+										fill: white;
+									}
+								}
+							}
+							&.disabled {
+								cursor: default;
+								text {
+									.st1 {
+										opacity: 0.25;
+									}
+								}
+								&:hover {
+									polygon {
+										opacity: 1;
+										fill: rgba(232, 232, 232, 0.08);
+										stroke: rgba(0, 0, 0, 0.20);
+									}
+								}
+							}
+						}
+					}
+				}
 				div.projects {
 					display: flex;
 					flex-direction: row;
@@ -808,6 +855,9 @@ body {
 				}
 				div.app {
 					height: 100%;
+					&.home {
+						height: 100vh;
+					}
 					div.projects {
 						flex-direction: column;
 						> div.projectList {
@@ -867,6 +917,47 @@ body {
 		&:hover {
 			a {
 				color: lighten(@lightblue, 80%)!important;
+			}
+		}
+	}
+	body {
+		&.erp {
+			> div {
+				div.app {
+					&.home {
+						div.logoNav {
+							svg {
+								display: none;
+							}
+							ul {
+								display: block;
+								li {
+									list-style-type: none;
+									font-size: 28px;
+									text-align: center;
+									margin: 30px 0;
+									a {
+										color: white;
+										letter-spacing: 4px;
+										&:hover {
+											color: @lightblue;
+											text-decoration: none;
+											letter-spacing: 6px;
+										}
+									}
+									&.disabled {
+										opacity: 0.4;
+										a {
+											cursor: default;
+											letter-spacing: 4px;
+											color: white;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

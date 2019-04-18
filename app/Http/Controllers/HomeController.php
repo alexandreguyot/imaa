@@ -44,9 +44,9 @@ class HomeController extends Controller
                 // attempt to do the login
                 if (Auth::attempt($userdata)) {
                     if (Auth::user()->isAdmin()) {
-                        return Redirect::route('erp.get.index-project');
+                        return Redirect::route('welcome');
                     }
-                    return Redirect::route('dashboard');
+                    return Redirect::route('welcome');
                 } else {        
                     // validation not successful, send back to form
                     Auth::logout();
