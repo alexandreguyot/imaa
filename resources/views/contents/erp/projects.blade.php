@@ -47,7 +47,7 @@
 												@if($dashboard->photos)
 													@foreach(explode(';', $dashboard->photos[0]) as $key => $photo)
 														@if($photo)
-															<li data-target="#carouselExampleIndicators-1" data-slide-to="{{ $key }}" @if ($loop->first) class="active" @endif></li>
+															<li data-target="#carouselExampleIndicators-{{ $key }}" data-slide-to="{{ $key }}" @if ($loop->first) class="active" @endif></li>
 														@endif
 													@endforeach
 												@endif
