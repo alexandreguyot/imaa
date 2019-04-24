@@ -64,7 +64,7 @@ class ProjectController extends Controller
 
     function edit($id) {
         $project = Project::where('id', $id)->with('dashboards')->first();
-        $dashboards = $project->dashboards;
+        $dashboards = $project->dashboards->reverse();
         return view('contents.erp.projects.edit', [
             'project' => $project,
             'dashboards' => $dashboards

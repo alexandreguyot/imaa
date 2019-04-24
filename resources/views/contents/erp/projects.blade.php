@@ -27,7 +27,7 @@
 			<div class="mounth animated fadeIn delay-06s">
 				<ul class="tabs">
 					@if (!$projectDashboard->dashboards->isEmpty())
-						@foreach ($projectDashboard->dashboards as $dashboard)
+						@foreach ($projectDashboard->dashboards->reverse() as $dashboard)
 							@if($dashboard->publish)
 								<li class="tab-link" data-tab="tab-{{ $dashboard->id }}"><a href="#">{{ $dashboard->month }} {{ $dashboard->year }}<i class="fas fa-angle-right"></i></a></li>
 							@endif
@@ -37,7 +37,7 @@
 			</div>
 			<div class="tabs-container animated fadeIn delay-04s">
 				@if (!$projectDashboard->dashboards->isEmpty())
-					@foreach ($projectDashboard->dashboards as $k => $dashboard)
+					@foreach ($projectDashboard->dashboards->reverse() as $k => $dashboard)
 						@if($dashboard->publish)
 							<div id="tab-{{ $dashboard->id }}" class="tab-content">
 								<div class="dashboard">
