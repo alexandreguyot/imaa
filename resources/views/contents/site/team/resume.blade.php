@@ -44,6 +44,14 @@
 	            <p>
 	        		<img src="{{ URL::asset('images/banners/team.jpg') }}" class="banner">
 	            </p>	
+	          	<div class="card_block">
+	      			<h3>Maxime CAMARA</h3>
+	      			<h4><a href="mailto:contact@imaa.eu">contact@imaa.eu</a></h4>
+					<ul>
+						<li>9 ans au sein d’un major en entreprise générale sur Nantes et Angers</li>
+						<li>Dernier poste occupé : Ingénieur principal chargé d’opérations</li>
+					</ul>
+	          	</div>	
           	</div>
           </div>
         </div>
