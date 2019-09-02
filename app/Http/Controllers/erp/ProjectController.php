@@ -11,6 +11,7 @@ use Carbon\CarbonPeriod;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Mail;
 
 class ProjectController extends Controller
 {
@@ -101,8 +102,12 @@ class ProjectController extends Controller
         $project->end = $end;
 
         if ($project->update() && request('dashboard')) {
+            $monthsToSendMail = [];
             foreach(request('dashboard') as $db) {
                 $dashboard = Dashboard::where('month', $db['month'])->where('project_id', $id)->where('year', $db['year'])->first();
+                if ($dashboard->publish && array_key_exists('publish', $db)) {
+                    array_push($monthsToSendMail, $dashboard);
+                }
                 if (array_key_exists('publish', $db)) {
                     $dashboard->publish = 1;
                 } else {
@@ -128,6 +133,19 @@ class ProjectController extends Controller
                     $dashboard->photos = $pathConcat;
                 }
                 $dashboard->update();
+            }
+            foreach($project->users as $user) {
+                foreach($monthsToSendMail as $db) {
+                    Mail::send('emails.dashboard', [
+                        'dashboard' => $dashboard, 
+                        'user' => $user, 
+                        'project' => $project
+                    ], function($message) use ($user, $dashboard) {    
+                        $message
+                        ->to($user->email)
+                        ->subject('Nouveau dashboard pour le mois de ' . $dashboard->month . ' ' . $dashboard->year);    
+                    });
+                }
             }
         }
         return Redirect::route('erp.get.index-project');

@@ -27,7 +27,7 @@
 			<div class="mounth animated fadeIn delay-06s">
 				<ul class="tabs">
 					@if (!$projectDashboard->dashboards->isEmpty())
-						@foreach ($projectDashboard->dashboards as $dashboard)
+						@foreach ($projectDashboard->dashboards->reverse() as $dashboard)
 							@if($dashboard->publish)
 								<li class="tab-link" data-tab="tab-{{ $dashboard->id }}"><a href="#">{{ $dashboard->month }} {{ $dashboard->year }}<i class="fas fa-angle-right"></i></a></li>
 							@endif
@@ -37,17 +37,17 @@
 			</div>
 			<div class="tabs-container animated fadeIn delay-04s">
 				@if (!$projectDashboard->dashboards->isEmpty())
-					@foreach ($projectDashboard->dashboards as $dashboard)
+					@foreach ($projectDashboard->dashboards->reverse() as $k => $dashboard)
 						@if($dashboard->publish)
 							<div id="tab-{{ $dashboard->id }}" class="tab-content">
 								<div class="dashboard">
 									<div class="banner">
-										<div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
+										<div id="dashboard-picture-{{ $k }}" class="carousel slide" data-ride="carousel">
 											<ol class="carousel-indicators">
 												@if($dashboard->photos)
 													@foreach(explode(';', $dashboard->photos[0]) as $key => $photo)
 														@if($photo)
-															<li data-target="#carouselExampleIndicators-1" data-slide-to="{{ $key }}" @if ($loop->first) class="active" @endif></li>
+															<li data-target="#dashboard-picture-{{ $k }}" data-slide-to="{{ $key }}" @if ($loop->first) class="active" @endif></li>
 														@endif
 													@endforeach
 												@endif
@@ -74,13 +74,13 @@
 												@endif
 											</div>
 											@if($dashboard->photos && count(explode(';', $dashboard->photos[0])) > 1)
-												<a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
+												<a class="carousel-control-prev" href="#dashboard-picture-{{ $k }}" role="button" data-slide="prev">
 													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-													<span class="sr-only">Previous</span>
+													<span class="sr-only">Précédent</span>
 												</a>
-												<a class="carousel-control-next" href="#carouselExampleIndicators-1" role="button" data-slide="next">
+												<a class="carousel-control-next" href="#dashboard-picture-{{ $k }}" role="button" data-slide="next">
 													<span class="carousel-control-next-icon" aria-hidden="true"></span>
-													<span class="sr-only">Next</span>
+													<span class="sr-only">Suivant</span>
 												</a>
 											@endif
 										</div>
