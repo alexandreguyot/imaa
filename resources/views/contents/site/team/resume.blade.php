@@ -27,7 +27,7 @@
         <div class="row p-y-3">
           <div class="col-lg-3">
 		      @include('layouts._sidebar_team')
-          </div>
+          </div> 
           <div class="col-md-12	col-lg-9">
           	<div class="article">
 	          	<div class="card_block">
