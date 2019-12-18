@@ -35,7 +35,6 @@
         <div class="bg-blue animated fadeIn">
             @yield('content') 
             @include('layouts._login')
-            @include('layouts._footer')
         </div>
 
         @yield('scripts') 

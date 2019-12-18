@@ -3,9 +3,9 @@
 /*
  * Route pour le site web
  * */
-
+ 
 Route::namespace('Site')->group(function () {
-    Route::get('/', ['uses' => 'IndexController@index'])->name('home');
+    Route::get('/', ['uses' => 'LoginController@index'])->name('app');
     Route::get('/accueil', ['uses' => 'IndexController@Home'])->name('accueil');
     Route::get('/activites', ['uses' => 'ActivityController@index'])->name('activites');
     Route::get('/activites/nos-domaines', ['uses' => 'ActivityController@domains'])->name('activites.nos-domaines');

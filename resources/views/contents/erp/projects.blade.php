@@ -135,12 +135,12 @@
 							@if ($projectDashboard->url)
 								<div class="overlay overlay-timelapse" id="overlay-timelapse-{{ $dashboard->id }}">
 									<div class="external">
-										<ul>
+										<!-- <ul>
 											<li>Site : {{ $projectDashboard->url }}</li>
 											<li>Identifiant : {{ $projectDashboard->identifiant }}</li>
 											<li>Mot de passe : {{ $projectDashboard->password }}</li>
 											<li><a href="#" class="close-pdf" id="close-pdf-{{ $dashboard->id }}"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-										</ul>
+										</ul> -->
 										<iframe src="{{ $projectDashboard->url }}"></iframe>
 									</div>
 									<a href="#" class="close-timelapse" id="close-timelapse-{{ $dashboard->id }}" ><i class="fa fa-times" aria-hidden="true"></i></a>

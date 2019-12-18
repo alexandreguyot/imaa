@@ -254,6 +254,7 @@ body {
 								&.current {
 									opacity: 1;
 									z-index: 1;
+									width: 100%;
 								}
 							}
 							div.banner {
@@ -747,7 +748,8 @@ body {
 				opacity: 0;
 				overflow: hidden;
 				transition: all 1.2s;
-				object { 
+				object, 
+				iframe { 
 					position: absolute;
 					height: calc(~'100% - 140px');
 					width: calc(~'100% - 60px');
@@ -872,6 +874,7 @@ body {
 									text-align: center;
 									border: none;
 									padding: 0px 30px;
+									display: none;
 									a {
 										font-size: 18px;
 										width: 100%;
@@ -1009,13 +1012,48 @@ body {
 						}
 						> div.tabs-container {
 							div.download {
+								padding: 20px;
 								flex-direction: column;
 								> div.pdf {
 									margin: 0 0 30px;
 									width: 100%!important;
+									> div {
+										flex-direction: column;
+										> a {
+											width: 100%;
+											flex-direction: column;
+											> div {
+												span {
+													text-align: center;
+												}
+												&:first-child {
+													width: 100%;
+													border-radius: 10px;
+													border: 1px solid #ddd;
+													margin: 0 0 10px;
+												}
+												&:last-child {
+													width: 100%;
+													border-radius: 10px;
+													border: 1px solid #ddd;
+													margin: 0 0 10px;
+												}
+											}
+											&:last-child {
+												width: 100%;
+											}
+										}
+									}
 									&:first-child {
 										margin: 0 0 30px;
 									}
+									&:last-child {
+										margin: 0;
+									}
+								}
+								> div.timelapse {
+									width: 100%;
+									margin: 0;
 									&:last-child {
 										margin: 0;
 									}

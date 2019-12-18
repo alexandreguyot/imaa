@@ -30,10 +30,10 @@
 						<polygon class="st6" points="456.4,8 456.4,135.6 288.9,196.6 288.9,68.9 	"/>
 					</g>
 				</a>
-				<a href="#" class="disabled">
+				<a href="#" class="" id="open-pdf" target="">
 					<g>
 						<g>
-							<text transform="matrix(1 0 0 1 8.9596 296.8281)"><tspan x="0" y="0" class="st1 st2 st3">Boîte à plan</tspan><tspan x="35" y="28.8" class="st1 st4 st5">Prochainement</tspan></text>
+							<text transform="matrix(1 0 0 1 8.9596 296.8281)"><tspan x="0" y="0" class="st1 st2 st3">Boîte à plan</tspan><tspan x="80" y="28.8" class="st1 st4 st5">Nouveauté</tspan></text>
 						</g>
 						<polygon class="st6" points="456.4,169.6 456.4,297.2 288.9,358.2 288.9,230.5 	"/>
 					</g>
@@ -57,12 +57,44 @@
 			</svg>
 			<ul>
 				<li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-				<li class="disabled"><a href="#">Boîte à plan</a></li>
+				<li class=""><a href="#" class="" id="open-pdf-2" target="">Boîte à plan</a></li>
 				<li><a href="{{ route('site.edit-user') }}">Mon compte</a></li>
 				<li><a href="{{ route('logout') }}">Déconnexion</a></li>
 			</ul>
 		</div>
-	</div>	
+	</div>	 
+	<div class="erp">
+		<div>
+			<div class="overlay overlay-pdf" id="overlay-pdf">
+				<iframe src="https://app.coment.in/?a=login" width="100%" height="100%"></iframe>
+				<a href="#" class="close-pdf" id="close-pdf"><i class="fa fa-times" aria-hidden="true"></i></a>
+			</div>
+			<div class="overlay overlay-pdf-2" id="overlay-pdf-2">
+				<iframe src="https://app.coment.in/?a=login" width="100%" height="100%"></iframe>
+				<a href="#" class="close-pdf" id="close-pdf-2"><i class="fa fa-times" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('#open-pdf').click(function() {
+			$('#overlay-pdf').addClass('active');
+		});
+		$('#close-pdf').click(function() {
+			$('#overlay-pdf').removeClass('active');
+		});
+		$('#overlay-pdf').click(function() {
+			$('#overlay-pdf').removeClass('active');
+		});
+		$('#open-pdf-2').click(function() {
+			$('#overlay-pdf-2').addClass('active');
+		});
+		$('#close-pdf-2').click(function() {
+			$('#overlay-pdf-2').removeClass('active');
+		});
+		$('#overlay-pdf-2').click(function() {
+			$('#overlay-pdf-2').removeClass('active');
+		});
+</script>
 @stop
 
 <!-- Facultatif, si l'on a des fichiers js spécifiques à la page -->

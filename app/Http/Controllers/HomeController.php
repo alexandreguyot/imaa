@@ -30,7 +30,7 @@ class HomeController extends Controller
         $validator = Validator::make(Input::all(), $rules);
 
         if ($validator->fails()) {
-            return Redirect::route('home')
+            return Redirect::route('app')
                 ->withErrors($validator) 
                 ->withInput(Input::except('password'));
         } else {
@@ -50,7 +50,7 @@ class HomeController extends Controller
                 } else {        
                     // validation not successful, send back to form
                     Auth::logout();
-                    return Redirect::route('home')->withErrors([
+                    return Redirect::route('app')->withErrors([
                         'both' => 'Mauvais compte mail ou mauvais mot de passe',
                     ]);
                 }
@@ -60,6 +60,6 @@ class HomeController extends Controller
 
     public function logout() {
         Auth::logout();
-        return Redirect::route('home');
+        return Redirect::route('app');
     }
 }
